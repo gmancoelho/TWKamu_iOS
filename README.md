@@ -1,4 +1,6 @@
-# TW Kamu - Swift 4
+# TW Kamu
+
+![N|Solid](https://www.thoughtworks.com/imgs/tw-logo.png)
 
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat
 )](https://developer.apple.com/iphone/index.action)
@@ -10,12 +12,30 @@
 )](http://mit-license.org)
 [![CocoaPods](https://img.shields.io/cocoapods/v/TKSubmitTransitionSwift3.svg)]()
 
-** Swift 4.0
+
+Baseado na Caminhada do Privilégio, o aplicativo "Jornada" do Privilégio tem como objetivo trazer reflexões aos participantes, através de perguntas e curiosidades sobre temas da nossa sociedade.
 
 # Tech Stack
 
-## Linter
-SwiftLint
+#### Linguagem
+* [Swift](https://swift.org/)
 
+#### Tools
+
+#### Arquitetura
+* [VIPER](https://blog.mindorks.com/building-ios-app-with-viper-architecture-8109acc72227)
+
+#### Testes
+
+#### CI/CD
+- A definir
+
+#### UI
+
+#### Qualidade de Código
+* [SwiftLint](https://github.com/realm/SwiftLint)
+
+#### Branching Model
+* [Feature Branch](https://hackernoon.com/still-using-gitflow-what-about-a-simpler-alternative-74aa9a46b9a3)
 
 
