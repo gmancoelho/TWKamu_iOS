@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97F8F206BA540C96957A745D /* Pods_TWKamuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9353BA450F2D3AB09E0BC126 /* Pods_TWKamuTests.framework */; };
 		B91B4985211E27BB0015BEBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B4984211E27BB0015BEBC /* AppDelegate.swift */; };
 		B91B4987211E27BB0015BEBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B4986211E27BB0015BEBC /* ViewController.swift */; };
 		B91B498C211E27BD0015BEBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B91B498B211E27BD0015BEBC /* Assets.xcassets */; };
 		B91B498F211E27BD0015BEBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91B498D211E27BD0015BEBC /* LaunchScreen.storyboard */; };
 		B91B499A211E27BD0015BEBC /* TWKamuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B4999211E27BD0015BEBC /* TWKamuTests.swift */; };
+		B9C0805A211E2ED20072F7BC /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C08058211E2ED20072F7BC /* Nimble.framework */; };
+		B9C0805B211E2ED20072F7BC /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C08059211E2ED20072F7BC /* Quick.framework */; };
+		FAD545A8666D78F5782C719B /* Pods_TWKamu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA3A973D06A419AB3BFE957 /* Pods_TWKamu.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3AC2CEF473AB281BB3AA558A /* Pods-TWKamu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWKamu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TWKamu/Pods-TWKamu.debug.xcconfig"; sourceTree = "<group>"; };
+		8BE69DB56561D7CCE18737E2 /* Pods-TWKamuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWKamuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TWKamuTests/Pods-TWKamuTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9353BA450F2D3AB09E0BC126 /* Pods_TWKamuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TWKamuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96BC11221041A35FEED7C54D /* Pods-TWKamuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWKamuTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TWKamuTests/Pods-TWKamuTests.release.xcconfig"; sourceTree = "<group>"; };
 		B91B4981211E27BB0015BEBC /* TWKamu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWKamu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B91B4984211E27BB0015BEBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B91B4986211E27BB0015BEBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +42,10 @@
 		B91B4995211E27BD0015BEBC /* TWKamuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TWKamuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B91B4999211E27BD0015BEBC /* TWKamuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWKamuTests.swift; sourceTree = "<group>"; };
 		B91B499B211E27BD0015BEBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9C08058211E2ED20072F7BC /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		B9C08059211E2ED20072F7BC /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		CBA3A973D06A419AB3BFE957 /* Pods_TWKamu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TWKamu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1C1DA7C79893096182B9E88 /* Pods-TWKamu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWKamu.release.xcconfig"; path = "Pods/Target Support Files/Pods-TWKamu/Pods-TWKamu.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD545A8666D78F5782C719B /* Pods_TWKamu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,18 +61,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9C0805A211E2ED20072F7BC /* Nimble.framework in Frameworks */,
+				B9C0805B211E2ED20072F7BC /* Quick.framework in Frameworks */,
+				97F8F206BA540C96957A745D /* Pods_TWKamuTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9592F28C3E5C2ED338E1C235 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9C08058211E2ED20072F7BC /* Nimble.framework */,
+				B9C08059211E2ED20072F7BC /* Quick.framework */,
+				CBA3A973D06A419AB3BFE957 /* Pods_TWKamu.framework */,
+				9353BA450F2D3AB09E0BC126 /* Pods_TWKamuTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B91B4978211E27BB0015BEBC = {
 			isa = PBXGroup;
 			children = (
 				B91B4983211E27BB0015BEBC /* TWKamu */,
 				B91B4998211E27BD0015BEBC /* TWKamuTests */,
 				B91B4982211E27BB0015BEBC /* Products */,
+				C95C04D87BCEC48CC2D99F03 /* Pods */,
+				9592F28C3E5C2ED338E1C235 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +170,17 @@
 			path = Properties;
 			sourceTree = "<group>";
 		};
+		C95C04D87BCEC48CC2D99F03 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3AC2CEF473AB281BB3AA558A /* Pods-TWKamu.debug.xcconfig */,
+				E1C1DA7C79893096182B9E88 /* Pods-TWKamu.release.xcconfig */,
+				8BE69DB56561D7CCE18737E2 /* Pods-TWKamuTests.debug.xcconfig */,
+				96BC11221041A35FEED7C54D /* Pods-TWKamuTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,9 +188,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B91B499E211E27BD0015BEBC /* Build configuration list for PBXNativeTarget "TWKamu" */;
 			buildPhases = (
+				7CC6B2E4ECB00AC521EA11A2 /* [CP] Check Pods Manifest.lock */,
 				B91B497D211E27BB0015BEBC /* Sources */,
 				B91B497E211E27BB0015BEBC /* Frameworks */,
 				B91B497F211E27BB0015BEBC /* Resources */,
+				B9C08057211E2BC00072F7BC /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -165,6 +207,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B91B49A1211E27BD0015BEBC /* Build configuration list for PBXNativeTarget "TWKamuTests" */;
 			buildPhases = (
+				7081C4AEAFF400555CF88855 /* [CP] Check Pods Manifest.lock */,
 				B91B4991211E27BD0015BEBC /* Sources */,
 				B91B4992211E27BD0015BEBC /* Frameworks */,
 				B91B4993211E27BD0015BEBC /* Resources */,
@@ -235,6 +278,63 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7081C4AEAFF400555CF88855 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TWKamuTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7CC6B2E4ECB00AC521EA11A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TWKamu-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9C08057211E2BC00072F7BC /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B91B497D211E27BB0015BEBC /* Sources */ = {
@@ -394,6 +494,7 @@
 		};
 		B91B499F211E27BD0015BEBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AC2CEF473AB281BB3AA558A /* Pods-TWKamu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -413,6 +514,7 @@
 		};
 		B91B49A0211E27BD0015BEBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1C1DA7C79893096182B9E88 /* Pods-TWKamu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -432,11 +534,16 @@
 		};
 		B91B49A2211E27BD0015BEBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BE69DB56561D7CCE18737E2 /* Pods-TWKamuTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CH8UYM6CUQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TWKamuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -453,11 +560,16 @@
 		};
 		B91B49A3211E27BD0015BEBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96BC11221041A35FEED7C54D /* Pods-TWKamuTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CH8UYM6CUQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TWKamuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
