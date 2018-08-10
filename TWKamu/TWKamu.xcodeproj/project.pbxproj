@@ -15,6 +15,15 @@
 		B91B499A211E27BD0015BEBC /* TWKamuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B4999211E27BD0015BEBC /* TWKamuTests.swift */; };
 		B9C0805A211E2ED20072F7BC /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C08058211E2ED20072F7BC /* Nimble.framework */; };
 		B9C0805B211E2ED20072F7BC /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C08059211E2ED20072F7BC /* Quick.framework */; };
+		B9C08062211E2F7F0072F7BC /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C0805E211E2F7E0072F7BC /* ViewInterface.swift */; };
+		B9C08063211E2F7F0072F7BC /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C0805F211E2F7E0072F7BC /* PresenterInterface.swift */; };
+		B9C08065211E2F7F0072F7BC /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C08061211E2F7E0072F7BC /* InteractorInterface.swift */; };
+		B9C08067211E2FF20072F7BC /* WireframeInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C08066211E2FF20072F7BC /* WireframeInterfaces.swift */; };
+		B9C08069211E32540072F7BC /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C08068211E32540072F7BC /* BaseWireframe.swift */; };
+		B9C27BB6211E33E100BBAFEC /* KamuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C27BB5211E33E100BBAFEC /* KamuNavigationController.swift */; };
+		B9C27BB8211E343700BBAFEC /* KamuApplicationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C27BB7211E343700BBAFEC /* KamuApplicationRouter.swift */; };
+		B9C27BBA211E347100BBAFEC /* KamuNavigationInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C27BB9211E347100BBAFEC /* KamuNavigationInterfaces.swift */; };
+		B9C27BBD211E34BE00BBAFEC /* KamuBlackNavigationBarTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C27BBC211E34BE00BBAFEC /* KamuBlackNavigationBarTheme.swift */; };
 		FAD545A8666D78F5782C719B /* Pods_TWKamu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA3A973D06A419AB3BFE957 /* Pods_TWKamu.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +53,15 @@
 		B91B499B211E27BD0015BEBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9C08058211E2ED20072F7BC /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		B9C08059211E2ED20072F7BC /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		B9C0805E211E2F7E0072F7BC /* ViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
+		B9C0805F211E2F7E0072F7BC /* PresenterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
+		B9C08061211E2F7E0072F7BC /* InteractorInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractorInterface.swift; sourceTree = "<group>"; };
+		B9C08066211E2FF20072F7BC /* WireframeInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WireframeInterfaces.swift; sourceTree = "<group>"; };
+		B9C08068211E32540072F7BC /* BaseWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseWireframe.swift; path = "../../../../../../faustop-ios/FaustopSounds/FaustopSounds/Infra/VIPER/BaseWireframe.swift"; sourceTree = "<group>"; };
+		B9C27BB5211E33E100BBAFEC /* KamuNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuNavigationController.swift; sourceTree = "<group>"; };
+		B9C27BB7211E343700BBAFEC /* KamuApplicationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuApplicationRouter.swift; sourceTree = "<group>"; };
+		B9C27BB9211E347100BBAFEC /* KamuNavigationInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuNavigationInterfaces.swift; sourceTree = "<group>"; };
+		B9C27BBC211E34BE00BBAFEC /* KamuBlackNavigationBarTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuBlackNavigationBarTheme.swift; sourceTree = "<group>"; };
 		CBA3A973D06A419AB3BFE957 /* Pods_TWKamu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TWKamu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1C1DA7C79893096182B9E88 /* Pods-TWKamu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWKamu.release.xcconfig"; path = "Pods/Target Support Files/Pods-TWKamu/Pods-TWKamu.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				B91B49A4211E27C50015BEBC /* Application */,
+				B9C0805C211E2F540072F7BC /* Base */,
+				B9C27BB4211E338300BBAFEC /* Navigation */,
 				B91B49A6211E27D30015BEBC /* Models */,
 				B91B49A5211E27CD0015BEBC /* Modules */,
 				B91B49A8211E27E00015BEBC /* Views */,
@@ -170,6 +190,45 @@
 			path = Properties;
 			sourceTree = "<group>";
 		};
+		B9C0805C211E2F540072F7BC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B9C0805D211E2F600072F7BC /* VIPER */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		B9C0805D211E2F600072F7BC /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				B9C08066211E2FF20072F7BC /* WireframeInterfaces.swift */,
+				B9C08068211E32540072F7BC /* BaseWireframe.swift */,
+				B9C08061211E2F7E0072F7BC /* InteractorInterface.swift */,
+				B9C0805F211E2F7E0072F7BC /* PresenterInterface.swift */,
+				B9C0805E211E2F7E0072F7BC /* ViewInterface.swift */,
+			);
+			path = VIPER;
+			sourceTree = "<group>";
+		};
+		B9C27BB4211E338300BBAFEC /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				B9C27BBB211E34AD00BBAFEC /* Themes */,
+				B9C27BB7211E343700BBAFEC /* KamuApplicationRouter.swift */,
+				B9C27BB5211E33E100BBAFEC /* KamuNavigationController.swift */,
+				B9C27BB9211E347100BBAFEC /* KamuNavigationInterfaces.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		B9C27BBB211E34AD00BBAFEC /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				B9C27BBC211E34BE00BBAFEC /* KamuBlackNavigationBarTheme.swift */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
 		C95C04D87BCEC48CC2D99F03 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +287,7 @@
 		B91B4979211E27BB0015BEBC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = Kamu;
 				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = ThoughtWorks;
@@ -318,7 +378,7 @@
 		};
 		B9C08057211E2BC00072F7BC /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -330,7 +390,7 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
@@ -341,7 +401,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9C08065211E2F7F0072F7BC /* InteractorInterface.swift in Sources */,
+				B9C27BBA211E347100BBAFEC /* KamuNavigationInterfaces.swift in Sources */,
+				B9C08063211E2F7F0072F7BC /* PresenterInterface.swift in Sources */,
+				B9C08069211E32540072F7BC /* BaseWireframe.swift in Sources */,
+				B9C27BBD211E34BE00BBAFEC /* KamuBlackNavigationBarTheme.swift in Sources */,
+				B9C27BB6211E33E100BBAFEC /* KamuNavigationController.swift in Sources */,
 				B91B4987211E27BB0015BEBC /* ViewController.swift in Sources */,
+				B9C27BB8211E343700BBAFEC /* KamuApplicationRouter.swift in Sources */,
+				B9C08062211E2F7F0072F7BC /* ViewInterface.swift in Sources */,
+				B9C08067211E2FF20072F7BC /* WireframeInterfaces.swift in Sources */,
 				B91B4985211E27BB0015BEBC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
