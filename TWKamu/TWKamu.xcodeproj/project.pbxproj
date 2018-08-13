@@ -23,6 +23,7 @@
 		B93206BA21220124006F2836 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93206B421220124006F2836 /* HomeViewController.swift */; };
 		B93206BC21220124006F2836 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B93206B621220124006F2836 /* HomeViewController.xib */; };
 		B93206BD21220124006F2836 /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93206B721220124006F2836 /* HomeWireframe.swift */; };
+		B93206C021220998006F2836 /* KamuStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93206BF21220998006F2836 /* KamuStrings.swift */; };
 		B9C0805A211E2ED20072F7BC /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C08058211E2ED20072F7BC /* Nimble.framework */; };
 		B9C0805B211E2ED20072F7BC /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C08059211E2ED20072F7BC /* Quick.framework */; };
 		B9C08062211E2F7F0072F7BC /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C0805E211E2F7E0072F7BC /* ViewInterface.swift */; };
@@ -82,6 +83,7 @@
 		B93206B421220124006F2836 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B93206B621220124006F2836 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		B93206B721220124006F2836 /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
+		B93206BF21220998006F2836 /* KamuStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuStrings.swift; sourceTree = "<group>"; };
 		B9C08058211E2ED20072F7BC /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		B9C08059211E2ED20072F7BC /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		B9C0805E211E2F7E0072F7BC /* ViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		B91B4983211E27BB0015BEBC /* TWKamu */ = {
 			isa = PBXGroup;
 			children = (
+				B93206BE21220968006F2836 /* Common */,
 				B91B49A4211E27C50015BEBC /* Application */,
 				B9C0805C211E2F540072F7BC /* Base */,
 				B9C27BB4211E338300BBAFEC /* Navigation */,
@@ -261,6 +264,14 @@
 			children = (
 			);
 			path = BookDetails;
+			sourceTree = "<group>";
+		};
+		B93206BE21220968006F2836 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B93206BF21220998006F2836 /* KamuStrings.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		B9C0805C211E2F540072F7BC /* Base */ = {
@@ -499,6 +510,7 @@
 			files = (
 				B9C08065211E2F7F0072F7BC /* InteractorInterface.swift in Sources */,
 				B9C27BBA211E347100BBAFEC /* KamuNavigationInterfaces.swift in Sources */,
+				B93206C021220998006F2836 /* KamuStrings.swift in Sources */,
 				B9C08063211E2F7F0072F7BC /* PresenterInterface.swift in Sources */,
 				B93206B921220124006F2836 /* HomePresenter.swift in Sources */,
 				B9C08069211E32540072F7BC /* BaseWireframe.swift in Sources */,

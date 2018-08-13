@@ -12,6 +12,9 @@ final class HomeViewController: UIViewController {
   
   // MARK: - Outlets
   
+  @IBOutlet weak var lblWelcome: UILabel!
+  @IBOutlet weak var btnStart: UIButton!
+  
   // MARK: - Class properties
   
   // MARK: - Public properties
@@ -52,13 +55,27 @@ final class HomeViewController: UIViewController {
   
   // MARK: - Class Configurations
   
-  func viewConfiguration() {
+  private func viewConfiguration() {
+    configureStartButton()
+    configureWelcomeLabel()
     
+  }
+  
+  private func configureWelcomeLabel() {
+    lblWelcome.text = KamuStrings.Labels.welcome
+  }
+  
+  private func configureStartButton() {
+    btnStart.setTitle(KamuStrings.Buttons.start, for: .normal)
   }
   
   // MARK: - Class Methods
   
   // MARK: - UIActions
+  
+  @IBAction func startIsPressed(_ sender: Any) {
+  }
+  
   
 }
 
