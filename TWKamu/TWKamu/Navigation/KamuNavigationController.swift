@@ -22,7 +22,7 @@ class KamuNavigationController: UINavigationController {
   }
   
   // MARK: - Private
-  override open var childForStatusBarStyle: UIViewController? {
+  override open var childViewControllerForStatusBarStyle: UIViewController? {
     return self.topViewController
   }
   

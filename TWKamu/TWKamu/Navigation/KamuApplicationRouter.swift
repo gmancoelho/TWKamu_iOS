@@ -27,7 +27,8 @@ final class KamuApplicationRouter {
   // MARK: - Router
   
   func initRouter() {
-
+    let homeModule = HomeWireframe(navigationController: baseNavigationController)
+    homeModule.show(with: .root)
   }
   
   // MARK: - Private Methods
