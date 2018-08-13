@@ -24,6 +24,12 @@
 		B93206BC21220124006F2836 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B93206B621220124006F2836 /* HomeViewController.xib */; };
 		B93206BD21220124006F2836 /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93206B721220124006F2836 /* HomeWireframe.swift */; };
 		B93206C021220998006F2836 /* KamuStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93206BF21220998006F2836 /* KamuStrings.swift */; };
+		B93206C221221F60006F2836 /* KamuClearNavigationBarTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93206C121221F60006F2836 /* KamuClearNavigationBarTheme.swift */; };
+		B93206C921222198006F2836 /* LibrariesInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93206C321222198006F2836 /* LibrariesInterfaces.swift */; };
+		B93206CA21222198006F2836 /* LibrariesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93206C421222198006F2836 /* LibrariesPresenter.swift */; };
+		B93206CB21222198006F2836 /* LibrariesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93206C521222198006F2836 /* LibrariesViewController.swift */; };
+		B93206CD21222198006F2836 /* LibrariesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B93206C721222198006F2836 /* LibrariesViewController.xib */; };
+		B93206CE21222198006F2836 /* LibrariesWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93206C821222198006F2836 /* LibrariesWireframe.swift */; };
 		B9C0805A211E2ED20072F7BC /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C08058211E2ED20072F7BC /* Nimble.framework */; };
 		B9C0805B211E2ED20072F7BC /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C08059211E2ED20072F7BC /* Quick.framework */; };
 		B9C08062211E2F7F0072F7BC /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C0805E211E2F7E0072F7BC /* ViewInterface.swift */; };
@@ -84,6 +90,12 @@
 		B93206B621220124006F2836 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		B93206B721220124006F2836 /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
 		B93206BF21220998006F2836 /* KamuStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuStrings.swift; sourceTree = "<group>"; };
+		B93206C121221F60006F2836 /* KamuClearNavigationBarTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuClearNavigationBarTheme.swift; sourceTree = "<group>"; };
+		B93206C321222198006F2836 /* LibrariesInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrariesInterfaces.swift; sourceTree = "<group>"; };
+		B93206C421222198006F2836 /* LibrariesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrariesPresenter.swift; sourceTree = "<group>"; };
+		B93206C521222198006F2836 /* LibrariesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrariesViewController.swift; sourceTree = "<group>"; };
+		B93206C721222198006F2836 /* LibrariesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibrariesViewController.xib; sourceTree = "<group>"; };
+		B93206C821222198006F2836 /* LibrariesWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrariesWireframe.swift; sourceTree = "<group>"; };
 		B9C08058211E2ED20072F7BC /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		B9C08059211E2ED20072F7BC /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		B9C0805E211E2F7E0072F7BC /* ViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
@@ -248,6 +260,11 @@
 		B93206A82121F41F006F2836 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				B93206C321222198006F2836 /* LibrariesInterfaces.swift */,
+				B93206C421222198006F2836 /* LibrariesPresenter.swift */,
+				B93206C521222198006F2836 /* LibrariesViewController.swift */,
+				B93206C721222198006F2836 /* LibrariesViewController.xib */,
+				B93206C821222198006F2836 /* LibrariesWireframe.swift */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -309,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				B9C27BBC211E34BE00BBAFEC /* KamuBlackNavigationBarTheme.swift */,
+				B93206C121221F60006F2836 /* KamuClearNavigationBarTheme.swift */,
 			);
 			path = Themes;
 			sourceTree = "<group>";
@@ -335,9 +353,9 @@
 				B91B497D211E27BB0015BEBC /* Sources */,
 				B91B497E211E27BB0015BEBC /* Frameworks */,
 				B91B497F211E27BB0015BEBC /* Resources */,
+				B93206AF2121F8BD006F2836 /* Embed Frameworks */,
 				B93206A62121F08A006F2836 /* Realm */,
 				B9C08057211E2BC00072F7BC /* SwiftLint */,
-				B93206AF2121F8BD006F2836 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -411,6 +429,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B93206CD21222198006F2836 /* LibrariesViewController.xib in Resources */,
 				B91B498F211E27BD0015BEBC /* LaunchScreen.storyboard in Resources */,
 				B91B498C211E27BD0015BEBC /* Assets.xcassets in Resources */,
 				B93206BC21220124006F2836 /* HomeViewController.xib in Resources */,
@@ -485,7 +504,7 @@
 		};
 		B9C08057211E2BC00072F7BC /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -497,9 +516,9 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n# print error to STDERR\necho \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\nexit 1\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -508,19 +527,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B93206CE21222198006F2836 /* LibrariesWireframe.swift in Sources */,
 				B9C08065211E2F7F0072F7BC /* InteractorInterface.swift in Sources */,
 				B9C27BBA211E347100BBAFEC /* KamuNavigationInterfaces.swift in Sources */,
 				B93206C021220998006F2836 /* KamuStrings.swift in Sources */,
 				B9C08063211E2F7F0072F7BC /* PresenterInterface.swift in Sources */,
+				B93206CA21222198006F2836 /* LibrariesPresenter.swift in Sources */,
 				B93206B921220124006F2836 /* HomePresenter.swift in Sources */,
 				B9C08069211E32540072F7BC /* BaseWireframe.swift in Sources */,
 				B9C27BBD211E34BE00BBAFEC /* KamuBlackNavigationBarTheme.swift in Sources */,
 				B9C27BB6211E33E100BBAFEC /* KamuNavigationController.swift in Sources */,
+				B93206CB21222198006F2836 /* LibrariesViewController.swift in Sources */,
 				B9C27BB8211E343700BBAFEC /* KamuApplicationRouter.swift in Sources */,
 				B93206BD21220124006F2836 /* HomeWireframe.swift in Sources */,
 				B9C08062211E2F7F0072F7BC /* ViewInterface.swift in Sources */,
+				B93206C221221F60006F2836 /* KamuClearNavigationBarTheme.swift in Sources */,
 				B93206B821220124006F2836 /* HomeInterfaces.swift in Sources */,
 				B9C08067211E2FF20072F7BC /* WireframeInterfaces.swift in Sources */,
+				B93206C921222198006F2836 /* LibrariesInterfaces.swift in Sources */,
 				B93206BA21220124006F2836 /* HomeViewController.swift in Sources */,
 				B91B4985211E27BB0015BEBC /* AppDelegate.swift in Sources */,
 			);

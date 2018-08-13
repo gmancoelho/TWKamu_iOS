@@ -19,9 +19,17 @@ protocol HomeWireframeInterface: WireframeInterface {
 }
 
 protocol HomeViewInterface: ViewInterface {
+  
+  
+  
 }
 
 protocol HomePresenterInterface: PresenterInterface {
+  
+  func startIsPressed()
+  
+  func configureStartButton() -> String
+  func configureWelcomeLabel() -> String
 }
 
 protocol HomeInteractorInterface: InteractorInterface {

@@ -29,4 +29,17 @@ final class HomePresenter {
 // MARK: - Extensions -
 
 extension HomePresenter: HomePresenterInterface {
+  
+  func startIsPressed() {
+    wireframe.navigate(to: .goToLibraries)
+  }
+  
+  func configureWelcomeLabel() -> String {
+    return KamuStrings.Labels.welcome
+  }
+  
+  func configureStartButton() -> String {
+    return KamuStrings.Buttons.start
+  }
+  
 }

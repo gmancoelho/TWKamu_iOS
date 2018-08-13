@@ -56,17 +56,8 @@ final class HomeViewController: UIViewController {
   // MARK: - Class Configurations
   
   private func viewConfiguration() {
-    configureStartButton()
-    configureWelcomeLabel()
-    
-  }
-  
-  private func configureWelcomeLabel() {
-    lblWelcome.text = KamuStrings.Labels.welcome
-  }
-  
-  private func configureStartButton() {
-    btnStart.setTitle(KamuStrings.Buttons.start, for: .normal)
+    lblWelcome.text = presenter.configureWelcomeLabel()
+    btnStart.setTitle(presenter.configureStartButton(), for: .normal)
   }
   
   // MARK: - Class Methods
@@ -74,12 +65,16 @@ final class HomeViewController: UIViewController {
   // MARK: - UIActions
   
   @IBAction func startIsPressed(_ sender: Any) {
+    presenter.startIsPressed()
   }
-  
   
 }
 
 // MARK: - Extensions
 
 extension HomeViewController: HomeViewInterface {
+  
 }
+
+extension HomeViewController: KamuClearNavigationBarTheme { }
+

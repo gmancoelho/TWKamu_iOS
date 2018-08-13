@@ -36,7 +36,6 @@ final class HomeWireframe: BaseWireframe {
 
   private func createLibraryModule() {
     
-    
   }
   
 }
@@ -47,6 +46,7 @@ extension HomeWireframe: HomeWireframeInterface {
   
   func navigate(to option: HomeNavigationOption) {
     switch option {
+      
     case .goToLibraries:
       createLibraryModule()
       

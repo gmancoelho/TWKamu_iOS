@@ -6,9 +6,6 @@ target 'TWKamu' do
   use_frameworks!
   
   # Pods for TWKamu
-
-  pod 'SwiftLint'
-
   target 'TWKamuTests' do
     inherit! :search_paths
     # Pods for testing

@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class KamuNavigationController: UINavigationController {
   
   // MARK: - Properties
@@ -92,6 +91,10 @@ class KamuNavigationController: UINavigationController {
       switch vc {
         
       case is KamuBlackNavigationBarTheme:
+        hiddenNavigation(false)
+        removeNavigationImage()
+        
+      case is KamuClearNavigationBarTheme:
         hiddenNavigation(false)
         removeNavigationImage()
       default:
