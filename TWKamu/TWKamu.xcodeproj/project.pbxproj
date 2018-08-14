@@ -30,6 +30,8 @@
 		B93206CB21222198006F2836 /* LibrariesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93206C521222198006F2836 /* LibrariesViewController.swift */; };
 		B93206CD21222198006F2836 /* LibrariesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B93206C721222198006F2836 /* LibrariesViewController.xib */; };
 		B93206CE21222198006F2836 /* LibrariesWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93206C821222198006F2836 /* LibrariesWireframe.swift */; };
+		B93F3C112123077B0000D0A5 /* KamuLibraryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93F3C0F2123077B0000D0A5 /* KamuLibraryCell.swift */; };
+		B93F3C122123077B0000D0A5 /* KamuLibraryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B93F3C102123077B0000D0A5 /* KamuLibraryCell.xib */; };
 		B9C0805A211E2ED20072F7BC /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C08058211E2ED20072F7BC /* Nimble.framework */; };
 		B9C0805B211E2ED20072F7BC /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C08059211E2ED20072F7BC /* Quick.framework */; };
 		B9C08062211E2F7F0072F7BC /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C0805E211E2F7E0072F7BC /* ViewInterface.swift */; };
@@ -96,6 +98,8 @@
 		B93206C521222198006F2836 /* LibrariesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrariesViewController.swift; sourceTree = "<group>"; };
 		B93206C721222198006F2836 /* LibrariesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibrariesViewController.xib; sourceTree = "<group>"; };
 		B93206C821222198006F2836 /* LibrariesWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrariesWireframe.swift; sourceTree = "<group>"; };
+		B93F3C0F2123077B0000D0A5 /* KamuLibraryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuLibraryCell.swift; sourceTree = "<group>"; };
+		B93F3C102123077B0000D0A5 /* KamuLibraryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KamuLibraryCell.xib; sourceTree = "<group>"; };
 		B9C08058211E2ED20072F7BC /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		B9C08059211E2ED20072F7BC /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		B9C0805E211E2F7E0072F7BC /* ViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
@@ -260,6 +264,7 @@
 		B93206A82121F41F006F2836 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				B93F3C0E2123071B0000D0A5 /* LibraryCell */,
 				B93206C321222198006F2836 /* LibrariesInterfaces.swift */,
 				B93206C421222198006F2836 /* LibrariesPresenter.swift */,
 				B93206C521222198006F2836 /* LibrariesViewController.swift */,
@@ -289,6 +294,15 @@
 				B93206BF21220998006F2836 /* KamuStrings.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		B93F3C0E2123071B0000D0A5 /* LibraryCell */ = {
+			isa = PBXGroup;
+			children = (
+				B93F3C0F2123077B0000D0A5 /* KamuLibraryCell.swift */,
+				B93F3C102123077B0000D0A5 /* KamuLibraryCell.xib */,
+			);
+			path = LibraryCell;
 			sourceTree = "<group>";
 		};
 		B9C0805C211E2F540072F7BC /* Base */ = {
@@ -431,6 +445,7 @@
 			files = (
 				B93206CD21222198006F2836 /* LibrariesViewController.xib in Resources */,
 				B91B498F211E27BD0015BEBC /* LaunchScreen.storyboard in Resources */,
+				B93F3C122123077B0000D0A5 /* KamuLibraryCell.xib in Resources */,
 				B91B498C211E27BD0015BEBC /* Assets.xcassets in Resources */,
 				B93206BC21220124006F2836 /* HomeViewController.xib in Resources */,
 			);
@@ -527,6 +542,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B93F3C112123077B0000D0A5 /* KamuLibraryCell.swift in Sources */,
 				B93206CE21222198006F2836 /* LibrariesWireframe.swift in Sources */,
 				B9C08065211E2F7F0072F7BC /* InteractorInterface.swift in Sources */,
 				B9C27BBA211E347100BBAFEC /* KamuNavigationInterfaces.swift in Sources */,

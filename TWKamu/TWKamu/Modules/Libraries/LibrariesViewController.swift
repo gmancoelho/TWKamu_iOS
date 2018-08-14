@@ -11,7 +11,9 @@ import UIKit
 final class LibrariesViewController: UIViewController {
   
   // MARK: - Outlets
+  @IBOutlet weak var lblLibraryTitle: UILabel!
   
+  @IBOutlet weak var tableView: UITableView!
   // MARK: - Class properties
   
   // MARK: - Public properties
@@ -53,7 +55,8 @@ final class LibrariesViewController: UIViewController {
   // MARK: - Class Configurations
   
   func viewConfiguration() {
-    
+    tableView.dataSource = self
+    tableView.delegate = self
   }
   
   // MARK: - Class Methods
@@ -66,3 +69,18 @@ final class LibrariesViewController: UIViewController {
 
 extension LibrariesViewController: LibrariesViewInterface {
 }
+
+extension LibrariesViewController: UITableViewDataSource {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return 0
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    return UITableViewCell()
+  }
+}
+
+extension LibrariesViewController: UITableViewDelegate {
+  
+}
+
