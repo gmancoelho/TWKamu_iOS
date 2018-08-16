@@ -17,8 +17,18 @@ protocol LibrariesWireframeInterface: WireframeInterface {
 }
 
 protocol LibrariesViewInterface: ViewInterface {
+  
+  func updateTableView()
+  
 }
 
 protocol LibrariesPresenterInterface: PresenterInterface {
+  
+  // TableView Methods
+  func libraryCellId() -> String
+  func totalItems() -> Int
+  func cellFor(index: IndexPath, tableView: UITableView) -> UITableViewCell
+  
+  func clickInCellForRow(index:IndexPath)
 }
 

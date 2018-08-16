@@ -55,11 +55,21 @@ final class LibrariesViewController: UIViewController {
   // MARK: - Class Configurations
   
   func viewConfiguration() {
-    tableView.dataSource = self
-    tableView.delegate = self
+    configureTableView()
   }
   
   // MARK: - Class Methods
+  
+  private func configureTableView() {
+    
+    tableView.dataSource = self
+    tableView.delegate = self
+    
+    let id = presenter.libraryCellId()
+    let nib = UINib(nibName: id, bundle: nil)
+    tableView.register(nib, forCellReuseIdentifier: id)
+    
+  }
   
   // MARK: - UIActions
   
@@ -68,19 +78,29 @@ final class LibrariesViewController: UIViewController {
 // MARK: - Extensions
 
 extension LibrariesViewController: LibrariesViewInterface {
+  
+  func updateTableView() {
+    tableView.reloadData()
+  }
+  
 }
 
 extension LibrariesViewController: UITableViewDataSource {
+  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 0
+    return presenter.totalItems()
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    return UITableViewCell()
+    return presenter.cellFor(index: indexPath, tableView: tableView)
   }
+  
 }
 
 extension LibrariesViewController: UITableViewDelegate {
   
-}
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    presenter.clickInCellForRow(index: indexPath)
+  }
 
+}

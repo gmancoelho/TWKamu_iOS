@@ -46,6 +46,7 @@
                 <constraint firstItem="AEP-Bm-dAJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pzN-da-cFn"/>
                 <constraint firstItem="AEP-Bm-dAJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="q6P-fo-bMV"/>
             </constraints>
+            <point key="canvasLocation" x="22" y="56"/>
         </view>
     </objects>
 </document>

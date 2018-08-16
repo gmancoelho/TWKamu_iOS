@@ -12,8 +12,10 @@
 		B91B498C211E27BD0015BEBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B91B498B211E27BD0015BEBC /* Assets.xcassets */; };
 		B91B498F211E27BD0015BEBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91B498D211E27BD0015BEBC /* LaunchScreen.storyboard */; };
 		B91B499A211E27BD0015BEBC /* TWKamuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B4999211E27BD0015BEBC /* TWKamuTests.swift */; };
-		B93206A52121DEBB006F2836 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B93206A32121D165006F2836 /* Realm.framework */; };
-		B93206AC2121F539006F2836 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B93206AB2121F539006F2836 /* RealmSwift.framework */; };
+		B91D6FF12125AEE200EF7BF3 /* RetrieveLibrariesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91D6FF02125AEE200EF7BF3 /* RetrieveLibrariesInteractor.swift */; };
+		B91D6FF32125AEF200EF7BF3 /* RetrieveLibrariesInteractorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91D6FF22125AEF200EF7BF3 /* RetrieveLibrariesInteractorProtocols.swift */; };
+		B91D700A2125B6CC00EF7BF3 /* KamuLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91D70092125B6CC00EF7BF3 /* KamuLibrary.swift */; };
+		B91D700C2125B72200EF7BF3 /* KamuLibraryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91D700B2125B72200EF7BF3 /* KamuLibraryObject.swift */; };
 		B93206AD2121F8BD006F2836 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B93206A32121D165006F2836 /* Realm.framework */; };
 		B93206AE2121F8BD006F2836 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B93206A32121D165006F2836 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B93206B02121F8C9006F2836 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B93206AB2121F539006F2836 /* RealmSwift.framework */; };
@@ -32,6 +34,7 @@
 		B93206CE21222198006F2836 /* LibrariesWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93206C821222198006F2836 /* LibrariesWireframe.swift */; };
 		B93F3C112123077B0000D0A5 /* KamuLibraryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93F3C0F2123077B0000D0A5 /* KamuLibraryCell.swift */; };
 		B93F3C122123077B0000D0A5 /* KamuLibraryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B93F3C102123077B0000D0A5 /* KamuLibraryCell.xib */; };
+		B99CC9FC2123135400738785 /* KamuConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99CC9FB2123135400738785 /* KamuConstants.swift */; };
 		B9C0805A211E2ED20072F7BC /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C08058211E2ED20072F7BC /* Nimble.framework */; };
 		B9C0805B211E2ED20072F7BC /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C08059211E2ED20072F7BC /* Quick.framework */; };
 		B9C08062211E2F7F0072F7BC /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C0805E211E2F7E0072F7BC /* ViewInterface.swift */; };
@@ -84,6 +87,10 @@
 		B91B4995211E27BD0015BEBC /* TWKamuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TWKamuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B91B4999211E27BD0015BEBC /* TWKamuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWKamuTests.swift; sourceTree = "<group>"; };
 		B91B499B211E27BD0015BEBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B91D6FF02125AEE200EF7BF3 /* RetrieveLibrariesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveLibrariesInteractor.swift; sourceTree = "<group>"; };
+		B91D6FF22125AEF200EF7BF3 /* RetrieveLibrariesInteractorProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveLibrariesInteractorProtocols.swift; sourceTree = "<group>"; };
+		B91D70092125B6CC00EF7BF3 /* KamuLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuLibrary.swift; sourceTree = "<group>"; };
+		B91D700B2125B72200EF7BF3 /* KamuLibraryObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuLibraryObject.swift; sourceTree = "<group>"; };
 		B93206A32121D165006F2836 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		B93206AB2121F539006F2836 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		B93206B221220124006F2836 /* HomeInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterfaces.swift; sourceTree = "<group>"; };
@@ -100,6 +107,7 @@
 		B93206C821222198006F2836 /* LibrariesWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrariesWireframe.swift; sourceTree = "<group>"; };
 		B93F3C0F2123077B0000D0A5 /* KamuLibraryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuLibraryCell.swift; sourceTree = "<group>"; };
 		B93F3C102123077B0000D0A5 /* KamuLibraryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KamuLibraryCell.xib; sourceTree = "<group>"; };
+		B99CC9FB2123135400738785 /* KamuConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuConstants.swift; sourceTree = "<group>"; };
 		B9C08058211E2ED20072F7BC /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		B9C08059211E2ED20072F7BC /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		B9C0805E211E2F7E0072F7BC /* ViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
@@ -122,8 +130,6 @@
 			files = (
 				B93206AD2121F8BD006F2836 /* Realm.framework in Frameworks */,
 				B93206B02121F8C9006F2836 /* RealmSwift.framework in Frameworks */,
-				B93206AC2121F539006F2836 /* RealmSwift.framework in Frameworks */,
-				B93206A52121DEBB006F2836 /* Realm.framework in Frameworks */,
 				FAD545A8666D78F5782C719B /* Pods_TWKamu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,6 +187,8 @@
 				B91B49A4211E27C50015BEBC /* Application */,
 				B9C0805C211E2F540072F7BC /* Base */,
 				B9C27BB4211E338300BBAFEC /* Navigation */,
+				B91D6FEE2125ACC000EF7BF3 /* Domain */,
+				B91D700D2125B76000EF7BF3 /* Repositories */,
 				B91B49A6211E27D30015BEBC /* Models */,
 				B91B49A5211E27CD0015BEBC /* Modules */,
 				B91B49A8211E27E00015BEBC /* Views */,
@@ -221,6 +229,7 @@
 		B91B49A6211E27D30015BEBC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B91D70082125B6BA00EF7BF3 /* Library */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -247,6 +256,47 @@
 				B91B4990211E27BD0015BEBC /* Info.plist */,
 			);
 			path = Properties;
+			sourceTree = "<group>";
+		};
+		B91D6FEE2125ACC000EF7BF3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B91D6FEF2125AEC500EF7BF3 /* Libraries */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B91D6FEF2125AEC500EF7BF3 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				B91D6FF02125AEE200EF7BF3 /* RetrieveLibrariesInteractor.swift */,
+				B91D6FF22125AEF200EF7BF3 /* RetrieveLibrariesInteractorProtocols.swift */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		B91D70082125B6BA00EF7BF3 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				B91D70092125B6CC00EF7BF3 /* KamuLibrary.swift */,
+				B91D700B2125B72200EF7BF3 /* KamuLibraryObject.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		B91D700D2125B76000EF7BF3 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				B91D700E2125B76A00EF7BF3 /* Libraries */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		B91D700E2125B76A00EF7BF3 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libraries;
 			sourceTree = "<group>";
 		};
 		B93206A72121F419006F2836 /* Home */ = {
@@ -292,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				B93206BF21220998006F2836 /* KamuStrings.swift */,
+				B99CC9FB2123135400738785 /* KamuConstants.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -542,6 +593,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B91D6FF32125AEF200EF7BF3 /* RetrieveLibrariesInteractorProtocols.swift in Sources */,
+				B91D700A2125B6CC00EF7BF3 /* KamuLibrary.swift in Sources */,
 				B93F3C112123077B0000D0A5 /* KamuLibraryCell.swift in Sources */,
 				B93206CE21222198006F2836 /* LibrariesWireframe.swift in Sources */,
 				B9C08065211E2F7F0072F7BC /* InteractorInterface.swift in Sources */,
@@ -549,6 +602,7 @@
 				B93206C021220998006F2836 /* KamuStrings.swift in Sources */,
 				B9C08063211E2F7F0072F7BC /* PresenterInterface.swift in Sources */,
 				B93206CA21222198006F2836 /* LibrariesPresenter.swift in Sources */,
+				B99CC9FC2123135400738785 /* KamuConstants.swift in Sources */,
 				B93206B921220124006F2836 /* HomePresenter.swift in Sources */,
 				B9C08069211E32540072F7BC /* BaseWireframe.swift in Sources */,
 				B9C27BBD211E34BE00BBAFEC /* KamuBlackNavigationBarTheme.swift in Sources */,
@@ -561,7 +615,9 @@
 				B93206B821220124006F2836 /* HomeInterfaces.swift in Sources */,
 				B9C08067211E2FF20072F7BC /* WireframeInterfaces.swift in Sources */,
 				B93206C921222198006F2836 /* LibrariesInterfaces.swift in Sources */,
+				B91D6FF12125AEE200EF7BF3 /* RetrieveLibrariesInteractor.swift in Sources */,
 				B93206BA21220124006F2836 /* HomeViewController.swift in Sources */,
+				B91D700C2125B72200EF7BF3 /* KamuLibraryObject.swift in Sources */,
 				B91B4985211E27BB0015BEBC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

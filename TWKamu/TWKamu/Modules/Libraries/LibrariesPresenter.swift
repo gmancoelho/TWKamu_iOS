@@ -13,9 +13,19 @@ import UIKit
 final class LibrariesPresenter {
   
   // MARK: - Private properties -
-  
+
   private unowned let view: LibrariesViewInterface
-  private let wireframe: LibrariesWireframeInterface
+  private let wireframe: LibrariesWireframeInterface!
+  
+  // MARK: - Data Source
+  
+  private var librariesItem: [String] = [] {
+    didSet {
+      if librariesItem != oldValue {
+        view.updateTableView()
+      }
+    }
+  }
   
   // MARK: - Lifecycle -
   
@@ -29,4 +39,37 @@ final class LibrariesPresenter {
 // MARK: - Extensions -
 
 extension LibrariesPresenter: LibrariesPresenterInterface {
+  
+  func libraryCellId() -> String {
+    return KamuConstants.Cells.library
+  }
+  
+  func totalItems() -> Int {
+    return librariesItem.count
+  }
+  
+  func cellFor(index: IndexPath, tableView: UITableView) -> UITableViewCell {
+    
+    let cellId = self.libraryCellId()
+    
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as? KamuLibraryCell
+      else {
+        return UITableViewCell()
+    }
+    
+    if librariesItem.isEmpty {
+      return UITableViewCell()
+    }
+    
+    let item = librariesItem[index.row]
+    
+    cell.setCity(city: item)
+    
+    return cell
+  }
+  
+  func clickInCellForRow(index: IndexPath) {
+    
+  }
+  
 }
