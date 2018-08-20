@@ -18,14 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ThoughtWorks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PuQ-ZB-QDD">
-                                <rect key="frame" x="79" y="612" width="217" height="35"/>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_kamu_logo" translatesAutoresizingMaskIntoConstraints="NO" id="4fK-cq-FfU">
-                                <rect key="frame" x="87.5" y="243.5" width="200" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconKamu" translatesAutoresizingMaskIntoConstraints="NO" id="4fK-cq-FfU">
+                                <rect key="frame" x="131.5" y="287.5" width="112.5" height="112.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4fK-cq-FfU" secondAttribute="height" multiplier="1:1" id="JeU-V6-LYt"/>
                                 </constraints>
@@ -34,9 +28,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="4fK-cq-FfU" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="DpK-4R-qnt"/>
-                            <constraint firstItem="4fK-cq-FfU" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.3" id="JtN-0g-Juv"/>
-                            <constraint firstItem="PuQ-ZB-QDD" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="YWX-bT-YIT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PuQ-ZB-QDD" secondAttribute="bottom" constant="20" id="iWA-92-nDB"/>
+                            <constraint firstItem="4fK-cq-FfU" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.3" id="Kuy-5i-drS"/>
                             <constraint firstItem="4fK-cq-FfU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="n8s-pa-xdG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -48,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="img_kamu_logo" width="123" height="33"/>
+        <image name="iconKamu" width="103" height="88"/>
     </resources>
 </document>

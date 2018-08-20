@@ -25,11 +25,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   // MARK: - Private Methods
   
   private func initBaseRouter() {
+        
     window = UIWindow(frame: UIScreen.main.bounds)
     if let window = window {
+      
       KamuApplicationRouter(window: window).initRouter()
     }
   
   }
+
 }
 

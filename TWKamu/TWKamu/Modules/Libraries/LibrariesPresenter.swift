@@ -16,10 +16,11 @@ final class LibrariesPresenter {
 
   private unowned let view: LibrariesViewInterface
   private let wireframe: LibrariesWireframeInterface!
+  private let librariesInteractor: RetrieveLibrariesInteractorInterface!
   
   // MARK: - Data Source
   
-  private var librariesItem: [String] = [] {
+  private var librariesItem: [KamuLibrary] = [] {
     didSet {
       if librariesItem != oldValue {
         view.updateTableView()
@@ -30,13 +31,25 @@ final class LibrariesPresenter {
   // MARK: - Lifecycle -
   
   init(wireframe: LibrariesWireframeInterface,
-       view: LibrariesViewInterface) {
+       view: LibrariesViewInterface,
+       librariesInteractor: RetrieveLibrariesInteractorInterface) {
     self.wireframe = wireframe
     self.view = view
+    self.librariesInteractor = librariesInteractor
   }
 }
 
 // MARK: - Extensions -
+
+extension LibrariesPresenter: RetrieveLibrariesInteractorReponse {
+  func getLibrariesSuccess(libraries: [KamuLibrary]) {
+    librariesItem = libraries
+  }
+  
+  func getLibrariesError(errorMessage: String) {
+    
+  }
+}
 
 extension LibrariesPresenter: LibrariesPresenterInterface {
   
@@ -63,7 +76,7 @@ extension LibrariesPresenter: LibrariesPresenterInterface {
     
     let item = librariesItem[index.row]
     
-    cell.setCity(city: item)
+    cell.setCity(city: item.cityName)
     
     return cell
   }

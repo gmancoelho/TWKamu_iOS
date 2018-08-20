@@ -11,10 +11,24 @@ import Foundation
 enum KamuStrings {
   
   enum Labels {
-    static let welcome = "Bem vindo"
+    
+    static let home_welcome = "Welcome"
+    static let home_desc = "Please use your TW email and password to login:"
+    static let home_emailError = "Please provide a valid email"
+    static let home_emailPlaceHolder = "TW Email"
+    static let home_passwordPlaceHolder = "Please provide a valid email"
+
+    static let libraries_office = "Select office"
+    
+    static let explore_title = "Explore"
   }
   
   enum Buttons {
-    static let start = "Start"
+    
+    static let login = "Login"
+    static let explore_back = "Change office"
+    
+    static let borrow = "Borrow"
+    static let borrowed = "Borrowed"
   }
 }

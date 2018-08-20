@@ -35,11 +35,11 @@ extension HomePresenter: HomePresenterInterface {
   }
   
   func configureWelcomeLabel() -> String {
-    return KamuStrings.Labels.welcome
+    return KamuStrings.Labels.home_welcome
   }
   
   func configureStartButton() -> String {
-    return KamuStrings.Buttons.start
+    return KamuStrings.Buttons.login
   }
   
 }

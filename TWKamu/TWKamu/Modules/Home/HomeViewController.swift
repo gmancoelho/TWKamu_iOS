@@ -12,8 +12,11 @@ final class HomeViewController: UIViewController {
   
   // MARK: - Outlets
   
+  @IBOutlet weak var lbldesc: UILabel!
   @IBOutlet weak var lblWelcome: UILabel!
-  @IBOutlet weak var btnStart: UIButton!
+  @IBOutlet weak var btnStart: KamuRedButton!
+  @IBOutlet weak var imgLogo: UIImageView!
+  @IBOutlet weak var viewTextFields: UIView!
   
   // MARK: - Class properties
   

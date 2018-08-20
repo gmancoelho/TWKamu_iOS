@@ -12,21 +12,25 @@ final class RetrieveLibrariesInteractor {
   
   // MARK: - Properties
   
+  var repository: LibraryRepository!
+  
   // MARK: - Response Delegate
-  var response: RetrieveLibrariesInteractorReponse!
+  weak var response: RetrieveLibrariesInteractorReponse!
   
   // MARK: - Init
 
-  init() {
-    
+  init(repository: LibraryRepository) {
+    self.repository = repository
   }
   
 }
 
-extension RetrieveLibrariesInteractor: RetrieveLibrariesInteractorProtocol {
+extension RetrieveLibrariesInteractor: RetrieveLibrariesInteractorInterface {
   
   func getLibraries() {
+    let libraries = repository.getAll()
     
+    response.getLibrariesSuccess(libraries: libraries)
   }
   
 }

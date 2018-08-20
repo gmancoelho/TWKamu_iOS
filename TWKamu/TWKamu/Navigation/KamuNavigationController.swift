@@ -30,7 +30,18 @@ class KamuNavigationController: UINavigationController {
   // MARK: - Lifecycle
   required convenience init() {
     self.init(navigationBarClass: nil, toolbarClass: nil)
-    customizeBackButton()
+    configureTheme()
+  }
+  
+  private func configureTheme() {
+    
+    self.navigationBar.tintColor = KamuColors.red
+    self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: KamuColors.red]
+    
+    if #available(iOS 11.0, *) {
+      self.navigationBar.prefersLargeTitles = true
+      self.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: KamuColors.red]
+    }
   }
   
   // MARK: - Navigation

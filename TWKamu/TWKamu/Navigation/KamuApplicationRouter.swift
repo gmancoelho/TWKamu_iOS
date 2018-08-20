@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 final class KamuApplicationRouter {
   
@@ -15,10 +16,14 @@ final class KamuApplicationRouter {
   let window:UIWindow
   let baseNavigationController: KamuNavigationController = KamuNavigationController()
   
+  // MARK: - Database
+  
   // MARK: - Init
   
   init(window: UIWindow) {
+    
     self.window = window
+    
     window.rootViewController = baseNavigationController
     window.backgroundColor = UIColor.white
     window.makeKeyAndVisible()
@@ -27,8 +32,8 @@ final class KamuApplicationRouter {
   // MARK: - Router
   
   func initRouter() {
-    let homeModule = HomeWireframe(navigationController: baseNavigationController)
-    homeModule.show(with: .root)
+    let splashModule = KamuSplashWireframe(navigationController: baseNavigationController)
+    splashModule.show(with: .root)
   }
   
   // MARK: - Private Methods

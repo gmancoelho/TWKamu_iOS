@@ -12,7 +12,7 @@ struct KamuLibrary {
   var cityName: String = ""
 }
 
-extension KamuLibrary {
+extension KamuLibrary: Equatable {
   
   static func ==(l: KamuLibrary, r: KamuLibrary) -> Bool {
     return l.cityName == r.cityName

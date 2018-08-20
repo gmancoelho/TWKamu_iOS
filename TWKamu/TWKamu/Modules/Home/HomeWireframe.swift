@@ -35,7 +35,8 @@ final class HomeWireframe: BaseWireframe {
   // MARK: - Private Routing -
 
   private func createLibraryModule() {
-    
+    let librariesModule = LibrariesWireframe(navigationController: navigationController)
+    librariesModule.show(with: .root)
   }
   
 }

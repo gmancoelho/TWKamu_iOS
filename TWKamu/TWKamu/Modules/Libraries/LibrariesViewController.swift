@@ -11,9 +11,8 @@ import UIKit
 final class LibrariesViewController: UIViewController {
   
   // MARK: - Outlets
-  @IBOutlet weak var lblLibraryTitle: UILabel!
-  
   @IBOutlet weak var tableView: UITableView!
+  
   // MARK: - Class properties
   
   // MARK: - Public properties
@@ -55,6 +54,9 @@ final class LibrariesViewController: UIViewController {
   // MARK: - Class Configurations
   
   func viewConfiguration() {
+    
+    self.title = KamuStrings.Labels.libraries_office
+    
     configureTableView()
   }
   

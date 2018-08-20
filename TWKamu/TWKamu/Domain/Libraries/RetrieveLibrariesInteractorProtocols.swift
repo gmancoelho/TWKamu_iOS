@@ -8,15 +8,15 @@
 
 import Foundation
 
-protocol RetrieveLibrariesInteractorProtocol {
+protocol RetrieveLibrariesInteractorInterface {
   
   func getLibraries()
   
 }
 
-protocol RetrieveLibrariesInteractorReponse {
+protocol RetrieveLibrariesInteractorReponse: class {
   
-  func getLibrariesSuccess(libraries: [String])
+  func getLibrariesSuccess(libraries: [KamuLibrary])
   func getLibrariesError(errorMessage: String)
 
 }
