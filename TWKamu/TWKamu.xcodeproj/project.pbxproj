@@ -20,7 +20,6 @@
 		B91B4985211E27BB0015BEBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B4984211E27BB0015BEBC /* AppDelegate.swift */; };
 		B91B498C211E27BD0015BEBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B91B498B211E27BD0015BEBC /* Assets.xcassets */; };
 		B91B498F211E27BD0015BEBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91B498D211E27BD0015BEBC /* LaunchScreen.storyboard */; };
-		B91B499A211E27BD0015BEBC /* TWKamuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B4999211E27BD0015BEBC /* TWKamuTests.swift */; };
 		B91D6FF12125AEE200EF7BF3 /* RetrieveLibrariesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91D6FF02125AEE200EF7BF3 /* RetrieveLibrariesInteractor.swift */; };
 		B91D6FF32125AEF200EF7BF3 /* RetrieveLibrariesInteractorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91D6FF22125AEF200EF7BF3 /* RetrieveLibrariesInteractorProtocols.swift */; };
 		B91D700A2125B6CC00EF7BF3 /* KamuLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91D70092125B6CC00EF7BF3 /* KamuLibrary.swift */; };
@@ -69,6 +68,9 @@
 		B9AD1A2B212C53E000B65018 /* KamuExploreWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD1A25212C53E000B65018 /* KamuExploreWireframe.swift */; };
 		B9AD1A2D212C597200B65018 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD1A2C212C597200B65018 /* String+Extension.swift */; };
 		B9AD1A30212C6EF200B65018 /* KeyboardConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD1A2F212C6EF200B65018 /* KeyboardConstraint.swift */; };
+		B9AD1A38212C7DA200B65018 /* quizMock.json in Resources */ = {isa = PBXBuildFile; fileRef = B9AD1A33212C7DA100B65018 /* quizMock.json */; };
+		B9AD1A39212C7DA200B65018 /* KamuLibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD1A34212C7DA100B65018 /* KamuLibraryTests.swift */; };
+		B9AD1A3B212C7DA200B65018 /* KamuRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD1A37212C7DA200B65018 /* KamuRepositoryTests.swift */; };
 		B9C0805A211E2ED20072F7BC /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C08058211E2ED20072F7BC /* Nimble.framework */; };
 		B9C0805B211E2ED20072F7BC /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C08059211E2ED20072F7BC /* Quick.framework */; };
 		B9C08062211E2F7F0072F7BC /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C0805E211E2F7E0072F7BC /* ViewInterface.swift */; };
@@ -127,7 +129,6 @@
 		B91B498E211E27BD0015BEBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B91B4990211E27BD0015BEBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B91B4995211E27BD0015BEBC /* TWKamuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TWKamuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B91B4999211E27BD0015BEBC /* TWKamuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWKamuTests.swift; sourceTree = "<group>"; };
 		B91B499B211E27BD0015BEBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B91D6FF02125AEE200EF7BF3 /* RetrieveLibrariesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveLibrariesInteractor.swift; sourceTree = "<group>"; };
 		B91D6FF22125AEF200EF7BF3 /* RetrieveLibrariesInteractorProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveLibrariesInteractorProtocols.swift; sourceTree = "<group>"; };
@@ -175,6 +176,9 @@
 		B9AD1A25212C53E000B65018 /* KamuExploreWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuExploreWireframe.swift; sourceTree = "<group>"; };
 		B9AD1A2C212C597200B65018 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		B9AD1A2F212C6EF200B65018 /* KeyboardConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardConstraint.swift; sourceTree = "<group>"; };
+		B9AD1A33212C7DA100B65018 /* quizMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = quizMock.json; sourceTree = "<group>"; };
+		B9AD1A34212C7DA100B65018 /* KamuLibraryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KamuLibraryTests.swift; sourceTree = "<group>"; };
+		B9AD1A37212C7DA200B65018 /* KamuRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KamuRepositoryTests.swift; sourceTree = "<group>"; };
 		B9C08058211E2ED20072F7BC /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		B9C08059211E2ED20072F7BC /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		B9C0805E211E2F7E0072F7BC /* ViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
@@ -290,7 +294,8 @@
 		B91B4998211E27BD0015BEBC /* TWKamuTests */ = {
 			isa = PBXGroup;
 			children = (
-				B91B4999211E27BD0015BEBC /* TWKamuTests.swift */,
+				B9AD1A31212C7DA100B65018 /* Models */,
+				B9AD1A36212C7DA200B65018 /* Repository */,
 				B91B499B211E27BD0015BEBC /* Info.plist */,
 			);
 			path = TWKamuTests;
@@ -520,6 +525,31 @@
 			path = KeyboardConstraint;
 			sourceTree = "<group>";
 		};
+		B9AD1A31212C7DA100B65018 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B9AD1A32212C7DA100B65018 /* Mock */,
+				B9AD1A34212C7DA100B65018 /* KamuLibraryTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B9AD1A32212C7DA100B65018 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				B9AD1A33212C7DA100B65018 /* quizMock.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		B9AD1A36212C7DA200B65018 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B9AD1A37212C7DA200B65018 /* KamuRepositoryTests.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		B9C0805C211E2F540072F7BC /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -674,6 +704,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9AD1A38212C7DA200B65018 /* quizMock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -822,7 +853,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B91B499A211E27BD0015BEBC /* TWKamuTests.swift in Sources */,
+				B9AD1A39212C7DA200B65018 /* KamuLibraryTests.swift in Sources */,
+				B9AD1A3B212C7DA200B65018 /* KamuRepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -947,6 +979,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -972,6 +1005,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = CH8UYM6CUQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -996,6 +1030,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = CH8UYM6CUQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
