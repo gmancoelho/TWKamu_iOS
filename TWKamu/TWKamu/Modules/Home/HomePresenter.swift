@@ -19,6 +19,13 @@ final class HomePresenter {
   
   private var userEmail:String = "" {
     didSet {
+      
+      if !userEmail.isEmpty {
+        view.showEmailWarning(show: userEmail.isEmailValid)
+      } else {
+        view.showEmailWarning(show: false)
+      }
+      
       updateLoginStatus()
     }
   }

@@ -103,7 +103,6 @@ final class HomeViewController: UIViewController {
 
     tfEmail.iconImage = UIImage(imageLiteralResourceName: "iconEmail")
     tfPassword.iconImage = UIImage(imageLiteralResourceName: "iconPassword")
-    tfPassword.iconWidth = 14
   }
   
   private func addTextFieldObservers() {
@@ -213,6 +212,10 @@ extension HomeViewController: HomeViewInterface {
   
   func loginButtonIs(enabled: Bool) {
     btnStart.isEnabled = enabled
+  }
+  
+  func showEmailWarning(show: Bool) {
+    tfEmail.errorMessage = show ? nil : KamuStrings.Labels.home_emailError
   }
   
 }

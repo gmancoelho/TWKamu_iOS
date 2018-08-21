@@ -59,12 +59,6 @@ and password to login:</string>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="iconEmail"/>
-                                <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
-                                    <integer key="value" value="0"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="tfDidEndOnExit:" destination="-1" eventType="primaryActionTriggered" id="2fg-AD-Fyy"/>
                             </connections>
@@ -74,12 +68,6 @@ and password to login:</string>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="go" secureTextEntry="YES"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="iconPassword"/>
-                                <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
-                                    <integer key="value" value="0"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="tfDidEndOnExit:" destination="-1" eventType="primaryActionTriggered" id="xnh-lp-V3v"/>
                             </connections>
@@ -129,8 +117,6 @@ and password to login:</string>
         </view>
     </objects>
     <resources>
-        <image name="iconEmail" width="28" height="28"/>
-        <image name="iconPassword" width="16" height="20"/>
         <image name="kamuLogo" width="123" height="33"/>
     </resources>
 </document>

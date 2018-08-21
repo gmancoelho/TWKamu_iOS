@@ -53,8 +53,7 @@ class KamuRedButton: UIButton {
     super.layoutSubviews()
     
     /// Set Round Corners
-    let rad = self.frame.height/2
-    self.roundCorners(.allCorners, radius: rad)
+    self.roundCorners(.allCorners, radius: 10)
     
     setUpFonts()
     
