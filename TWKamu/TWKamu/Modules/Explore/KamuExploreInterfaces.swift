@@ -21,7 +21,16 @@ protocol KamuExploreWireframeInterface: WireframeInterface {
 }
 
 protocol KamuExploreViewInterface: ViewInterface {
+  func updateCollectionView()
 }
 
 protocol KamuExplorePresenterInterface: PresenterInterface {
+  
+  // Actions
+  func clickInCell(index:IndexPath)
+  
+  // CollectionView
+  func numberOfItens() -> Int
+  func cellForIndex(index:IndexPath, collectionView:UICollectionView) -> UICollectionViewCell
+  func returnCellId() -> String
 }

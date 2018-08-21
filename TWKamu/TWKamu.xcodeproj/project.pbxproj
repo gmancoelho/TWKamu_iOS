@@ -74,6 +74,10 @@
 		B9AD1A3F212C90F300B65018 /* KamuBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD1A3E212C90F300B65018 /* KamuBook.swift */; };
 		B9AD1A41212C91D800B65018 /* KamuBookObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD1A40212C91D800B65018 /* KamuBookObject.swift */; };
 		B9AD1A44212C966700B65018 /* KamuBookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD1A43212C966700B65018 /* KamuBookRepository.swift */; };
+		B9AD1A48212C997E00B65018 /* KamuBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD1A46212C997E00B65018 /* KamuBookCell.swift */; };
+		B9AD1A49212C997E00B65018 /* KamuBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9AD1A47212C997E00B65018 /* KamuBookCell.xib */; };
+		B9AD1A4C212CB33000B65018 /* library.json in Resources */ = {isa = PBXBuildFile; fileRef = B9AD1A4B212CB33000B65018 /* library.json */; };
+		B9AD1A4D212CB33000B65018 /* library.json in Resources */ = {isa = PBXBuildFile; fileRef = B9AD1A4B212CB33000B65018 /* library.json */; };
 		B9C0805A211E2ED20072F7BC /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C08058211E2ED20072F7BC /* Nimble.framework */; };
 		B9C0805B211E2ED20072F7BC /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C08059211E2ED20072F7BC /* Quick.framework */; };
 		B9C08062211E2F7F0072F7BC /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C0805E211E2F7E0072F7BC /* ViewInterface.swift */; };
@@ -185,6 +189,9 @@
 		B9AD1A3E212C90F300B65018 /* KamuBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuBook.swift; sourceTree = "<group>"; };
 		B9AD1A40212C91D800B65018 /* KamuBookObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuBookObject.swift; sourceTree = "<group>"; };
 		B9AD1A43212C966700B65018 /* KamuBookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuBookRepository.swift; sourceTree = "<group>"; };
+		B9AD1A46212C997E00B65018 /* KamuBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuBookCell.swift; sourceTree = "<group>"; };
+		B9AD1A47212C997E00B65018 /* KamuBookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KamuBookCell.xib; sourceTree = "<group>"; };
+		B9AD1A4B212CB33000B65018 /* library.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = library.json; sourceTree = "<group>"; };
 		B9C08058211E2ED20072F7BC /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		B9C08059211E2ED20072F7BC /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		B9C0805E211E2F7E0072F7BC /* ViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
@@ -340,6 +347,7 @@
 		B91B49A7211E27D70015BEBC /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				B9AD1A4A212CB31800B65018 /* JSONs */,
 				B91D701621276E0600EF7BF3 /* Animations */,
 				B91B498B211E27BD0015BEBC /* Assets.xcassets */,
 			);
@@ -466,6 +474,7 @@
 		B93206A92121F42C006F2836 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
+				B9AD1A45212C995B00B65018 /* BookCell */,
 				B9AD1A20212C53E000B65018 /* KamuExploreInterfaces.swift */,
 				B9AD1A21212C53E000B65018 /* KamuExplorePresenter.swift */,
 				B9AD1A22212C53E000B65018 /* KamuExploreViewController.swift */,
@@ -573,6 +582,23 @@
 				B9AD1A43212C966700B65018 /* KamuBookRepository.swift */,
 			);
 			path = Books;
+			sourceTree = "<group>";
+		};
+		B9AD1A45212C995B00B65018 /* BookCell */ = {
+			isa = PBXGroup;
+			children = (
+				B9AD1A46212C997E00B65018 /* KamuBookCell.swift */,
+				B9AD1A47212C997E00B65018 /* KamuBookCell.xib */,
+			);
+			path = BookCell;
+			sourceTree = "<group>";
+		};
+		B9AD1A4A212CB31800B65018 /* JSONs */ = {
+			isa = PBXGroup;
+			children = (
+				B9AD1A4B212CB33000B65018 /* library.json */,
+			);
+			path = JSONs;
 			sourceTree = "<group>";
 		};
 		B9C0805C211E2F540072F7BC /* Base */ = {
@@ -720,8 +746,10 @@
 				B91B498F211E27BD0015BEBC /* LaunchScreen.storyboard in Resources */,
 				B93F3C122123077B0000D0A5 /* KamuLibraryCell.xib in Resources */,
 				B91B498C211E27BD0015BEBC /* Assets.xcassets in Resources */,
+				B9AD1A49212C997E00B65018 /* KamuBookCell.xib in Resources */,
 				B93206BC21220124006F2836 /* HomeViewController.xib in Resources */,
 				B9191784212AF0BB006EBD80 /* KamuSplashViewController.xib in Resources */,
+				B9AD1A4C212CB33000B65018 /* library.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,6 +758,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9AD1A38212C7DA200B65018 /* quizMock.json in Resources */,
+				B9AD1A4D212CB33000B65018 /* library.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -873,6 +902,7 @@
 				B9AD1A0F212B00F700B65018 /* UIFont+Extension.swift in Sources */,
 				B91B4985211E27BB0015BEBC /* AppDelegate.swift in Sources */,
 				B9AD1A44212C966700B65018 /* KamuBookRepository.swift in Sources */,
+				B9AD1A48212C997E00B65018 /* KamuBookCell.swift in Sources */,
 				B91D70122125B8F200EF7BF3 /* KamuLibraryRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

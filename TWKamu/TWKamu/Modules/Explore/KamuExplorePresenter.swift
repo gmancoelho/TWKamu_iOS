@@ -17,6 +17,16 @@ final class KamuExplorePresenter {
   private unowned let view: KamuExploreViewInterface
   private let wireframe: KamuExploreWireframeInterface
   
+  // MARK: - Collection Itens
+  
+  let cellId = KamuConstants.Cells.book
+  
+  var cellItens:[KamuBook] = [] {
+    didSet {
+      view.updateCollectionView()
+    }
+  }
+  
   // MARK: - Lifecycle -
   
   init(wireframe: KamuExploreWireframeInterface,
@@ -29,4 +39,33 @@ final class KamuExplorePresenter {
 // MARK: - Extensions -
 
 extension KamuExplorePresenter: KamuExplorePresenterInterface {
+  
+  func clickInCell(index: IndexPath) {
+
+  }
+  
+  func numberOfItens() -> Int {
+    return cellItens.count
+  }
+  
+  func cellForIndex(index: IndexPath, collectionView: UICollectionView) -> UICollectionViewCell {
+    
+    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.cellId, for: index) as? KamuBookCell else {
+      return KamuBookCell()
+    }
+    
+    let item = cellItens[index.row]
+    
+    let isBorrowed = ( item.user != nil && item.borrowDate != nil)
+    
+    cell.configureCellWith(title: item.title,
+                           author: item.author,
+                           isBorrowed: isBorrowed)
+    
+    return cell
+  }
+  
+  func returnCellId() -> String {
+    return self.cellId
+  }
 }

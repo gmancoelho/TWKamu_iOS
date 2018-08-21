@@ -56,9 +56,43 @@ final class KamuExploreViewController: UIViewController {
   
   func viewConfiguration() {
     self.title = KamuStrings.Labels.explore_title
+    
+    configureCollectionView()
   }
   
   // MARK: - Class Methods
+  
+  private func configureCollectionView() {
+    
+    self.collectionView.delegate = self
+    self.collectionView.dataSource = self
+    
+    let nib = UINib(nibName: presenter.returnCellId(), bundle: nil)
+    
+    self.collectionView.register(nib, forCellWithReuseIdentifier: presenter.returnCellId())
+    
+    self.collectionViewLayout()
+    
+    self.collectionView.reloadData()
+    
+  }
+  
+  private func collectionViewLayout() {
+    
+    let leftAndRightPaddings: CGFloat = 4.0
+    let numberOfItemsPerRow: CGFloat = 2.0
+    
+    let bounds = UIScreen.main.bounds
+    
+    let width = (bounds.size.width - leftAndRightPaddings*(numberOfItemsPerRow+1)) / numberOfItemsPerRow
+    
+    let height = width * 2/3
+    
+    if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+      layout.itemSize = CGSize(width, height)
+    }
+  }
+  
   
   // MARK: - UIActions
   
@@ -66,5 +100,30 @@ final class KamuExploreViewController: UIViewController {
 
 // MARK: - Extensions
 
+// MARK: - UICollectionView
+
+extension KamuExploreViewController: UICollectionViewDataSource {
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    presenter.clickInCell(index: indexPath)
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return presenter.numberOfItens()
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    return presenter.cellForIndex(index: indexPath, collectionView: collectionView)
+  }
+  
+}
+
+extension KamuExploreViewController: UICollectionViewDelegate { }
+
+
 extension KamuExploreViewController: KamuExploreViewInterface {
+  
+  func updateCollectionView() {
+    self.collectionView.reloadData()
+  }
 }

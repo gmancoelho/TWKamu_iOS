@@ -19,7 +19,7 @@ class KamuRedButton: UIButton {
   private var shadowLayer: CAShapeLayer!
   
   private var baseColor: UIColor = KamuColors.red
-  private var disabledColor: UIColor = KamuColors.plaeGrey
+  private var disabledColor: UIColor = KamuColors.paleGrey
   
   // MARK: - Public Properties
   

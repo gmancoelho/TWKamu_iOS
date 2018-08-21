@@ -62,7 +62,6 @@ extension KamuSplashViewController: KamuSplashViewInterface {
   func startAnimation() {
     
     splashAnimation.play { (finished) in
-      print("Finished")
       self.presenter.animationIsCompleted()
     }
   }

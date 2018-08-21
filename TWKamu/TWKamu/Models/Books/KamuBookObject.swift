@@ -25,7 +25,7 @@ class KamuBookObject: Object {
   @objc dynamic var borrowDate: Date? = nil
 
   @objc dynamic var numberOfPages: Int = -1
-  @objc dynamic var publicationDate: Date = Date(timeIntervalSince1970: 0)
+  @objc dynamic var publicationDate: String = ""
   
   // MARK: - PK
   
@@ -45,7 +45,7 @@ class KamuBookObject: Object {
                    user: String?,
                    borrowDate: Date?,
                    numberOfPages: Int,
-                   publicationDate: Date) {
+                   publicationDate: String) {
     self.init()
     
     self.author = author

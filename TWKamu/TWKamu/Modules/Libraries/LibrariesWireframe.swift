@@ -61,7 +61,7 @@ extension LibrariesWireframe: LibrariesWireframeInterface {
       
     case .back:
       goBack()
-      
+       
     case .goToLibrary(let lib):
       goToLib(library: lib)
     }

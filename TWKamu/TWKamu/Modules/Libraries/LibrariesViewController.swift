@@ -11,6 +11,7 @@ import UIKit
 final class LibrariesViewController: UIViewController {
   
   // MARK: - Outlets
+  
   @IBOutlet weak var tableView: UITableView!
   
   // MARK: - Class properties
@@ -23,24 +24,15 @@ final class LibrariesViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.viewConfiguration()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+    self.viewConfiguration()
     presenter.viewWillAppear(animated: animated)
-  }
-  
-  override func viewWillDisappear(_ animated: Bool) {
-    super.viewWillDisappear(animated)
     
   }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-  
+
   // MARK: - Init Deinit -
   
   required convenience init() {
@@ -53,7 +45,7 @@ final class LibrariesViewController: UIViewController {
   
   // MARK: - Class Configurations
   
-  func viewConfiguration() {
+  private func viewConfiguration() {
     
     self.title = KamuStrings.Labels.libraries_office
     
@@ -64,13 +56,16 @@ final class LibrariesViewController: UIViewController {
   
   private func configureTableView() {
     
-    tableView.dataSource = self
-    tableView.delegate = self
     
     let id = presenter.libraryCellId()
     let nib = UINib(nibName: id, bundle: nil)
     tableView.register(nib, forCellReuseIdentifier: id)
     
+    tableView.dataSource = self
+    tableView.delegate = self
+    
+    tableView.reloadData()
+
   }
   
   // MARK: - UIActions
@@ -87,7 +82,11 @@ extension LibrariesViewController: LibrariesViewInterface {
   
 }
 
-extension LibrariesViewController: UITableViewDataSource {
+extension LibrariesViewController: UITableViewDataSource, UITableViewDelegate {
+  
+  func numberOfSections(in tableView: UITableView) -> Int {
+    return 1
+  }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return presenter.totalItems()
@@ -98,8 +97,9 @@ extension LibrariesViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 50
+    return 60
   }
+  
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     let view = UIView()
     
@@ -123,15 +123,12 @@ extension LibrariesViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return 40
+    return 50
   }
-  
-}
-
-extension LibrariesViewController: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    print("Click")
     presenter.clickInCellForRow(index: indexPath)
   }
-
+  
 }

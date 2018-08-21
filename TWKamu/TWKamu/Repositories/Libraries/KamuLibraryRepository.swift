@@ -20,7 +20,7 @@ final class KamuLibraryRepository {
   init(realm: Realm) {
     self.realm = realm
   }
-  
+    
 }
 
 extension KamuLibraryRepository: RepositoryProtocol {

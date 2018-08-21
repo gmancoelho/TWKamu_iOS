@@ -22,8 +22,8 @@ class KamuNavigationController: UINavigationController {
 
   private func configureTheme() {
     
-    self.navigationBar.backgroundColor = KamuColors.plaeGrey
-    
+    self.navigationBar.backgroundColor = KamuColors.paleGrey
+    self.navigationBar.isTranslucent = false
     self.navigationBar.tintColor = KamuColors.red
     self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: KamuColors.black]
     

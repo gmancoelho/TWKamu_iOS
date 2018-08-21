@@ -23,6 +23,24 @@ final class RetrieveLibrariesInteractor {
     self.repository = repository
   }
   
+  // MARK: - Private Methods
+  
+  private func openLibraryJSON() -> [[String: Any]]? {
+    
+        if let url = Bundle.main.url(forResource: "library", withExtension: "json") {
+          do {
+            let data = try Data(contentsOf: url)
+            let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments)
+            return json as? [[String: Any]]
+          } catch {
+            return nil
+          }
+        }
+    return nil
+  }
+  
+  
+  
 }
 
 extension RetrieveLibrariesInteractor: RetrieveLibrariesInteractorInterface {
@@ -34,9 +52,17 @@ extension RetrieveLibrariesInteractor: RetrieveLibrariesInteractorInterface {
       return
     }
     
-    let libraries = repository.getAll()
+    if let jsonArray = openLibraryJSON(),
+      repository.getObjectsCount() == 0 {
+      
+      let libraries = KamuLibrary.parseArrayFromJSON(array: jsonArray)
+      for lib in libraries {
+        _ = repository.create(a: lib)
+      }
+    }
     
-    resp.getLibrariesSuccess(libraries: libraries)
+    
+    resp.getLibrariesSuccess(libraries: repository.getAll())
   }
   
 }

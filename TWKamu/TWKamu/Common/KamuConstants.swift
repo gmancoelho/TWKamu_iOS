@@ -16,6 +16,7 @@ enum KamuConstants {
   
   enum Cells {
     static let library = "KamuLibraryCell"
+    static let book = "KamuBookCell"
   }
   
 }
