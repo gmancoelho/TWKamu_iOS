@@ -21,10 +21,6 @@ final class RetrieveLibrariesInteractor {
 
   init(repository: LibraryRepository) {
     self.repository = repository
-    
-    _ = repository.create(a: KamuLibrary(cityName:"Teste", id: 1))
-    _ = repository.create(a: KamuLibrary(cityName:"Teste1", id: 2))
-    _ = repository.create(a: KamuLibrary(cityName:"Teste2", id: 3))
   }
   
 }

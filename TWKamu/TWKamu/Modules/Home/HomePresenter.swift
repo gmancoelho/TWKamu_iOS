@@ -21,7 +21,7 @@ final class HomePresenter {
     didSet {
       
       if !userEmail.isEmpty {
-        view.showEmailWarning(show: userEmail.isEmailValid)
+        view.showEmailWarning(show: !userEmail.isEmailValid)
       } else {
         view.showEmailWarning(show: false)
       }

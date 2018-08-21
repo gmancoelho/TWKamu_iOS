@@ -14,7 +14,10 @@ class KamuLibraryObject: Object {
   // MARK: - Properties
   
   @objc dynamic var cityName: String = ""
+  @objc dynamic var slug: String = ""
   @objc dynamic var id:Int = -1
+  
+  var books = List<KamuBookObject>()
   
   // MARK: - PK
   
@@ -24,16 +27,26 @@ class KamuLibraryObject: Object {
 
   // MARK: - Init
   
-  convenience init(cityName: String, id: Int) {
+  convenience init(cityName: String, slug:String, books: [KamuBook], id: Int) {
     self.init()
+    
     self.cityName = cityName
     self.id = id
+    self.slug = slug
+    
+    let arr = books.map({$0.object})
+    
+    self.books = List(arr)
+    
   }
   
   // MARK: - Adapter
   
   var kamuLibrary: KamuLibrary {
-    return KamuLibrary(cityName: self.cityName, id: self.id)
+    return KamuLibrary(cityName: self.cityName,
+                       slug: self.slug,
+                       books: books.map({$0.kamuBook}),
+                       id: self.id)
   }
 
 }
@@ -42,7 +55,11 @@ class KamuLibraryObject: Object {
 
 extension KamuLibrary {
   var object: KamuLibraryObject {
-    return KamuLibraryObject(cityName: cityName, id: id)
+    
+    return KamuLibraryObject(cityName: cityName,
+                             slug: slug,
+                             books: books,
+                             id: id)
   }
 }
 

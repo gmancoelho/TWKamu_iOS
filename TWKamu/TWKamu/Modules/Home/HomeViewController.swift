@@ -215,7 +215,7 @@ extension HomeViewController: HomeViewInterface {
   }
   
   func showEmailWarning(show: Bool) {
-    tfEmail.errorMessage = show ? nil : KamuStrings.Labels.home_emailError
+    tfEmail.errorMessage = show ? KamuStrings.Labels.home_emailError : nil
   }
   
 }

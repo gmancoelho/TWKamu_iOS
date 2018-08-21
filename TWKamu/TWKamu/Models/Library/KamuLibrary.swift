@@ -11,14 +11,15 @@ import Foundation
 struct KamuLibrary {
   
   var cityName: String = ""
+  var slug: String = ""
+  var books: [KamuBook] = []
   var id:Int = -1
-  
 }
 
 extension KamuLibrary: Equatable {
   
   static func ==(l: KamuLibrary, r: KamuLibrary) -> Bool {
-    return l.cityName == r.cityName
+    return l.cityName == r.cityName &&
+      l.id == r.id
   }
-  
 }

@@ -46,7 +46,8 @@ final class LibrariesWireframe: BaseWireframe {
   }
   
   private func goToLib(library: KamuLibrary) {
-    
+    let exploreModule = KamuExploreWireframe(navigationController: navigationController)
+    exploreModule.show(with: .push, animated: true)
   }
   
 }
