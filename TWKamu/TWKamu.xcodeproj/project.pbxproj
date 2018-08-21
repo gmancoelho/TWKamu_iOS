@@ -67,6 +67,7 @@
 		B9AD1A28212C53E000B65018 /* KamuExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD1A22212C53E000B65018 /* KamuExploreViewController.swift */; };
 		B9AD1A2A212C53E000B65018 /* KamuExploreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9AD1A24212C53E000B65018 /* KamuExploreViewController.xib */; };
 		B9AD1A2B212C53E000B65018 /* KamuExploreWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD1A25212C53E000B65018 /* KamuExploreWireframe.swift */; };
+		B9AD1A2D212C597200B65018 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD1A2C212C597200B65018 /* String+Extension.swift */; };
 		B9C0805A211E2ED20072F7BC /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C08058211E2ED20072F7BC /* Nimble.framework */; };
 		B9C0805B211E2ED20072F7BC /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C08059211E2ED20072F7BC /* Quick.framework */; };
 		B9C08062211E2F7F0072F7BC /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C0805E211E2F7E0072F7BC /* ViewInterface.swift */; };
@@ -171,6 +172,7 @@
 		B9AD1A22212C53E000B65018 /* KamuExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuExploreViewController.swift; sourceTree = "<group>"; };
 		B9AD1A24212C53E000B65018 /* KamuExploreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KamuExploreViewController.xib; sourceTree = "<group>"; };
 		B9AD1A25212C53E000B65018 /* KamuExploreWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuExploreWireframe.swift; sourceTree = "<group>"; };
+		B9AD1A2C212C597200B65018 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		B9C08058211E2ED20072F7BC /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		B9C08059211E2ED20072F7BC /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		B9C0805E211E2F7E0072F7BC /* ViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
@@ -416,6 +418,7 @@
 				B91D702121276E9A00EF7BF3 /* UIView+Extension.swift */,
 				B91D701C21276E8F00EF7BF3 /* UIViewController+Extension.swift */,
 				B9AD1A0E212B00F700B65018 /* UIFont+Extension.swift */,
+				B9AD1A2C212C597200B65018 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -770,6 +773,7 @@
 				B9AD1A27212C53E000B65018 /* KamuExplorePresenter.swift in Sources */,
 				B99CC9FC2123135400738785 /* KamuConstants.swift in Sources */,
 				B919178E212AF666006EBD80 /* KamuSplashPresenter.swift in Sources */,
+				B9AD1A2D212C597200B65018 /* String+Extension.swift in Sources */,
 				B91D702321276E9F00EF7BF3 /* UIViewController+Extension.swift in Sources */,
 				B93206B921220124006F2836 /* HomePresenter.swift in Sources */,
 				B91D70152125EBC200EF7BF3 /* KamuDataBase.swift in Sources */,

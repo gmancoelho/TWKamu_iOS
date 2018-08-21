@@ -12,6 +12,8 @@ import UIKit
 enum HomeNavigationOption {
   
   case goToLibraries
+  case showError(String)
+
 }
 
 protocol HomeWireframeInterface: WireframeInterface {
@@ -20,16 +22,30 @@ protocol HomeWireframeInterface: WireframeInterface {
 
 protocol HomeViewInterface: ViewInterface {
   
-  
-  
+  func loginButtonIs(enabled:Bool)
+  func loginCompleted(success:Bool)
 }
 
 protocol HomePresenterInterface: PresenterInterface {
   
-  func startIsPressed()
+  // Properties
+
+  var minimumPasswordSize: Int { get }
+
+  // Actions
   
+  func startIsPressed()
+  func tfEmailIsChanged(email:String)
+  func tfPasswordIsChanged(password:String)
+  
+  // Configuration
+
   func configureStartButton() -> String
   func configureWelcomeLabel() -> String
+  
+  // Notification
+  func showErrorMessage(message:String)
+
 }
 
 protocol HomeInteractorInterface: InteractorInterface {

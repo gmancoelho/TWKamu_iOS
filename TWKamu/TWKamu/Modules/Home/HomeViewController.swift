@@ -63,18 +63,32 @@ final class HomeViewController: UIViewController {
   private func viewConfiguration() {
     
     configureTextFields()
+    configureButtons()
+    
     hideKeyboardWhenTap()
+    addTextFieldObservers()
     
     lblWelcome.text = presenter.configureWelcomeLabel()
-    btnStart.setTitle(presenter.configureStartButton(), for: .normal)
   }
   
   // MARK: - Class Methods
   
+  private func configureButtons() {
+    
+    btnStart.isEnabled = false
+    btnStart.setTitle(presenter.configureStartButton(), for: .normal)
+    
+  }
+  
   private func configureTextFields() {
+    
+    tfEmail.delegate = self
+    tfPassword.delegate = self
     
     tfEmail.basicSetUp()
     tfPassword.basicSetUp()
+    
+    tfPassword.isSecureTextEntry = true
 
     tfEmail.placeholder = KamuStrings.Labels.home_emailPlaceHolder
     tfEmail.title = KamuStrings.Labels.home_emailPlaceHolder
@@ -85,20 +99,110 @@ final class HomeViewController: UIViewController {
     tfEmail.iconImage = UIImage(imageLiteralResourceName: "iconEmail")
     tfPassword.iconImage = UIImage(imageLiteralResourceName: "iconPassword")
     tfPassword.iconWidth = 14
-
+  }
+  
+  private func addTextFieldObservers() {
+    // Get notified every time the text changes, so we can save it
+    let notificationCenter = NotificationCenter.default
+    notificationCenter.addObserver(self,
+                                   selector: #selector(textFieldDidChange(_:)),
+                                   name: Notification.Name.UITextFieldTextDidChange,
+                                   object: nil)
+  }
+  
+  // MARK: - TextField Observer
+  
+  @objc func textFieldDidChange(_ sender: Any) {
+    
+    if let notification = sender as? Notification,
+      let textFieldChanged = notification.object as? UITextField {
+      
+      if textFieldChanged == self.tfEmail,
+        let text = textFieldChanged.text {
+        
+        // TF is email type and have a valid text
+        presenter.tfEmailIsChanged(email: text)
+        
+      } else if textFieldChanged == self.tfPassword,
+        let text = textFieldChanged.text {
+        
+        // TF is password type and have a valid text
+        presenter.tfPasswordIsChanged(password: text)
+        
+      }
+    }
   }
   
   // MARK: - UIActions
   
   @IBAction func startIsPressed(_ sender: Any) {
+    
+    //hangs the screen when making a request
+    self.viewEnabledIteractionIs(enabled: false)
+    
     presenter.startIsPressed()
   }
   
+  @IBAction func tfDidEndOnExit(_ sender: UITextField) {
+    
+    if sender == tfEmail {
+      
+      tfEmail.resignFirstResponder()
+      tfPassword.becomeFirstResponder()
+      
+    } else if sender == tfPassword {
+      
+      tfPassword.resignFirstResponder()
+      
+      if self.btnStart.isEnabled {
+        presenter.startIsPressed()
+      }
+      
+    }
+  }
 }
 
 // MARK: - Extensions
 
+extension HomeViewController: UITextFieldDelegate {
+  
+  func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    
+    switch textField {
+    case tfEmail:
+      if textField == tfEmail {
+        if (string == " ") {
+          return false
+        }
+      }
+    case tfPassword:
+      guard let text = textField.text else { return true }
+      let newLength = text.count + string.count - range.length
+      return newLength <= 4
+    default:
+      return true
+    }
+    
+    return true
+  }
+  
+}
+
 extension HomeViewController: HomeViewInterface {
+  
+  func loginCompleted(success:Bool) {
+    if !success {
+      self.viewEnabledIteractionIs(enabled: true)
+    }
+  }
+  
+  func viewEnabledIteractionIs(enabled: Bool) {
+    self.view.superview?.isUserInteractionEnabled = enabled
+  }
+  
+  func loginButtonIs(enabled: Bool) {
+    btnStart.isEnabled = enabled
+  }
   
 }
 

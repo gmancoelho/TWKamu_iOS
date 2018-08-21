@@ -10,6 +10,12 @@ import Foundation
 
 enum KamuStrings {
   
+  enum Error {
+    
+    static let opsError = "An unexpected error has ocurred."
+    static let unexpectedError = "Try again."
+  }
+  
   enum Labels {
     
     static let home_welcome = "Welcome"

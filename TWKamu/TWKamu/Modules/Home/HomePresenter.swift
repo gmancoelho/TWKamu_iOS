@@ -17,6 +17,18 @@ final class HomePresenter {
   private unowned let view: HomeViewInterface
   private let wireframe: HomeWireframeInterface
   
+  private var userEmail:String = "" {
+    didSet {
+      updateLoginStatus()
+    }
+  }
+  
+  private var userPassword:String = "" {
+    didSet {
+      updateLoginStatus()
+    }
+  }
+  
   // MARK: - Lifecycle -
   
   init(wireframe: HomeWireframeInterface,
@@ -24,16 +36,53 @@ final class HomePresenter {
     self.wireframe = wireframe
     self.view = view
   }
+  
+  // MARK: - Methods
+  
+  private func updateLoginStatus() {
+    
+    let emailIsValid = userEmail.isEmailValid
+    let passwordIsValid = userPassword.count > self.minimumPasswordSize
+    let enableLogin = emailIsValid && passwordIsValid
+    
+    view.loginButtonIs(enabled: enableLogin)
+  }
+  
 }
 
 // MARK: - Extensions -
 
 extension HomePresenter: HomePresenterInterface {
   
+  // Properties
+  
+  var minimumPasswordSize: Int {
+    return 4
+  }
+  
+  // Actions
+  
   func startIsPressed() {
     wireframe.navigate(to: .goToLibraries)
   }
   
+  func tfEmailIsChanged(email: String) {
+    userEmail = email
+  }
+  
+  func tfPasswordIsChanged(password: String) {
+    userPassword = password
+
+  }
+  
+  // Notification
+  
+  func showErrorMessage(message: String) {
+    wireframe.navigate(to: .showError(message))
+  }
+  
+  // Configuration
+
   func configureWelcomeLabel() -> String {
     return KamuStrings.Labels.home_welcome
   }
