@@ -19,9 +19,12 @@ final class LibrariesWireframe: BaseWireframe {
     
     let librariesRepository: LibraryRepository = LibraryRepository(realm: KamuDataBase.shared.getRealmDB())
     let librariesInteractor: RetrieveLibrariesInteractor = RetrieveLibrariesInteractor(repository: librariesRepository)
+    
     let presenter = LibrariesPresenter(wireframe: self,
                                        view: viewController,
                                        librariesInteractor: librariesInteractor)
+    
+    librariesInteractor.response = presenter
     viewController.presenter = presenter
   }
   
@@ -38,6 +41,14 @@ final class LibrariesWireframe: BaseWireframe {
   
   // MARK: - Private Routing -
 
+  private func goBack() {
+    
+  }
+  
+  private func goToLib(library: KamuLibrary) {
+    
+  }
+  
 }
 
 // MARK: - Extensions -
@@ -45,6 +56,14 @@ final class LibrariesWireframe: BaseWireframe {
 extension LibrariesWireframe: LibrariesWireframeInterface {
   
   func navigate(to option: LibrariesNavigationOption) {
+    switch option {
+      
+    case .back:
+      goBack()
+      
+    case .goToLibrary(let lib):
+      goToLib(library: lib)
+    }
     
   }
 }

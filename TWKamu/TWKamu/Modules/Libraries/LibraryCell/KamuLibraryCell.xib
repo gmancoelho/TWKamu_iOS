@@ -19,18 +19,28 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Belo Horizonte" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTO-Os-J7N">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Belo Horizonte" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTO-Os-J7N">
                         <rect key="frame" x="16" y="11" width="288" height="22"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconAccessory" translatesAutoresizingMaskIntoConstraints="NO" id="0Li-Ti-fAW">
+                        <rect key="frame" x="282" y="11" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="22" id="Tnd-zY-sVo"/>
+                            <constraint firstAttribute="height" constant="22" id="brz-Ld-J28"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="0Li-Ti-fAW" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="AKN-Vt-Cqi"/>
                     <constraint firstAttribute="bottomMargin" secondItem="bTO-Os-J7N" secondAttribute="bottom" id="EPr-BJ-maW"/>
                     <constraint firstItem="bTO-Os-J7N" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="USu-zX-WTY"/>
                     <constraint firstAttribute="trailingMargin" secondItem="bTO-Os-J7N" secondAttribute="trailing" id="b4h-QT-weq"/>
+                    <constraint firstItem="0Li-Ti-fAW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="jrM-Sf-5fU"/>
                     <constraint firstItem="bTO-Os-J7N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="knA-lQ-PNd"/>
+                    <constraint firstItem="0Li-Ti-fAW" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="qMI-wD-8fq"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -39,4 +49,7 @@
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="iconAccessory" width="28" height="28"/>
+    </resources>
 </document>

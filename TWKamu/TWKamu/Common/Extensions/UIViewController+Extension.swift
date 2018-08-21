@@ -8,6 +8,20 @@
 
 import UIKit
 
+extension UIViewController {
+  
+  func hideKeyboardWhenTap() {
+    
+    let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+    tap.cancelsTouchesInView = false
+    view.addGestureRecognizer(tap)
+  }
+  
+  @objc func dismissKeyboard() {
+    view.endEditing(true)
+  }
+}
+
 protocol Alertable {
   func presentAlertWithTitle(title: String, message: String, options: String..., completion: @escaping (Int) -> Void)
 }

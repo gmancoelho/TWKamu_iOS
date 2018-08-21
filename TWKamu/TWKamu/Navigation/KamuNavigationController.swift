@@ -10,38 +10,32 @@ import UIKit
 
 class KamuNavigationController: UINavigationController {
   
-  // MARK: - Properties
+  // MARK: - Life Cycle
   
-  override var preferredStatusBarStyle: UIStatusBarStyle {
-    let defaultBarStyle: UIStatusBarStyle = .lightContent
-    if let vc = viewControllers.last as? StatusBarTheme {
-      return vc.navigationStatusBarStyle ?? defaultBarStyle
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    configureTheme()
+  }
+  
+  // MARK: - Class Configuration
+
+  private func configureTheme() {
+    
+    self.navigationBar.backgroundColor = KamuColors.plaeGrey
+    
+    self.navigationBar.tintColor = KamuColors.red
+    self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: KamuColors.black]
+    
+    if #available(iOS 11.0, *) {
+      self.navigationBar.prefersLargeTitles = true
+      self.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: KamuColors.black]
     }
-    return defaultBarStyle
   }
   
   // MARK: - Private
   override open var childViewControllerForStatusBarStyle: UIViewController? {
     return self.topViewController
-  }
-  
-  // MARK: - Private
-  
-  // MARK: - Lifecycle
-  required convenience init() {
-    self.init(navigationBarClass: nil, toolbarClass: nil)
-    configureTheme()
-  }
-  
-  private func configureTheme() {
-    
-    self.navigationBar.tintColor = KamuColors.red
-    self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: KamuColors.red]
-    
-    if #available(iOS 11.0, *) {
-      self.navigationBar.prefersLargeTitles = true
-      self.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: KamuColors.red]
-    }
   }
   
   // MARK: - Navigation
@@ -71,25 +65,9 @@ class KamuNavigationController: UINavigationController {
   
   // MARK: - Styling
   
-  private func customizeBackButton() {
-    let backArrowImage = UIImage(named: "btn_leftArrowWhite")
-    let renderedImage = backArrowImage?.withRenderingMode(.alwaysTemplate)
-    UINavigationBar.appearance().backIndicatorImage = renderedImage
-    UINavigationBar.appearance().backIndicatorTransitionMaskImage = renderedImage
-  }
-  
-  private func removeNavigationShadow() {
-    navigationBar.shadowImage = UIImage()
-  }
-  
   private func removeNavigationImage() {
     navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-    removeNavigationShadow()
-  }
-  
-  private func removeBackButtonTitle(from viewController: UIViewController?) {
-    let item = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-    viewController?.navigationItem.backBarButtonItem = item
+    navigationBar.shadowImage = UIImage()
   }
   
   private func hiddenNavigation(_ hidden: Bool) {
@@ -101,23 +79,18 @@ class KamuNavigationController: UINavigationController {
     if let vc = viewController as? Themeable {
       switch vc {
         
-      case is KamuBlackNavigationBarTheme:
-        hiddenNavigation(false)
+      case is KamuClearNavigationBarTheme:
+        
+        hiddenNavigation(true)
         removeNavigationImage()
         
-      case is KamuClearNavigationBarTheme:
-        hiddenNavigation(false)
-        removeNavigationImage()
       default:
-        break
+        hiddenNavigation(false)
+
       }
-      
-      removeBackButtonTitle(from: viewController)
-      navigationBar.barStyle = vc.navigationBarStyle
-      navigationBar.isTranslucent = vc.navigationBarTranslucent
-      navigationBar.barTintColor = vc.navigationBarBackgroundColor
-      navigationBar.tintColor = vc.navigationBarTintColor
-      navigationBar.titleTextAttributes = vc.navigationTitleTextAttributes
+    } else {
+      hiddenNavigation(false)
     }
   }
+  
 }

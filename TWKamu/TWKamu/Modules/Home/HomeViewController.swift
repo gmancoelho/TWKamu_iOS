@@ -18,6 +18,8 @@ final class HomeViewController: UIViewController {
   @IBOutlet weak var imgLogo: UIImageView!
   @IBOutlet weak var viewTextFields: UIView!
   
+  @IBOutlet weak var tfPassword: KamuTextFieldIcon!
+  @IBOutlet weak var tfEmail: KamuTextFieldIcon!
   // MARK: - Class properties
   
   // MARK: - Public properties
@@ -59,11 +61,32 @@ final class HomeViewController: UIViewController {
   // MARK: - Class Configurations
   
   private func viewConfiguration() {
+    
+    configureTextFields()
+    hideKeyboardWhenTap()
+    
     lblWelcome.text = presenter.configureWelcomeLabel()
     btnStart.setTitle(presenter.configureStartButton(), for: .normal)
   }
   
   // MARK: - Class Methods
+  
+  private func configureTextFields() {
+    
+    tfEmail.basicSetUp()
+    tfPassword.basicSetUp()
+
+    tfEmail.placeholder = KamuStrings.Labels.home_emailPlaceHolder
+    tfEmail.title = KamuStrings.Labels.home_emailPlaceHolder
+    
+    tfPassword.placeholder = KamuStrings.Labels.home_passwordPlaceHolder
+    tfPassword.title = KamuStrings.Labels.home_passwordPlaceHolder
+
+    tfEmail.iconImage = UIImage(imageLiteralResourceName: "iconEmail")
+    tfPassword.iconImage = UIImage(imageLiteralResourceName: "iconPassword")
+    tfPassword.iconWidth = 14
+
+  }
   
   // MARK: - UIActions
   

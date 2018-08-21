@@ -16,10 +16,11 @@ enum KamuStrings {
     static let home_desc = "Please use your TW email and password to login:"
     static let home_emailError = "Please provide a valid email"
     static let home_emailPlaceHolder = "TW Email"
-    static let home_passwordPlaceHolder = "Please provide a valid email"
+    static let home_passwordPlaceHolder = "Password"
 
     static let libraries_office = "Select office"
-    
+    static let libraries_cities = "CITIES"
+
     static let explore_title = "Explore"
   }
   

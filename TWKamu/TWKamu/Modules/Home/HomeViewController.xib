@@ -15,6 +15,8 @@
                 <outlet property="imgLogo" destination="foS-uA-aiS" id="46q-y1-0lx"/>
                 <outlet property="lblWelcome" destination="tfh-Zc-qcV" id="PiL-DE-oS1"/>
                 <outlet property="lbldesc" destination="viG-fK-UyS" id="7Qe-AV-5Tg"/>
+                <outlet property="tfEmail" destination="Nyv-8d-r9T" id="Uyz-Sv-CbY"/>
+                <outlet property="tfPassword" destination="jNw-Ka-hEk" id="Nz7-lk-Q1p"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewTextFields" destination="LY0-MY-8Mc" id="96y-rj-kyc"/>
             </connections>
@@ -47,9 +49,45 @@ and password to login:</string>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LY0-MY-8Mc">
                     <rect key="frame" x="19" y="278.5" width="337.5" height="110"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nyv-8d-r9T" customClass="KamuTextFieldIcon" customModule="TWKamu" customModuleProvider="target">
+                            <rect key="frame" x="8" y="8" width="321.5" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="zl0-DJ-rdh"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="iconEmail"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
+                                    <integer key="value" value="0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jNw-Ka-hEk" customClass="KamuTextFieldIcon" customModule="TWKamu" customModuleProvider="target">
+                            <rect key="frame" x="8" y="61" width="321.5" height="45"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="iconPassword"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
+                                    <integer key="value" value="0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="Nyv-8d-r9T" firstAttribute="top" secondItem="LY0-MY-8Mc" secondAttribute="top" constant="8" id="6vr-7q-nZw"/>
+                        <constraint firstAttribute="trailing" secondItem="Nyv-8d-r9T" secondAttribute="trailing" constant="8" id="Kd0-75-PUh"/>
+                        <constraint firstItem="Nyv-8d-r9T" firstAttribute="leading" secondItem="LY0-MY-8Mc" secondAttribute="leading" constant="8" id="KyD-kB-6XR"/>
+                        <constraint firstItem="jNw-Ka-hEk" firstAttribute="height" secondItem="Nyv-8d-r9T" secondAttribute="height" id="Q1F-bN-An7"/>
+                        <constraint firstItem="jNw-Ka-hEk" firstAttribute="centerX" secondItem="Nyv-8d-r9T" secondAttribute="centerX" id="cq5-Ad-muo"/>
                         <constraint firstAttribute="height" constant="110" id="dz1-X5-8s0"/>
+                        <constraint firstItem="jNw-Ka-hEk" firstAttribute="width" secondItem="Nyv-8d-r9T" secondAttribute="width" id="lYZ-Is-EoC"/>
+                        <constraint firstItem="jNw-Ka-hEk" firstAttribute="top" secondItem="Nyv-8d-r9T" secondAttribute="bottom" constant="8" id="wz1-cJ-Tpj"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkx-Ym-QJd" customClass="KamuRedButton" customModule="TWKamu" customModuleProvider="target">
@@ -83,6 +121,8 @@ and password to login:</string>
         </view>
     </objects>
     <resources>
+        <image name="iconEmail" width="28" height="28"/>
+        <image name="iconPassword" width="16" height="20"/>
         <image name="kamuLogo" width="123" height="33"/>
     </resources>
 </document>

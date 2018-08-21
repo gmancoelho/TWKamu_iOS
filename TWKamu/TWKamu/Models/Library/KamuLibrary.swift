@@ -9,7 +9,10 @@
 import Foundation
 
 struct KamuLibrary {
+  
   var cityName: String = ""
+  var id:Int = -1
+  
 }
 
 extension KamuLibrary: Equatable {

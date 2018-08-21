@@ -37,11 +37,20 @@ final class LibrariesPresenter {
     self.view = view
     self.librariesInteractor = librariesInteractor
   }
+  
+  // MARK: - Methods
+  
+  func viewWillAppear(animated: Bool) {
+    
+    librariesInteractor.getLibraries()
+  }
+  
 }
 
 // MARK: - Extensions -
 
 extension LibrariesPresenter: RetrieveLibrariesInteractorReponse {
+  
   func getLibrariesSuccess(libraries: [KamuLibrary]) {
     librariesItem = libraries
   }
@@ -77,12 +86,13 @@ extension LibrariesPresenter: LibrariesPresenterInterface {
     let item = librariesItem[index.row]
     
     cell.setCity(city: item.cityName)
-    
+        
     return cell
   }
   
   func clickInCellForRow(index: IndexPath) {
-    
+    let library = librariesItem[index.row]
+    wireframe.navigate(to: .goToLibrary(library))
   }
   
 }

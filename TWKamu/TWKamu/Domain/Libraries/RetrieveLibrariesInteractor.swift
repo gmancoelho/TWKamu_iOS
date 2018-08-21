@@ -15,12 +15,16 @@ final class RetrieveLibrariesInteractor {
   var repository: LibraryRepository!
   
   // MARK: - Response Delegate
-  weak var response: RetrieveLibrariesInteractorReponse!
+  weak var response: RetrieveLibrariesInteractorReponse?
   
   // MARK: - Init
 
   init(repository: LibraryRepository) {
     self.repository = repository
+    
+    _ = repository.create(a: KamuLibrary(cityName:"Teste", id: 1))
+    _ = repository.create(a: KamuLibrary(cityName:"Teste1", id: 2))
+    _ = repository.create(a: KamuLibrary(cityName:"Teste2", id: 3))
   }
   
 }
@@ -28,9 +32,15 @@ final class RetrieveLibrariesInteractor {
 extension RetrieveLibrariesInteractor: RetrieveLibrariesInteractorInterface {
   
   func getLibraries() {
+    
+    guard let resp = response else {
+      dump("RetrieveLibrariesInteractorReponse is nil")
+      return
+    }
+    
     let libraries = repository.getAll()
     
-    response.getLibrariesSuccess(libraries: libraries)
+    resp.getLibrariesSuccess(libraries: libraries)
   }
   
 }

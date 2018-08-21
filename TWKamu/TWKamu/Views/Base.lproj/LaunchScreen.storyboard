@@ -27,7 +27,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4fK-cq-FfU" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="DpK-4R-qnt"/>
+                            <constraint firstItem="4fK-cq-FfU" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="10.25" id="DpK-4R-qnt"/>
                             <constraint firstItem="4fK-cq-FfU" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.3" id="Kuy-5i-drS"/>
                             <constraint firstItem="4fK-cq-FfU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="n8s-pa-xdG"/>
                         </constraints>

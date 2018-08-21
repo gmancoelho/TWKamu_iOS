@@ -10,6 +10,10 @@
 import UIKit
 
 enum LibrariesNavigationOption {
+  
+  case back
+  case goToLibrary(KamuLibrary)
+  
 }
 
 protocol LibrariesWireframeInterface: WireframeInterface {
