@@ -1,15 +1,15 @@
 //
-//  LibraryRepository.swift
+//  KamuBookRepository.swift
 //  TWKamu
 //
-//  Created by Guilherme Coelho on 16/08/18.
+//  Created by Guilherme Coelho on 21/08/18.
 //  Copyright © 2018 ThoughtWorks. All rights reserved.
 //
 
 import Foundation
 import RealmSwift
 
-final class LibraryRepository {
+final class KamuBookRepository {
   
   // MARK: - Class Properties
   
@@ -23,31 +23,31 @@ final class LibraryRepository {
   
 }
 
-extension LibraryRepository: RepositoryProtocol {
+extension KamuBookRepository: RepositoryProtocol {
   
-  func getAll() -> [KamuLibrary] {
+  func getAll() -> [KamuBook] {
     
-    let questionsObjArray = realm.objects(KamuLibraryObject.self)
+    let questionsObjArray = realm.objects(KamuBookObject.self)
     
-    let questions: [KamuLibrary] = questionsObjArray.compactMap({
-      $0.kamuLibrary
+    let questions: [KamuBook] = questionsObjArray.compactMap({
+      $0.kamuBook
     })
     
     return questions
   }
   
-  func get(identifier: Int) -> KamuLibrary? {
+  func get(identifier: Int) -> KamuBook? {
     
-    let questionsObjArray = realm.objects(KamuLibraryObject.self)
+    let questionsObjArray = realm.objects(KamuBookObject.self)
     
-    let questions: [KamuLibrary] = questionsObjArray.compactMap({
-      $0.kamuLibrary
+    let questions: [KamuBook] = questionsObjArray.compactMap({
+      $0.kamuBook
     })
     
     return questions.first
   }
   
-  func create(a: KamuLibrary) -> Bool {
+  func create(a: KamuBook) -> Bool {
     
     do {
       try realm.write {
@@ -60,7 +60,7 @@ extension LibraryRepository: RepositoryProtocol {
     return true
   }
   
-  func update(a: KamuLibrary) -> Bool {
+  func update(a: KamuBook) -> Bool {
     
     do {
       try realm.write {
@@ -73,13 +73,13 @@ extension LibraryRepository: RepositoryProtocol {
     return true
   }
   
-  func delete(a: KamuLibrary) -> Bool {
+  func delete(a: KamuBook) -> Bool {
     
     do {
       
       try realm.write {
         
-        let obj = realm.objects(KamuLibraryObject.self).first
+        let obj = realm.objects(KamuBookObject.self).first
         
         if let obj = obj {
           realm.delete(obj)
@@ -108,7 +108,7 @@ extension LibraryRepository: RepositoryProtocol {
   }
   
   func getObjectsCount() -> Int {
-    return realm.objects(KamuLibraryObject.self).count
+    return realm.objects(KamuBookObject.self).count
   }
   
 }

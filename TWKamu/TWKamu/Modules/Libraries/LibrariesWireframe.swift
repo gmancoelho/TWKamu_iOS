@@ -17,7 +17,7 @@ final class LibrariesWireframe: BaseWireframe {
   
   func configureModule(with viewController: LibrariesViewController) {
     
-    let librariesRepository: LibraryRepository = LibraryRepository(realm: KamuDataBase.shared.getRealmDB())
+    let librariesRepository: KamuLibraryRepository = KamuLibraryRepository(realm: KamuDataBase.shared.getRealmDB())
     let librariesInteractor: RetrieveLibrariesInteractor = RetrieveLibrariesInteractor(repository: librariesRepository)
     
     let presenter = LibrariesPresenter(wireframe: self,

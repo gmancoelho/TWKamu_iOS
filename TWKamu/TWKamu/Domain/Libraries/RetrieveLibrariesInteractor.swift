@@ -12,14 +12,14 @@ final class RetrieveLibrariesInteractor {
   
   // MARK: - Properties
   
-  var repository: LibraryRepository!
+  var repository: KamuLibraryRepository!
   
   // MARK: - Response Delegate
   weak var response: RetrieveLibrariesInteractorReponse?
   
   // MARK: - Init
 
-  init(repository: LibraryRepository) {
+  init(repository: KamuLibraryRepository) {
     self.repository = repository
   }
   

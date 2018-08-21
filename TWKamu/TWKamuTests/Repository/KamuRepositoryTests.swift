@@ -11,7 +11,7 @@ class KamuRepositoryTests: QuickSpec {
   
   // MARK: - Class Properties
   
-  var mockRepo: LibraryRepository!
+  var mockRepo: KamuLibraryRepository!
   
   // MARK: - Spec
   
@@ -23,7 +23,7 @@ class KamuRepositoryTests: QuickSpec {
     
     beforeEach {
       let realm = try! Realm()
-      self.mockRepo = LibraryRepository(realm: realm)
+      self.mockRepo = KamuLibraryRepository(realm: realm)
       _ = self.mockRepo.deleteAll()
     }
     
@@ -39,7 +39,7 @@ class KamuRepositoryTests: QuickSpec {
     
     let realm = try! Realm()
 
-    mockRepo = LibraryRepository(realm: realm)
+    mockRepo = KamuLibraryRepository(realm: realm)
     
     describe("A LibraryRepository") {
       context("afeter being initialized with no parametes") {
@@ -78,7 +78,7 @@ class KamuRepositoryTests: QuickSpec {
     
     let realm = try! Realm()
     
-    mockRepo = LibraryRepository(realm: realm)
+    mockRepo = KamuLibraryRepository(realm: realm)
     
     describe("A LibraryRepository with only one object with the pk = 1") {
       context("when the user inserts another object with the same PK") {
@@ -101,7 +101,7 @@ class KamuRepositoryTests: QuickSpec {
     
     let realm = try! Realm()
     
-    mockRepo = LibraryRepository(realm: realm)
+    mockRepo = KamuLibraryRepository(realm: realm)
 
     describe("A LibraryRepository with only one object with the PK = 1") {
       context("when the user query for a object with the PK = 1") {
@@ -120,7 +120,7 @@ class KamuRepositoryTests: QuickSpec {
     
     let realm = try! Realm()
     
-    mockRepo = LibraryRepository(realm: realm)
+    mockRepo = KamuLibraryRepository(realm: realm)
 
     describe("A LibraryRepository with only one object with the PK = 1") {
       context("when the user deletes the object with the PK = 1") {
