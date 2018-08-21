@@ -12,6 +12,8 @@ final class HomeViewController: UIViewController {
   
   // MARK: - Outlets
   
+  @IBOutlet weak var bottonConstraint: NSLayoutConstraint!
+  
   @IBOutlet weak var lbldesc: UILabel!
   @IBOutlet weak var lblWelcome: UILabel!
   @IBOutlet weak var btnStart: KamuRedButton!
@@ -20,8 +22,11 @@ final class HomeViewController: UIViewController {
   
   @IBOutlet weak var tfPassword: KamuTextFieldIcon!
   @IBOutlet weak var tfEmail: KamuTextFieldIcon!
+  
   // MARK: - Class properties
   
+  let underKeyboardLayoutConstraint = UnderKeyboardLayoutConstraint()
+
   // MARK: - Public properties
   
   var presenter: HomePresenterInterface!
@@ -102,6 +107,10 @@ final class HomeViewController: UIViewController {
   }
   
   private func addTextFieldObservers() {
+    
+    underKeyboardLayoutConstraint.setup(bottonConstraint,
+                                        view: view)
+    
     // Get notified every time the text changes, so we can save it
     let notificationCenter = NotificationCenter.default
     notificationCenter.addObserver(self,
@@ -139,7 +148,7 @@ final class HomeViewController: UIViewController {
     
     //hangs the screen when making a request
     self.viewEnabledIteractionIs(enabled: false)
-    
+
     presenter.startIsPressed()
   }
   
@@ -154,10 +163,6 @@ final class HomeViewController: UIViewController {
       
       tfPassword.resignFirstResponder()
       
-      if self.btnStart.isEnabled {
-        presenter.startIsPressed()
-      }
-      
     }
   }
 }
@@ -169,16 +174,20 @@ extension HomeViewController: UITextFieldDelegate {
   func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
     
     switch textField {
+      
     case tfEmail:
       if textField == tfEmail {
         if (string == " ") {
           return false
         }
       }
+      
     case tfPassword:
+      
       guard let text = textField.text else { return true }
       let newLength = text.count + string.count - range.length
-      return newLength <= 4
+      return newLength <= presenter.minimumPasswordSize
+      
     default:
       return true
     }
@@ -198,6 +207,8 @@ extension HomeViewController: HomeViewInterface {
   
   func viewEnabledIteractionIs(enabled: Bool) {
     self.view.superview?.isUserInteractionEnabled = enabled
+    btnStart.loadingIndicator(show: !enabled)
+
   }
   
   func loginButtonIs(enabled: Bool) {

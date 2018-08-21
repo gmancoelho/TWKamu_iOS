@@ -68,6 +68,7 @@
 		B9AD1A2A212C53E000B65018 /* KamuExploreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9AD1A24212C53E000B65018 /* KamuExploreViewController.xib */; };
 		B9AD1A2B212C53E000B65018 /* KamuExploreWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD1A25212C53E000B65018 /* KamuExploreWireframe.swift */; };
 		B9AD1A2D212C597200B65018 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD1A2C212C597200B65018 /* String+Extension.swift */; };
+		B9AD1A30212C6EF200B65018 /* KeyboardConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD1A2F212C6EF200B65018 /* KeyboardConstraint.swift */; };
 		B9C0805A211E2ED20072F7BC /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C08058211E2ED20072F7BC /* Nimble.framework */; };
 		B9C0805B211E2ED20072F7BC /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C08059211E2ED20072F7BC /* Quick.framework */; };
 		B9C08062211E2F7F0072F7BC /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C0805E211E2F7E0072F7BC /* ViewInterface.swift */; };
@@ -173,6 +174,7 @@
 		B9AD1A24212C53E000B65018 /* KamuExploreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KamuExploreViewController.xib; sourceTree = "<group>"; };
 		B9AD1A25212C53E000B65018 /* KamuExploreWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuExploreWireframe.swift; sourceTree = "<group>"; };
 		B9AD1A2C212C597200B65018 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		B9AD1A2F212C6EF200B65018 /* KeyboardConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardConstraint.swift; sourceTree = "<group>"; };
 		B9C08058211E2ED20072F7BC /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		B9C08059211E2ED20072F7BC /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		B9C0805E211E2F7E0072F7BC /* ViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
@@ -470,6 +472,7 @@
 		B93206BE21220968006F2836 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B9AD1A2E212C6ED700B65018 /* KeyboardConstraint */,
 				B9AD1A12212B395700B65018 /* TextField */,
 				B919178F212AFFA0006EBD80 /* Buttons */,
 				B91D701B21276E8600EF7BF3 /* Extensions */,
@@ -507,6 +510,14 @@
 				B9AD1A17212B3E8100B65018 /* UITextField+fixCaretPosition.swift */,
 			);
 			path = Sky;
+			sourceTree = "<group>";
+		};
+		B9AD1A2E212C6ED700B65018 /* KeyboardConstraint */ = {
+			isa = PBXGroup;
+			children = (
+				B9AD1A2F212C6EF200B65018 /* KeyboardConstraint.swift */,
+			);
+			path = KeyboardConstraint;
 			sourceTree = "<group>";
 		};
 		B9C0805C211E2F540072F7BC /* Base */ = {
@@ -775,6 +786,7 @@
 				B919178E212AF666006EBD80 /* KamuSplashPresenter.swift in Sources */,
 				B9AD1A2D212C597200B65018 /* String+Extension.swift in Sources */,
 				B91D702321276E9F00EF7BF3 /* UIViewController+Extension.swift in Sources */,
+				B9AD1A30212C6EF200B65018 /* KeyboardConstraint.swift in Sources */,
 				B93206B921220124006F2836 /* HomePresenter.swift in Sources */,
 				B91D70152125EBC200EF7BF3 /* KamuDataBase.swift in Sources */,
 				B9C08069211E32540072F7BC /* BaseWireframe.swift in Sources */,

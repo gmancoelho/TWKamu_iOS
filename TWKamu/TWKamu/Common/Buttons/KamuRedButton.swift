@@ -14,7 +14,12 @@ class KamuRedButton: UIButton {
   
   // MARK: - Class Properties
   
+  private var indicatorView:UIActivityIndicatorView = UIActivityIndicatorView()
+  private var title:String = ""
   private var shadowLayer: CAShapeLayer!
+  
+  private var baseColor: UIColor = KamuColors.red
+  private var disabledColor: UIColor = KamuColors.plaeGrey
   
   // MARK: - Public Properties
   
@@ -52,28 +57,24 @@ class KamuRedButton: UIButton {
     self.roundCorners(.allCorners, radius: rad)
     
     setUpFonts()
-    setShadow()
+    
+    /// Set Colors
+    setDefaultColors()
+    
+    /// SetUp IndicatorView inside the button
+    setUpIndicatorView()
+    
   }
   
   // MARK: - Class Methods
-
-  private func setShadow() {
+  
+  private func setDefaultColors() {
     
-    let size = self.layer.frame.height / 2
-    shadowLayer = CAShapeLayer()
-    shadowLayer.path = UIBezierPath(roundedRect: bounds,
-                                    cornerRadius: size).cgPath
+    let titleColor = isEnabled ? UIColor.white : KamuColors.steel
+    self.setTitleColor(titleColor, for: .normal)
     
-    let bgColor: UIColor = KamuColors.red
-    shadowLayer.fillColor = bgColor.cgColor
+    self.backgroundColor = isEnabled ? baseColor : disabledColor
     
-    shadowLayer.shadowColor = KamuColors.steel.cgColor
-    shadowLayer.shadowPath = shadowLayer.path
-    shadowLayer.shadowOffset = CGSize(width: 2.0, height: 2.0)
-    shadowLayer.shadowOpacity = 0.8
-    shadowLayer.shadowRadius = 2
-    
-    layer.insertSublayer(shadowLayer, at: 0)
   }
   
   private func setUpFonts() {
@@ -82,7 +83,9 @@ class KamuRedButton: UIButton {
       label.font = UIFont.btnTitleWhite
     }
     
-    self.setTitleColor(.white, for: .normal)
+    let titleColor = isEnabled ? UIColor.white : KamuColors.steel
+    self.setTitleColor(titleColor, for: .normal)
+    
   }
   
   // MARK: - Public Methods
@@ -114,6 +117,43 @@ class KamuRedButton: UIButton {
       })
       
     })
+  }
+  
+  // MARK: - Indicator
+  private func setUpIndicatorView() {
+    
+    let buttonHeight = self.bounds.size.height
+    let buttonWidth = self.bounds.size.width
+    let centerPoint =  CGPoint( buttonWidth/2, buttonHeight/2 )
+    
+    indicatorView.center = centerPoint
+    indicatorView.tag = tag
+    indicatorView.color = .white
+    indicatorView.tintColor = .white
+    
+    indicatorView.hidesWhenStopped = true
+    
+    self.addSubview(indicatorView)
+    
+  }
+  
+  func loadingIndicator(show: Bool) {
+    
+    if (show) {
+      self.isUserInteractionEnabled = false
+      self.setTitle("", for: .normal)
+      backgroundColor = disabledColor
+      indicatorView.startAnimating()
+    } else {
+      self.isUserInteractionEnabled = true
+      backgroundColor = baseColor
+      self.setTitle(self.title, for: .normal)
+      indicatorView.stopAnimating()
+    }
+    
+    let titleColor = isEnabled ? UIColor.white : KamuColors.steel
+    self.setTitleColor(titleColor, for: .normal)
+    
   }
   
 }

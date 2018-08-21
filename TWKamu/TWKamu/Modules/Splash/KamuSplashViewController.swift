@@ -45,7 +45,7 @@ class KamuSplashViewController: UIViewController {
   
   private func configuration() {
     
-    let newWidth = self.view.frame.width / 3
+    let newWidth = self.view.frame.width / 3.0
     splashAnimation.frame = CGRect(x: 0, y: 0, width: newWidth, height: newWidth)
     splashAnimation.center = self.view.center
     splashAnimation.contentMode = .scaleAspectFit

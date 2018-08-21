@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="TWKamu" customModuleProvider="target">
             <connections>
+                <outlet property="bottonConstraint" destination="QTW-HD-RTi" id="Swa-fS-LRH"/>
                 <outlet property="btnStart" destination="qkx-Ym-QJd" id="mH0-Oz-1vl"/>
                 <outlet property="imgLogo" destination="foS-uA-aiS" id="46q-y1-0lx"/>
                 <outlet property="lblWelcome" destination="tfh-Zc-qcV" id="PiL-DE-oS1"/>
@@ -57,7 +58,7 @@ and password to login:</string>
                             </constraints>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="iconEmail"/>
                                 <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
@@ -65,14 +66,14 @@ and password to login:</string>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="tfDidEndOnExit:" destination="-1" eventType="editingDidEnd" id="ICD-gW-LhT"/>
+                                <action selector="tfDidEndOnExit:" destination="-1" eventType="primaryActionTriggered" id="2fg-AD-Fyy"/>
                             </connections>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jNw-Ka-hEk" customClass="KamuTextFieldIcon" customModule="TWKamu" customModuleProvider="target">
                             <rect key="frame" x="8" y="61" width="321.5" height="45"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="go" secureTextEntry="YES"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="iconPassword"/>
                                 <userDefinedRuntimeAttribute type="number" keyPath="iconTypeValue">
@@ -80,7 +81,7 @@ and password to login:</string>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="tfDidEndOnExit:" destination="-1" eventType="editingDidEnd" id="nlr-qn-Iig"/>
+                                <action selector="tfDidEndOnExit:" destination="-1" eventType="primaryActionTriggered" id="xnh-lp-V3v"/>
                             </connections>
                         </textField>
                     </subviews>
@@ -113,8 +114,9 @@ and password to login:</string>
                 <constraint firstItem="viG-fK-UyS" firstAttribute="centerX" secondItem="tfh-Zc-qcV" secondAttribute="centerX" id="2nS-5L-QIK"/>
                 <constraint firstItem="qkx-Ym-QJd" firstAttribute="centerX" secondItem="LY0-MY-8Mc" secondAttribute="centerX" id="8Bg-Oy-yRz"/>
                 <constraint firstItem="qkx-Ym-QJd" firstAttribute="width" secondItem="LY0-MY-8Mc" secondAttribute="width" id="DX4-fJ-Kzo"/>
-                <constraint firstItem="LY0-MY-8Mc" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Hwy-Gh-brI"/>
+                <constraint firstItem="LY0-MY-8Mc" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" priority="990" id="Hwy-Gh-brI"/>
                 <constraint firstItem="tfh-Zc-qcV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OET-Em-6H2"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qkx-Ym-QJd" secondAttribute="bottom" constant="22" id="QTW-HD-RTi"/>
                 <constraint firstItem="LY0-MY-8Mc" firstAttribute="top" secondItem="viG-fK-UyS" secondAttribute="bottom" constant="32" id="QYv-1z-jHq"/>
                 <constraint firstItem="viG-fK-UyS" firstAttribute="width" secondItem="LY0-MY-8Mc" secondAttribute="width" id="Tgh-PH-YmA"/>
                 <constraint firstItem="qkx-Ym-QJd" firstAttribute="top" secondItem="LY0-MY-8Mc" secondAttribute="bottom" constant="12" id="bg2-57-TrJ"/>

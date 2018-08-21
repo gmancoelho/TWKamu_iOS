@@ -42,7 +42,7 @@ final class HomePresenter {
   private func updateLoginStatus() {
     
     let emailIsValid = userEmail.isEmailValid
-    let passwordIsValid = userPassword.count > self.minimumPasswordSize
+    let passwordIsValid = userPassword.count >= self.minimumPasswordSize
     let enableLogin = emailIsValid && passwordIsValid
     
     view.loginButtonIs(enabled: enableLogin)
@@ -57,7 +57,7 @@ extension HomePresenter: HomePresenterInterface {
   // Properties
   
   var minimumPasswordSize: Int {
-    return 4
+    return 6
   }
   
   // Actions
