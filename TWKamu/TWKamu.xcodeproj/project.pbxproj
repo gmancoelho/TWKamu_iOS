@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		97F8F206BA540C96957A745D /* Pods_TWKamuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9353BA450F2D3AB09E0BC126 /* Pods_TWKamuTests.framework */; };
 		B9178052212D9FC0003CFF8B /* libraryMock.json in Resources */ = {isa = PBXBuildFile; fileRef = B9178051212D9FBF003CFF8B /* libraryMock.json */; };
+		B9178055212DA645003CFF8B /* KamuTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9178054212DA645003CFF8B /* KamuTabBarController.swift */; };
+		B9178057212DA665003CFF8B /* KamuTabBarInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9178056212DA665003CFF8B /* KamuTabBarInterfaces.swift */; };
+		B9178059212DA739003CFF8B /* KamuTabBarWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9178058212DA739003CFF8B /* KamuTabBarWireframe.swift */; };
+		B9178061212DAA57003CFF8B /* KamuSettingsInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917805B212DAA57003CFF8B /* KamuSettingsInterfaces.swift */; };
+		B9178062212DAA57003CFF8B /* KamuSettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917805C212DAA57003CFF8B /* KamuSettingsPresenter.swift */; };
+		B9178063212DAA57003CFF8B /* KamuSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917805D212DAA57003CFF8B /* KamuSettingsViewController.swift */; };
+		B9178065212DAA57003CFF8B /* KamuSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B917805F212DAA57003CFF8B /* KamuSettingsViewController.xib */; };
+		B9178066212DAA57003CFF8B /* KamuSettingsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9178060212DAA57003CFF8B /* KamuSettingsWireframe.swift */; };
 		B9191783212AF0BB006EBD80 /* KamuSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9191781212AF0BB006EBD80 /* KamuSplashViewController.swift */; };
 		B9191784212AF0BB006EBD80 /* KamuSplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9191782212AF0BB006EBD80 /* KamuSplashViewController.xib */; };
 		B9191786212AF490006EBD80 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9191785212AF490006EBD80 /* Lottie.framework */; };
@@ -124,6 +132,14 @@
 		9353BA450F2D3AB09E0BC126 /* Pods_TWKamuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TWKamuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96BC11221041A35FEED7C54D /* Pods-TWKamuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWKamuTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TWKamuTests/Pods-TWKamuTests.release.xcconfig"; sourceTree = "<group>"; };
 		B9178051212D9FBF003CFF8B /* libraryMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = libraryMock.json; sourceTree = "<group>"; };
+		B9178054212DA645003CFF8B /* KamuTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuTabBarController.swift; sourceTree = "<group>"; };
+		B9178056212DA665003CFF8B /* KamuTabBarInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuTabBarInterfaces.swift; sourceTree = "<group>"; };
+		B9178058212DA739003CFF8B /* KamuTabBarWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuTabBarWireframe.swift; sourceTree = "<group>"; };
+		B917805B212DAA57003CFF8B /* KamuSettingsInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuSettingsInterfaces.swift; sourceTree = "<group>"; };
+		B917805C212DAA57003CFF8B /* KamuSettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuSettingsPresenter.swift; sourceTree = "<group>"; };
+		B917805D212DAA57003CFF8B /* KamuSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuSettingsViewController.swift; sourceTree = "<group>"; };
+		B917805F212DAA57003CFF8B /* KamuSettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KamuSettingsViewController.xib; sourceTree = "<group>"; };
+		B9178060212DAA57003CFF8B /* KamuSettingsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuSettingsWireframe.swift; sourceTree = "<group>"; };
 		B9191781212AF0BB006EBD80 /* KamuSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuSplashViewController.swift; sourceTree = "<group>"; };
 		B9191782212AF0BB006EBD80 /* KamuSplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KamuSplashViewController.xib; sourceTree = "<group>"; };
 		B9191785212AF490006EBD80 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
@@ -247,6 +263,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B9178053212DA61E003CFF8B /* KamuTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				B9178054212DA645003CFF8B /* KamuTabBarController.swift */,
+				B9178056212DA665003CFF8B /* KamuTabBarInterfaces.swift */,
+				B9178058212DA739003CFF8B /* KamuTabBarWireframe.swift */,
+			);
+			path = KamuTabBar;
+			sourceTree = "<group>";
+		};
+		B917805A212DAA27003CFF8B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B917805B212DAA57003CFF8B /* KamuSettingsInterfaces.swift */,
+				B917805C212DAA57003CFF8B /* KamuSettingsPresenter.swift */,
+				B917805D212DAA57003CFF8B /* KamuSettingsViewController.swift */,
+				B917805F212DAA57003CFF8B /* KamuSettingsViewController.xib */,
+				B9178060212DAA57003CFF8B /* KamuSettingsWireframe.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		B9191780212AF09F006EBD80 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
@@ -329,8 +367,10 @@
 				B9191780212AF09F006EBD80 /* Splash */,
 				B93206A72121F419006F2836 /* Home */,
 				B93206A82121F41F006F2836 /* Libraries */,
+				B9178053212DA61E003CFF8B /* KamuTabBar */,
 				B93206A92121F42C006F2836 /* Explore */,
 				B93206AA2121F432006F2836 /* BookDetails */,
+				B917805A212DAA27003CFF8B /* Settings */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -748,6 +788,7 @@
 				B91B498C211E27BD0015BEBC /* Assets.xcassets in Resources */,
 				B9AD1A49212C997E00B65018 /* KamuBookCell.xib in Resources */,
 				B93206BC21220124006F2836 /* HomeViewController.xib in Resources */,
+				B9178065212DAA57003CFF8B /* KamuSettingsViewController.xib in Resources */,
 				B9191784212AF0BB006EBD80 /* KamuSplashViewController.xib in Resources */,
 				B9AD1A4C212CB33000B65018 /* library.json in Resources */,
 			);
@@ -855,17 +896,21 @@
 				B91D702921276E9F00EF7BF3 /* CGPoint+Extension.swift in Sources */,
 				B9191791212AFFBE006EBD80 /* KamuRedButton.swift in Sources */,
 				B9AD1A2B212C53E000B65018 /* KamuExploreWireframe.swift in Sources */,
+				B9178066212DAA57003CFF8B /* KamuSettingsWireframe.swift in Sources */,
 				B93206CE21222198006F2836 /* LibrariesWireframe.swift in Sources */,
 				B9C08065211E2F7F0072F7BC /* InteractorInterface.swift in Sources */,
 				B9C27BBA211E347100BBAFEC /* KamuNavigationInterfaces.swift in Sources */,
 				B93206C021220998006F2836 /* KamuStrings.swift in Sources */,
 				B9C08063211E2F7F0072F7BC /* PresenterInterface.swift in Sources */,
+				B9178062212DAA57003CFF8B /* KamuSettingsPresenter.swift in Sources */,
 				B9AD1A3F212C90F300B65018 /* KamuBook.swift in Sources */,
 				B919178C212AF62A006EBD80 /* KamuSplashInterfaces.swift in Sources */,
 				B91D702721276E9F00EF7BF3 /* CGRect+Extension.swift in Sources */,
 				B9AD1A1A212B3E8200B65018 /* UITextField+fixCaretPosition.swift in Sources */,
+				B9178061212DAA57003CFF8B /* KamuSettingsInterfaces.swift in Sources */,
 				B9191783212AF0BB006EBD80 /* KamuSplashViewController.swift in Sources */,
 				B9AD1A28212C53E000B65018 /* KamuExploreViewController.swift in Sources */,
+				B9178059212DA739003CFF8B /* KamuTabBarWireframe.swift in Sources */,
 				B93206CA21222198006F2836 /* LibrariesPresenter.swift in Sources */,
 				B9AD1A27212C53E000B65018 /* KamuExplorePresenter.swift in Sources */,
 				B99CC9FC2123135400738785 /* KamuConstants.swift in Sources */,
@@ -889,14 +934,17 @@
 				B93206BD21220124006F2836 /* HomeWireframe.swift in Sources */,
 				B9AD1A1D212B451700B65018 /* KamuTextFieldIcon.swift in Sources */,
 				B91D702421276E9F00EF7BF3 /* UIButton+Extension.swift in Sources */,
+				B9178057212DA665003CFF8B /* KamuTabBarInterfaces.swift in Sources */,
 				B9C08062211E2F7F0072F7BC /* ViewInterface.swift in Sources */,
 				B93206C221221F60006F2836 /* KamuClearNavigationBarTheme.swift in Sources */,
 				B93206B821220124006F2836 /* HomeInterfaces.swift in Sources */,
+				B9178063212DAA57003CFF8B /* KamuSettingsViewController.swift in Sources */,
 				B9C08067211E2FF20072F7BC /* WireframeInterfaces.swift in Sources */,
 				B93206C921222198006F2836 /* LibrariesInterfaces.swift in Sources */,
 				B91D702821276E9F00EF7BF3 /* UIView+Extension.swift in Sources */,
 				B91D6FF12125AEE200EF7BF3 /* RetrieveLibrariesInteractor.swift in Sources */,
 				B93206BA21220124006F2836 /* HomeViewController.swift in Sources */,
+				B9178055212DA645003CFF8B /* KamuTabBarController.swift in Sources */,
 				B919178A212AF5EA006EBD80 /* KamuSplashWireframe.swift in Sources */,
 				B91D700C2125B72200EF7BF3 /* KamuLibraryObject.swift in Sources */,
 				B9AD1A0F212B00F700B65018 /* UIFont+Extension.swift in Sources */,

@@ -24,11 +24,12 @@ final class LibrariesViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    viewConfiguration()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    self.viewConfiguration()
     presenter.viewWillAppear(animated: animated)
     
   }
@@ -64,7 +65,7 @@ final class LibrariesViewController: UIViewController {
     tableView.dataSource = self
     tableView.delegate = self
     
-    tableView.reloadData()
+    updateTableView()
 
   }
   
@@ -127,7 +128,6 @@ extension LibrariesViewController: UITableViewDataSource, UITableViewDelegate {
   }
     
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    print("Click")
     presenter.clickInCellForRow(index: indexPath)
   }
   

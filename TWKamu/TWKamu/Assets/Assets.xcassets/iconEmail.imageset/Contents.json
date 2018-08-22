@@ -3,10 +3,16 @@
     {
       "idiom" : "universal",
       "filename" : "iconEmail.pdf"
+    },
+    {
+      "idiom" : "iphone"
     }
   ],
   "info" : {
     "version" : 1,
     "author" : "xcode"
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
   }
 }

@@ -41,7 +41,6 @@ final class LibrariesPresenter {
   // MARK: - Methods
   
   func viewWillAppear(animated: Bool) {
-    
     librariesInteractor.getLibraries()
   }
   

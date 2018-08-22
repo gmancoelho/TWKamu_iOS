@@ -24,7 +24,6 @@ protocol HomeViewInterface: ViewInterface {
   
   func showEmailWarning(show: Bool)
   func loginButtonIs(enabled: Bool)
-  func loginCompleted(success: Bool)
 }
 
 protocol HomePresenterInterface: PresenterInterface {

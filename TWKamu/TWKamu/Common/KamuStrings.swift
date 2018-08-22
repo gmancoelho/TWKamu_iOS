@@ -28,6 +28,12 @@ enum KamuStrings {
     static let libraries_cities = "CITIES"
 
     static let explore_title = "Explore"
+    static let myBooks_title = "My Books"
+    static let wishlist_title = "Wishlist"
+
+    static let settings_title = "Settings"
+    static let settings_goodCare = "Take good care of the books! :)"
+
   }
   
   enum Buttons {

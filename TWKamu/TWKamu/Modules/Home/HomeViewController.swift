@@ -79,7 +79,7 @@ final class HomeViewController: UIViewController {
   
   private func configureButtons() {
     
-    #if !DEV
+    #if PROD
       btnStart.isEnabled = false
     #endif
     
@@ -146,10 +146,6 @@ final class HomeViewController: UIViewController {
   // MARK: - UIActions
   
   @IBAction func startIsPressed(_ sender: Any) {
-    
-    //hangs the screen when making a request
-    self.viewEnabledIteractionIs(enabled: false)
-
     presenter.startIsPressed()
   }
   
@@ -201,15 +197,7 @@ extension HomeViewController: UITextFieldDelegate {
 extension HomeViewController: HomeViewInterface {
   
   func loginCompleted(success:Bool) {
-    if !success {
-      self.viewEnabledIteractionIs(enabled: true)
-    }
-  }
-  
-  func viewEnabledIteractionIs(enabled: Bool) {
-    self.view.superview?.isUserInteractionEnabled = enabled
-    btnStart.loadingIndicator(show: !enabled)
-
+   btnStart.loadingIndicator(show: false)
   }
   
   func loginButtonIs(enabled: Bool) {

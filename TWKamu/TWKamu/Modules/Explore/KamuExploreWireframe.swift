@@ -13,24 +13,19 @@ final class KamuExploreWireframe: BaseWireframe {
   
   // MARK: - Private properties -
   
+  let viewController = KamuExploreViewController(nibName: nil, bundle: nil)
+  
   // MARK: - Module setup -
   
-  func configureModule(with viewController: KamuExploreViewController) {
-    
+  func configureModule() -> KamuExploreViewController {
+  
     let presenter = KamuExplorePresenter(wireframe: self, view: viewController)
     viewController.presenter = presenter
+    
+    return viewController
   }
   
   // MARK: - Transitions -
-  
-  func show(with transition: Transition, animated: Bool = true) {
-
-    let moduleViewController = KamuExploreViewController(nibName: nil, bundle: nil)
-    
-    configureModule(with: moduleViewController)
-    
-    show(viewController: moduleViewController, with: transition, animated: animated)
-  }
   
   // MARK: - Private Routing -
 
