@@ -39,8 +39,6 @@ final class RetrieveLibrariesInteractor {
     return nil
   }
   
-  
-  
 }
 
 extension RetrieveLibrariesInteractor: RetrieveLibrariesInteractorInterface {

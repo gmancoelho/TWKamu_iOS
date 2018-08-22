@@ -79,7 +79,10 @@ final class HomeViewController: UIViewController {
   
   private func configureButtons() {
     
-    btnStart.isEnabled = false
+    #if !DEV
+      btnStart.isEnabled = false
+    #endif
+    
     btnStart.setTitle(presenter.configureStartButton(), for: .normal)
     
   }

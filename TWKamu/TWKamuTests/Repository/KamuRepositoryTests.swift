@@ -65,7 +65,7 @@ class KamuRepositoryTests: QuickSpec {
           let modelMock1 = KamuLibrary()
           _ = self.mockRepo.update(a: modelMock1)
           
-          let modelMock2 = KamuLibrary(cityName: "", id: 2)
+          let modelMock2 = KamuLibrary(cityName: "", slug: "", books: [], id: 2)
           _ = self.mockRepo.update(a: modelMock2)
           
           expect(self.mockRepo.getAll().count) == 2
@@ -107,7 +107,7 @@ class KamuRepositoryTests: QuickSpec {
       context("when the user query for a object with the PK = 1") {
         it("shoud retrieve only one object with the PK = 1") {
           
-          let modelMock = KamuLibrary(cityName: "", id: 2)
+          let modelMock = KamuLibrary(cityName: "", slug: "", books: [], id: 2)
           _ = self.mockRepo.update(a: modelMock)
           expect(self.mockRepo.get(identifier: 1)?.id) == 1
           
@@ -126,7 +126,7 @@ class KamuRepositoryTests: QuickSpec {
       context("when the user deletes the object with the PK = 1") {
         it("shoud retrieve zero objects") {
           
-          let modelMock = KamuLibrary(cityName: "", id: 2)
+          let modelMock = KamuLibrary(cityName: "", slug: "", books: [], id: 2)
 
           _ = self.mockRepo.update(a: modelMock)
           expect(self.mockRepo.get(identifier: 1)?.id) == 1

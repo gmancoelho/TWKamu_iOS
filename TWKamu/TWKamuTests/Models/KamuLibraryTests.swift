@@ -43,7 +43,7 @@ class KamuLibraryTests: QuickSpec {
     
     describe("A KamuLibrary") {
       context("afeter being initialized with custom parametes as id = 1") {
-        let mockModel = KamuLibrary(cityName: "", id: 1)
+        let mockModel = KamuLibrary(cityName: "", slug: "", books: [], id: 1)
         it("shoud have a valid id") {
           expect(mockModel.id) == expextedId
         }
@@ -55,7 +55,7 @@ class KamuLibraryTests: QuickSpec {
     
     describe("A KamuLibrary with id = 1") {
       context("when the user gets the object property") {
-        let mockModel = KamuLibrary(cityName: "", id: 1)
+        let mockModel = KamuLibrary(cityName: "", slug: "", books: [], id: 1)
         it("shoud return a KamuLibraryObject with id = 1") {
           expect(mockModel.object.id) == 1
         }
@@ -67,16 +67,16 @@ class KamuLibraryTests: QuickSpec {
   
   private func openLibraryJSON() -> [[String: Any]]? {
     
-//    if let url = Bundle.main.url(forResource: "quizMock", withExtension: "json") {
-//      do {
-//        let data = try Data(contentsOf: url)
-//        let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments)
-//        return json as? [[String: Any]]
-//      } catch {
-//        return nil
-//      }
-//    }
-   return nil
+    if let url = Bundle.main.url(forResource: "library", withExtension: "json") {
+      do {
+        let data = try Data(contentsOf: url)
+        let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments)
+        return json as? [[String: Any]]
+      } catch {
+        return nil
+      }
+    }
+    return nil
   }
   
 }

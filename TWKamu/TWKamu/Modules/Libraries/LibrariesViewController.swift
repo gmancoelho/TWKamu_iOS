@@ -125,10 +125,12 @@ extension LibrariesViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
     return 50
   }
-  
+    
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     print("Click")
     presenter.clickInCellForRow(index: indexPath)
   }
   
 }
+
+extension LibrariesViewController: KamuBlackNavigationBarTheme {}
