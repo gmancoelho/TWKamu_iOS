@@ -15,6 +15,7 @@ enum KamuColors {
   static let white = UIColor("ffffff")
   static let paleGrey = UIColor("efeff4")
   static let black = UIColor("000000")
-  static let navColor = UIColor("EFEFF4")
 
+  static let navColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 0.3)
+  
 }

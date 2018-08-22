@@ -36,19 +36,23 @@ enum KamuTabItens {
       
     case .explore:
       return UITabBarItem(title: KamuStrings.Labels.explore_title,
-                          image: UIImage(named: "iconTabExplore"), tag: 0)
+                          image: UIImage(named: "iconTabExplore"),
+                          tag: 0)
       
     case .myBooks:
       return UITabBarItem(title: KamuStrings.Labels.myBooks_title,
-                          image: UIImage(named: "iconTabBook"), tag: 1)
+                          image: UIImage(named: "iconTabBook"),
+                          tag: 1)
       
     case .wishlist:
       return UITabBarItem(title: KamuStrings.Labels.wishlist_title,
-                          image: UIImage(named: "iconTabWishlist"), tag: 2)
+                          image: UIImage(named: "iconTabWishlist"),
+                          tag: 2)
       
     case .settings:
       return UITabBarItem(title: KamuStrings.Labels.settings_title,
-                          image: UIImage(named: "iconTabSettings"), tag: 3)
+                          image: UIImage(named: "iconTabSettings"),
+                          tag: 3)
     }
     
   }

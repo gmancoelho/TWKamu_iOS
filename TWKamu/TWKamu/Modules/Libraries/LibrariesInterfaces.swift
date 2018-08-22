@@ -21,9 +21,7 @@ protocol LibrariesWireframeInterface: WireframeInterface {
 }
 
 protocol LibrariesViewInterface: ViewInterface {
-  
   func updateTableView()
-  
 }
 
 protocol LibrariesPresenterInterface: PresenterInterface {

@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KamuExploreViewController" customModule="TWKamu" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="BSp-D8-YoO" id="rse-qp-5tC"/>
+                <outlet property="lblTitle" destination="RhE-Ch-oSg" id="nUX-QF-6HI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,8 +22,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="BSp-D8-YoO">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <rect key="frame" x="0.0" y="133.5" width="375" height="533.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wBc-3s-adM">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -34,14 +35,35 @@
                         <outlet property="delegate" destination="-1" id="J8l-fQ-hN9"/>
                     </connections>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pJU-jL-V86">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="133.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RhE-Ch-oSg">
+                            <rect key="frame" x="16" y="76.5" width="104" height="49"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="RhE-Ch-oSg" secondAttribute="bottom" constant="8" id="40K-3L-poQ"/>
+                        <constraint firstItem="RhE-Ch-oSg" firstAttribute="leading" secondItem="pJU-jL-V86" secondAttribute="leading" constant="16" id="avM-hc-Xz0"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="BSp-D8-YoO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4A7-Sn-HaN"/>
+                <constraint firstItem="BSp-D8-YoO" firstAttribute="top" secondItem="pJU-jL-V86" secondAttribute="bottom" id="6et-qg-ukF"/>
+                <constraint firstItem="pJU-jL-V86" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.2" id="DX8-gW-ZuC"/>
                 <constraint firstItem="BSp-D8-YoO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EDR-uz-OpD"/>
                 <constraint firstAttribute="bottom" secondItem="BSp-D8-YoO" secondAttribute="bottom" id="Fyx-AG-Nq6"/>
                 <constraint firstAttribute="trailing" secondItem="BSp-D8-YoO" secondAttribute="trailing" id="Mjp-V7-Y8q"/>
+                <constraint firstAttribute="trailing" secondItem="pJU-jL-V86" secondAttribute="trailing" id="n6w-IE-Zbz"/>
+                <constraint firstItem="pJU-jL-V86" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pSG-zO-YQ4"/>
+                <constraint firstItem="pJU-jL-V86" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="sFK-2M-dpY"/>
             </constraints>
+            <point key="canvasLocation" x="66.5" y="53.5"/>
         </view>
     </objects>
 </document>

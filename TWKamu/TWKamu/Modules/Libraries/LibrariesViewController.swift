@@ -26,6 +26,8 @@ final class LibrariesViewController: UIViewController {
     super.viewDidLoad()
     
     viewConfiguration()
+    navigationController?.navigationBar.installBlurEffect()
+
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -66,7 +68,6 @@ final class LibrariesViewController: UIViewController {
     tableView.delegate = self
     
     updateTableView()
-
   }
   
   // MARK: - UIActions

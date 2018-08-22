@@ -58,11 +58,18 @@ final class KamuTabBarWireframe: BaseWireframe {
     self.tabBarController = tabBar
     
     if let tab = self.tabBarController {
-      self.navigationController.pushViewController(tab, animated: true)
+      self.navigationController.present(tab, animated: true)
     }
     
   }
-  
+//  
+//  func show(parentVC: UIViewController, transition: Transition, animated:Bool = true) {
+//    configureModule(with: moduleViewController)
+//    show(moduleViewController,
+//         with: .createNavFrom(fromViewController: parentVC),
+//         animated: true)
+//  }
+//  
   // MARK: - Private Routing -
   
   private func selectedIndex(index:Int) {

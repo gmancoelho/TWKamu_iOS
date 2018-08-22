@@ -33,7 +33,6 @@ final class LibrariesWireframe: BaseWireframe {
   func show(with transition: Transition, animated: Bool = true) {
 
     let moduleViewController = LibrariesViewController(nibName: nil, bundle: nil)
-    
     configureModule(with: moduleViewController)
     
     show(viewController: moduleViewController, with: transition, animated: animated)

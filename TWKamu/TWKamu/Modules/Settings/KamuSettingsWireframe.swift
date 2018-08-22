@@ -31,6 +31,11 @@ final class KamuSettingsWireframe: BaseWireframe {
   
   // MARK: - Private Routing -
 
+  func goToHomeModule() {
+    let homeModule = HomeWireframe(navigationController: navigationController)
+    homeModule.show(with: .root)
+  }
+  
 }
 
 // MARK: - Extensions -
@@ -38,6 +43,11 @@ final class KamuSettingsWireframe: BaseWireframe {
 extension KamuSettingsWireframe: KamuSettingsWireframeInterface {
   
   func navigate(to option: KamuSettingsNavigationOption) {
-
+    switch option {
+      
+    case .goToHome:
+      goToHomeModule()
+      
+    }
   }
 }

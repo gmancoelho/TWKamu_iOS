@@ -11,7 +11,14 @@ import UIKit
 final class KamuSettingsViewController: UIViewController {
   
   // MARK: - Outlets
+  @IBOutlet weak var lbltitle: UILabel!
   
+  @IBOutlet weak var tableView: UITableView!
+  
+  @IBOutlet weak var viewGoodCare: UIView!
+  @IBOutlet weak var imgKamu: UIImageView!
+  @IBOutlet weak var lblGoodCare: UILabel!
+
   // MARK: - Class properties
   
   // MARK: - Public properties
@@ -52,8 +59,20 @@ final class KamuSettingsViewController: UIViewController {
   
   // MARK: - Class Configurations
   
-  func viewConfiguration() {
+  private func viewConfiguration() {
+    lbltitle.text = KamuStrings.Labels.settings_title
+    lblGoodCare.text = KamuStrings.Labels.settings_goodCare
+    configureTableView()
+  }
+  
+  private func configureTableView() {
     
+    tableView.delegate = self
+    tableView.dataSource = self
+    
+    tableView = presenter.configureCells(tableView: tableView)
+    
+    tableView.reloadData()
   }
   
   // MARK: - Class Methods
@@ -64,5 +83,40 @@ final class KamuSettingsViewController: UIViewController {
 
 // MARK: - Extensions
 
+extension KamuSettingsViewController: UITableViewDataSource, UITableViewDelegate {
+  
+  func numberOfSections(in tableView: UITableView) -> Int {
+    return presenter.totalSections()
+  }
+  
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return presenter.totalItemsFor(section: section)
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    return presenter.cellFor(index: indexPath, tableView: tableView)
+  }
+
+  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    return presenter.nameForSection(section: section)
+  }
+  
+  func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    return 50
+  }
+  
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 60
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    presenter.clickInCellForRow(index: indexPath)
+  }
+  
+}
+
 extension KamuSettingsViewController: KamuSettingsViewInterface {
+  func updateTableView() {
+    tableView.reloadData()
+  }
 }

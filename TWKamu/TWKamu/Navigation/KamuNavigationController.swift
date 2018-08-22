@@ -23,7 +23,7 @@ class KamuNavigationController: UINavigationController {
   private func configureTheme() {
     
     self.navigationBar.backgroundColor = KamuColors.paleGrey
-    self.navigationBar.isTranslucent = false
+    self.navigationBar.isTranslucent = true
     self.navigationBar.tintColor = KamuColors.red
     self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: KamuColors.black]
     
@@ -31,6 +31,9 @@ class KamuNavigationController: UINavigationController {
       self.navigationBar.prefersLargeTitles = true
       self.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: KamuColors.black]
     }
+    
+    self.navigationBar.installBlurEffect()
+
   }
   
   // MARK: - Private
@@ -93,4 +96,22 @@ class KamuNavigationController: UINavigationController {
     }
   }
   
+}
+
+extension UINavigationBar {
+  
+  func installBlurEffect() {
+    isTranslucent = true
+    setBackgroundImage(UIImage(), for: .default)
+    let statusBarHeight: CGFloat = UIApplication.shared.statusBarFrame.height
+    var blurFrame = bounds
+    blurFrame.size.height += statusBarHeight
+    blurFrame.origin.y -= statusBarHeight
+    let blurView  = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+    blurView.isUserInteractionEnabled = false
+    blurView.frame = blurFrame
+    blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    addSubview(blurView)
+    blurView.layer.zPosition = -1
+  }
 }

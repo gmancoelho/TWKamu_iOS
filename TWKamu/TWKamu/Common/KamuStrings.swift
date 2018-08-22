@@ -34,6 +34,10 @@ enum KamuStrings {
     static let settings_title = "Settings"
     static let settings_goodCare = "Take good care of the books! :)"
 
+    static let settings_newBooksCell = "New books added"
+    static let settings_whishlistCell = "Wishlist book available"
+    static let settings_LogoutCell = "Log out"
+
   }
   
   enum Buttons {

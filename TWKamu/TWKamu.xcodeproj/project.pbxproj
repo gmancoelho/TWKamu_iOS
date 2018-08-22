@@ -17,6 +17,16 @@
 		B9178063212DAA57003CFF8B /* KamuSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917805D212DAA57003CFF8B /* KamuSettingsViewController.swift */; };
 		B9178065212DAA57003CFF8B /* KamuSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B917805F212DAA57003CFF8B /* KamuSettingsViewController.xib */; };
 		B9178066212DAA57003CFF8B /* KamuSettingsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9178060212DAA57003CFF8B /* KamuSettingsWireframe.swift */; };
+		B917806E212DD0AC003CFF8B /* KamuSettingsSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B917806C212DD0AC003CFF8B /* KamuSettingsSwitchCell.swift */; };
+		B917806F212DD0AC003CFF8B /* KamuSettingsSwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B917806D212DD0AC003CFF8B /* KamuSettingsSwitchCell.xib */; };
+		B917807B212E04A9003CFF8B /* library.json in Resources */ = {isa = PBXBuildFile; fileRef = B917807A212E04A9003CFF8B /* library.json */; };
+		B917807C212E04A9003CFF8B /* library.json in Resources */ = {isa = PBXBuildFile; fileRef = B917807A212E04A9003CFF8B /* library.json */; };
+		B917807E212E04BB003CFF8B /* books.json in Resources */ = {isa = PBXBuildFile; fileRef = B917807D212E04BB003CFF8B /* books.json */; };
+		B917807F212E04BB003CFF8B /* books.json in Resources */ = {isa = PBXBuildFile; fileRef = B917807D212E04BB003CFF8B /* books.json */; };
+		B9178083212E04DE003CFF8B /* KamuBooksInteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9178081212E04DE003CFF8B /* KamuBooksInteractorInterface.swift */; };
+		B9178084212E04DE003CFF8B /* KamuBooksInteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9178081212E04DE003CFF8B /* KamuBooksInteractorInterface.swift */; };
+		B9178085212E04DE003CFF8B /* KamuBooksInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9178082212E04DE003CFF8B /* KamuBooksInteractor.swift */; };
+		B9178086212E04DE003CFF8B /* KamuBooksInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9178082212E04DE003CFF8B /* KamuBooksInteractor.swift */; };
 		B9191783212AF0BB006EBD80 /* KamuSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9191781212AF0BB006EBD80 /* KamuSplashViewController.swift */; };
 		B9191784212AF0BB006EBD80 /* KamuSplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9191782212AF0BB006EBD80 /* KamuSplashViewController.xib */; };
 		B9191786212AF490006EBD80 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9191785212AF490006EBD80 /* Lottie.framework */; };
@@ -140,6 +150,12 @@
 		B917805D212DAA57003CFF8B /* KamuSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuSettingsViewController.swift; sourceTree = "<group>"; };
 		B917805F212DAA57003CFF8B /* KamuSettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KamuSettingsViewController.xib; sourceTree = "<group>"; };
 		B9178060212DAA57003CFF8B /* KamuSettingsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuSettingsWireframe.swift; sourceTree = "<group>"; };
+		B917806C212DD0AC003CFF8B /* KamuSettingsSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuSettingsSwitchCell.swift; sourceTree = "<group>"; };
+		B917806D212DD0AC003CFF8B /* KamuSettingsSwitchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KamuSettingsSwitchCell.xib; sourceTree = "<group>"; };
+		B917807A212E04A9003CFF8B /* library.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = library.json; sourceTree = "<group>"; };
+		B917807D212E04BB003CFF8B /* books.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = books.json; sourceTree = "<group>"; };
+		B9178081212E04DE003CFF8B /* KamuBooksInteractorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuBooksInteractorInterface.swift; sourceTree = "<group>"; };
+		B9178082212E04DE003CFF8B /* KamuBooksInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuBooksInteractor.swift; sourceTree = "<group>"; };
 		B9191781212AF0BB006EBD80 /* KamuSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuSplashViewController.swift; sourceTree = "<group>"; };
 		B9191782212AF0BB006EBD80 /* KamuSplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KamuSplashViewController.xib; sourceTree = "<group>"; };
 		B9191785212AF490006EBD80 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
@@ -276,6 +292,7 @@
 		B917805A212DAA27003CFF8B /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				B9178067212DD03E003CFF8B /* SettingsSwitchCell */,
 				B917805B212DAA57003CFF8B /* KamuSettingsInterfaces.swift */,
 				B917805C212DAA57003CFF8B /* KamuSettingsPresenter.swift */,
 				B917805D212DAA57003CFF8B /* KamuSettingsViewController.swift */,
@@ -283,6 +300,24 @@
 				B9178060212DAA57003CFF8B /* KamuSettingsWireframe.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		B9178067212DD03E003CFF8B /* SettingsSwitchCell */ = {
+			isa = PBXGroup;
+			children = (
+				B917806C212DD0AC003CFF8B /* KamuSettingsSwitchCell.swift */,
+				B917806D212DD0AC003CFF8B /* KamuSettingsSwitchCell.xib */,
+			);
+			path = SettingsSwitchCell;
+			sourceTree = "<group>";
+		};
+		B9178080212E04CD003CFF8B /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				B9178081212E04DE003CFF8B /* KamuBooksInteractorInterface.swift */,
+				B9178082212E04DE003CFF8B /* KamuBooksInteractor.swift */,
+			);
+			path = Books;
 			sourceTree = "<group>";
 		};
 		B9191780212AF09F006EBD80 /* Splash */ = {
@@ -332,8 +367,8 @@
 				B91B49A4211E27C50015BEBC /* Application */,
 				B9C0805C211E2F540072F7BC /* Base */,
 				B9C27BB4211E338300BBAFEC /* Navigation */,
-				B91D6FEE2125ACC000EF7BF3 /* Domain */,
 				B91D700D2125B76000EF7BF3 /* Repositories */,
+				B91D6FEE2125ACC000EF7BF3 /* Domain */,
 				B91B49A6211E27D30015BEBC /* Models */,
 				B91B49A5211E27CD0015BEBC /* Modules */,
 				B91B49A8211E27E00015BEBC /* Views */,
@@ -413,6 +448,7 @@
 		B91D6FEE2125ACC000EF7BF3 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				B9178080212E04CD003CFF8B /* Books */,
 				B91D6FEF2125AEC500EF7BF3 /* Libraries */,
 			);
 			path = Domain;
@@ -636,7 +672,9 @@
 		B9AD1A4A212CB31800B65018 /* JSONs */ = {
 			isa = PBXGroup;
 			children = (
+				B917807D212E04BB003CFF8B /* books.json */,
 				B9AD1A4B212CB33000B65018 /* library.json */,
+				B917807A212E04A9003CFF8B /* library.json */,
 			);
 			path = JSONs;
 			sourceTree = "<group>";
@@ -780,7 +818,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B917807E212E04BB003CFF8B /* books.json in Resources */,
 				B93206CD21222198006F2836 /* LibrariesViewController.xib in Resources */,
+				B917807B212E04A9003CFF8B /* library.json in Resources */,
 				B9AD1A11212B08A200B65018 /* kamu_wings_animation_v2.json in Resources */,
 				B9AD1A2A212C53E000B65018 /* KamuExploreViewController.xib in Resources */,
 				B91B498F211E27BD0015BEBC /* LaunchScreen.storyboard in Resources */,
@@ -788,6 +828,7 @@
 				B91B498C211E27BD0015BEBC /* Assets.xcassets in Resources */,
 				B9AD1A49212C997E00B65018 /* KamuBookCell.xib in Resources */,
 				B93206BC21220124006F2836 /* HomeViewController.xib in Resources */,
+				B917806F212DD0AC003CFF8B /* KamuSettingsSwitchCell.xib in Resources */,
 				B9178065212DAA57003CFF8B /* KamuSettingsViewController.xib in Resources */,
 				B9191784212AF0BB006EBD80 /* KamuSplashViewController.xib in Resources */,
 				B9AD1A4C212CB33000B65018 /* library.json in Resources */,
@@ -798,7 +839,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B917807F212E04BB003CFF8B /* books.json in Resources */,
 				B9178052212D9FC0003CFF8B /* libraryMock.json in Resources */,
+				B917807C212E04A9003CFF8B /* library.json in Resources */,
 				B9AD1A4D212CB33000B65018 /* library.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -891,6 +934,7 @@
 				B9AD1A18212B3E8200B65018 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
 				B91D700A2125B6CC00EF7BF3 /* KamuLibrary.swift in Sources */,
 				B93F3C112123077B0000D0A5 /* KamuLibraryCell.swift in Sources */,
+				B917806E212DD0AC003CFF8B /* KamuSettingsSwitchCell.swift in Sources */,
 				B91D701A21276E2700EF7BF3 /* KamuColors.swift in Sources */,
 				B9AD1A1F212B456800B65018 /* KamuTextField.swift in Sources */,
 				B91D702921276E9F00EF7BF3 /* CGPoint+Extension.swift in Sources */,
@@ -913,6 +957,7 @@
 				B9178059212DA739003CFF8B /* KamuTabBarWireframe.swift in Sources */,
 				B93206CA21222198006F2836 /* LibrariesPresenter.swift in Sources */,
 				B9AD1A27212C53E000B65018 /* KamuExplorePresenter.swift in Sources */,
+				B9178085212E04DE003CFF8B /* KamuBooksInteractor.swift in Sources */,
 				B99CC9FC2123135400738785 /* KamuConstants.swift in Sources */,
 				B919178E212AF666006EBD80 /* KamuSplashPresenter.swift in Sources */,
 				B9AD1A2D212C597200B65018 /* String+Extension.swift in Sources */,
@@ -922,6 +967,7 @@
 				B91D70152125EBC200EF7BF3 /* KamuDataBase.swift in Sources */,
 				B9C08069211E32540072F7BC /* BaseWireframe.swift in Sources */,
 				B9C27BBD211E34BE00BBAFEC /* KamuBlackNavigationBarTheme.swift in Sources */,
+				B9178083212E04DE003CFF8B /* KamuBooksInteractorInterface.swift in Sources */,
 				B9AD1A26212C53E000B65018 /* KamuExploreInterfaces.swift in Sources */,
 				B91D702521276E9F00EF7BF3 /* CGRect+Extensions.swift in Sources */,
 				B9C27BB6211E33E100BBAFEC /* KamuNavigationController.swift in Sources */,
@@ -961,6 +1007,8 @@
 			files = (
 				B9AD1A39212C7DA200B65018 /* KamuLibraryTests.swift in Sources */,
 				B9AD1A3B212C7DA200B65018 /* KamuRepositoryTests.swift in Sources */,
+				B9178084212E04DE003CFF8B /* KamuBooksInteractorInterface.swift in Sources */,
+				B9178086212E04DE003CFF8B /* KamuBooksInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
