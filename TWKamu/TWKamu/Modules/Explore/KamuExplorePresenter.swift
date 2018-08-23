@@ -64,7 +64,8 @@ extension KamuExplorePresenter: KamuBooksInteractorInterfaceResponse {
 extension KamuExplorePresenter: KamuExplorePresenterInterface {
   
   func clickInCell(index: IndexPath) {
-
+    let book = cellItens[index.row]
+    wireframe.navigate(to: .goToDetail(book))
   }
   
   func numberOfItens() -> Int {

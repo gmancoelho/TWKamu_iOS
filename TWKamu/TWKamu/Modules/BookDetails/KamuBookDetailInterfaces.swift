@@ -17,6 +17,15 @@ protocol KamuBookDetailWireframeInterface: WireframeInterface {
 }
 
 protocol KamuBookDetailViewInterface: ViewInterface {
+  
+  func updateBookSumary(sumary: String)
+  func updateBookAuthor(author: String)
+  func updateBookTitle(title: String)
+  func updateBookPages(pages: String)
+  func updateBookPubDate(date: String)
+  func updateBookAvailability(availability: String)
+  func updateBookCover(bookCover: UIImage)
+
 }
 
 protocol KamuBookDetailPresenterInterface: PresenterInterface {

@@ -13,7 +13,8 @@ enum Transition {
   case root
   case push
   case stack(viewControllers: [UIViewController])
-  
+  case createNavFrom(fromViewController: UIViewController)
+
 }
 
 protocol WireframeInterface: class {

@@ -12,7 +12,7 @@ import UIKit
 enum KamuExploreNavigationOption {
   
   case back
-  case goToDetail
+  case goToDetail(KamuBook)
   
 }
 

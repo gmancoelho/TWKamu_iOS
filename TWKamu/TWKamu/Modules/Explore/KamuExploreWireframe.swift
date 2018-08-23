@@ -39,8 +39,9 @@ final class KamuExploreWireframe: BaseWireframe {
 
   }
   
-  private func createDetailModule() {
-    
+  private func createDetailModule(book: KamuBook) {
+    let detailModule = KamuBookDetailWireframe(navigationController: navigationController)
+    detailModule.show(parentVC: self.viewController, transition: .root, book: book)
   }
 }
 
@@ -54,8 +55,8 @@ extension KamuExploreWireframe: KamuExploreWireframeInterface {
     case .back:
       backToOfficeModule()
       
-    case .goToDetail:
-      createDetailModule()
+    case .goToDetail(let book):
+      createDetailModule(book: book)
     }
   }
 }

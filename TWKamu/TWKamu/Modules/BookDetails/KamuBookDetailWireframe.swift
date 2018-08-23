@@ -13,23 +13,25 @@ final class KamuBookDetailWireframe: BaseWireframe {
   
   // MARK: - Private properties -
   
+  let moduleViewController = KamuBookDetailViewController(nibName: nil, bundle: nil)
+
   // MARK: - Module setup -
   
-  func configureModule(with viewController: KamuBookDetailViewController, book: KamuBook) {
+  func configureModule(book: KamuBook) {
     
-    let presenter = KamuBookDetailPresenter(wireframe: self, view: viewController, book: book)
-    viewController.presenter = presenter
+    let presenter = KamuBookDetailPresenter(wireframe: self, view: moduleViewController, book: book)
+    moduleViewController.presenter = presenter
   }
   
   // MARK: - Transitions -
   
-  func show(with transition: Transition, animated: Bool = true, book: KamuBook) {
-
-    let moduleViewController = KamuBookDetailViewController(nibName: nil, bundle: nil)
+  func show(parentVC: UIViewController, transition: Transition, animated:Bool = true, book: KamuBook) {
     
-    configureModule(with: moduleViewController, book: book)
+    configureModule(book: book)
     
-    show(viewController: moduleViewController, with: transition, animated: animated)
+    show(viewController: moduleViewController,
+         with: .createNavFrom(fromViewController: parentVC),
+         animated: true)
   }
   
   // MARK: - Private Routing -

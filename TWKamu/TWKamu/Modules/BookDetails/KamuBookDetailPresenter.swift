@@ -30,6 +30,35 @@ final class KamuBookDetailPresenter {
     self.book = book
 
   }
+  
+  // MARK: - Methods
+  
+  func viewDidLoad() {
+    getBookCover()
+    
+    view.updateBookAuthor(author: book.author)
+    view.updateBookPages(pages: book.numberOfPages.description)
+    view.updateBookTitle(title: book.title)
+    view.updateBookPubDate(date: book.publicationDate)
+    view.updateBookSumary(sumary: book.desc)
+    view.updateBookAvailability(availability: "1")
+
+  }
+  
+  private func getBookCover() {
+    
+    let coverImageView = UIImageView()
+    
+    if let imgUrl = URL(string: book.imgUrl) {
+      coverImageView.pin_setImage(from: imgUrl) { (result) in
+        if let img = result.image {
+          self.view.updateBookCover(bookCover: img)
+        }
+      }
+    }
+    
+  }
+  
 }
 
 // MARK: - Extensions -

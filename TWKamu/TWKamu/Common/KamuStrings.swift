@@ -38,13 +38,21 @@ enum KamuStrings {
     static let settings_whishlistCell = "Wishlist book available"
     static let settings_LogoutCell = "Log out"
 
+    static let details_newBooksCell = "Book Details"
+    static let details_availability = "AVAILABILITY"
+    static let details_pages = "PAGES"
+    static let details_pub = "PUBLICATION"
+    static let details_sumary = "SUMARY"
+    static let details_bookAvailable = "Book Available"
+
   }
   
   enum Buttons {
     
     static let login = "Login"
     static let explore_back = "Change office"
-    
+    static let addWishlist = "Add to wishlist"
+
     static let borrow = "Borrow"
     static let borrowed = "Borrowed"
   }
