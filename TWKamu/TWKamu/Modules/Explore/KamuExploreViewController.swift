@@ -30,7 +30,7 @@ final class KamuExploreViewController: UIViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    
+    presenter.viewWillAppear(animated: animated)
   }
   
   override func viewWillDisappear(_ animated: Bool) {
@@ -79,15 +79,14 @@ final class KamuExploreViewController: UIViewController {
   
   private func collectionViewLayout() {
     
-    let leftAndRightPaddings: CGFloat = 4.0
+    let leftAndRightPaddings: CGFloat = 24.0
     let numberOfItemsPerRow: CGFloat = 2.0
     
     let bounds = UIScreen.main.bounds
     
-    let width = (bounds.size.width - leftAndRightPaddings*(numberOfItemsPerRow+1)) / numberOfItemsPerRow
-    
-    let height = width * 2/3
-    
+    let width = (bounds.size.width - leftAndRightPaddings * (numberOfItemsPerRow)) / numberOfItemsPerRow
+    let height:CGFloat = 300.0
+    dump(width)
     if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
       layout.itemSize = CGSize(width, height)
     }

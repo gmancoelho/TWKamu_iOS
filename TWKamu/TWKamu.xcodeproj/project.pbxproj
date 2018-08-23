@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		97F8F206BA540C96957A745D /* Pods_TWKamuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9353BA450F2D3AB09E0BC126 /* Pods_TWKamuTests.framework */; };
+		B9170D8F212F227F0028B83E /* PINRemoteImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9170D8D212F227E0028B83E /* PINRemoteImage.framework */; };
+		B9170D90212F227F0028B83E /* PINCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9170D8E212F227E0028B83E /* PINCache.framework */; };
+		B9170D91212F228B0028B83E /* PINCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9170D8E212F227E0028B83E /* PINCache.framework */; };
+		B9170D92212F228B0028B83E /* PINCache.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9170D8E212F227E0028B83E /* PINCache.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B9170D93212F228B0028B83E /* PINRemoteImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9170D8D212F227E0028B83E /* PINRemoteImage.framework */; };
+		B9170D94212F228B0028B83E /* PINRemoteImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9170D8D212F227E0028B83E /* PINRemoteImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B9178052212D9FC0003CFF8B /* libraryMock.json in Resources */ = {isa = PBXBuildFile; fileRef = B9178051212D9FBF003CFF8B /* libraryMock.json */; };
 		B9178055212DA645003CFF8B /* KamuTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9178054212DA645003CFF8B /* KamuTabBarController.swift */; };
 		B9178057212DA665003CFF8B /* KamuTabBarInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9178056212DA665003CFF8B /* KamuTabBarInterfaces.swift */; };
@@ -125,7 +131,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B9170D94212F228B0028B83E /* PINRemoteImage.framework in Embed Frameworks */,
 				B93206B12121F8C9006F2836 /* RealmSwift.framework in Embed Frameworks */,
+				B9170D92212F228B0028B83E /* PINCache.framework in Embed Frameworks */,
 				B93206AE2121F8BD006F2836 /* Realm.framework in Embed Frameworks */,
 				B9191788212AF494006EBD80 /* Lottie.framework in Embed Frameworks */,
 			);
@@ -139,6 +147,8 @@
 		8BE69DB56561D7CCE18737E2 /* Pods-TWKamuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWKamuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TWKamuTests/Pods-TWKamuTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9353BA450F2D3AB09E0BC126 /* Pods_TWKamuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TWKamuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96BC11221041A35FEED7C54D /* Pods-TWKamuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWKamuTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TWKamuTests/Pods-TWKamuTests.release.xcconfig"; sourceTree = "<group>"; };
+		B9170D8D212F227E0028B83E /* PINRemoteImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINRemoteImage.framework; path = Carthage/Build/iOS/PINRemoteImage.framework; sourceTree = "<group>"; };
+		B9170D8E212F227E0028B83E /* PINCache.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PINCache.framework; path = Carthage/Build/iOS/PINCache.framework; sourceTree = "<group>"; };
 		B9178051212D9FBF003CFF8B /* libraryMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = libraryMock.json; sourceTree = "<group>"; };
 		B9178054212DA645003CFF8B /* KamuTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuTabBarController.swift; sourceTree = "<group>"; };
 		B9178056212DA665003CFF8B /* KamuTabBarInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuTabBarInterfaces.swift; sourceTree = "<group>"; };
@@ -241,9 +251,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9170D8F212F227F0028B83E /* PINRemoteImage.framework in Frameworks */,
+				B9170D91212F228B0028B83E /* PINCache.framework in Frameworks */,
+				B9170D90212F227F0028B83E /* PINCache.framework in Frameworks */,
 				B9191786212AF490006EBD80 /* Lottie.framework in Frameworks */,
 				B9191787212AF494006EBD80 /* Lottie.framework in Frameworks */,
 				B93206AD2121F8BD006F2836 /* Realm.framework in Frameworks */,
+				B9170D93212F228B0028B83E /* PINRemoteImage.framework in Frameworks */,
 				B93206B02121F8C9006F2836 /* RealmSwift.framework in Frameworks */,
 				FAD545A8666D78F5782C719B /* Pods_TWKamu.framework in Frameworks */,
 			);
@@ -265,6 +279,8 @@
 		9592F28C3E5C2ED338E1C235 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B9170D8E212F227E0028B83E /* PINCache.framework */,
+				B9170D8D212F227E0028B83E /* PINRemoteImage.framework */,
 				B9191785212AF490006EBD80 /* Lottie.framework */,
 				B93206AB2121F539006F2836 /* RealmSwift.framework */,
 				B93206A32121D165006F2836 /* Realm.framework */,

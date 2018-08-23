@@ -24,15 +24,27 @@ class KamuBookCell: UICollectionViewCell {
   override func awakeFromNib() {
     super.awakeFromNib()
     // Initialization code
+    
+    configureBorder()
+    
+    btnBorrow.setTitle(KamuStrings.Buttons.borrow, for: .normal)
+    btnBorrow.setTitle(KamuStrings.Buttons.borrowed, for: .disabled)
+  }
+  
+  private func configureBorder() {
+    
+    self.layer.cornerRadius = 10
+    self.layer.borderWidth = 1
+    self.layer.borderColor = KamuColors.steel.cgColor
+    
   }
   
   // MARK: - Configurations
   
-  func configureCellWith(title: String, author: String, cover: UIImage? = UIImage(named: "placeholderIcon"), isBorrowed: Bool) {
+  func configureCellWith(title: String, author: String, isBorrowed: Bool) {
     
     lblBookTitle.text = title
     lblBookAuthor.text = author
-    imgBookCover.image = cover
     btnBorrow.isEnabled = isBorrowed
     
   }

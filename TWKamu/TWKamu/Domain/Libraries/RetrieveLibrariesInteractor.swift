@@ -59,7 +59,6 @@ extension RetrieveLibrariesInteractor: RetrieveLibrariesInteractorInterface {
       }
     }
     
-    
     resp.getLibrariesSuccess(libraries: repository.getAll())
   }
   

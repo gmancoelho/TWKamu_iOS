@@ -9,6 +9,7 @@
 //
 
 import UIKit
+import PINRemoteImage
 
 final class KamuExplorePresenter {
   
@@ -16,7 +17,8 @@ final class KamuExplorePresenter {
   
   private unowned let view: KamuExploreViewInterface
   private let wireframe: KamuExploreWireframeInterface
-  
+  private let booksInteractor: KamuBooksInteractorInterface!
+
   // MARK: - Collection Itens
   
   let cellId = KamuConstants.Cells.book
@@ -30,13 +32,34 @@ final class KamuExplorePresenter {
   // MARK: - Lifecycle -
   
   init(wireframe: KamuExploreWireframeInterface,
-       view: KamuExploreViewInterface) {
+       view: KamuExploreViewInterface,
+       booksInteractor: KamuBooksInteractorInterface) {
     self.wireframe = wireframe
     self.view = view
+    self.booksInteractor = booksInteractor
   }
+  
+  // MARK: - Methods
+  
+  func viewWillAppear(animated: Bool) {
+    booksInteractor.getBooks()
+  }
+  
 }
 
 // MARK: - Extensions -
+
+extension KamuExplorePresenter: KamuBooksInteractorInterfaceResponse {
+  
+  func getBooksSuccess(books: [KamuBook]) {
+    cellItens = books
+  }
+  
+  func getBooksError(errorMessage: String) {
+    
+  }
+  
+}
 
 extension KamuExplorePresenter: KamuExplorePresenterInterface {
   
@@ -57,6 +80,28 @@ extension KamuExplorePresenter: KamuExplorePresenterInterface {
     let item = cellItens[index.row]
     
     let isBorrowed = ( item.user != nil && item.borrowDate != nil)
+    
+    let placeHolder = UIImage(named: "placeholderIcon")
+    
+    weak var weakPinCell = cell
+
+    if let imgUrl = URL(string: item.imgUrl) {
+      
+      cell.imgBookCover.pin_setImage(from: imgUrl, placeholderImage:placeHolder,  completion: { (result) in
+        if result.requestDuration > 0.25 {
+          
+          UIView.animate(withDuration: 0.3, animations: {
+            weakPinCell?.alpha = 1
+          })
+        } else {
+          weakPinCell?.alpha = 1
+        }
+      })
+      cell.imgBookCover.contentMode = .scaleToFill
+    } else {
+      cell.imgBookCover.contentMode = .center
+      cell.imgBookCover.image = placeHolder
+    }
     
     cell.configureCellWith(title: item.title,
                            author: item.author,

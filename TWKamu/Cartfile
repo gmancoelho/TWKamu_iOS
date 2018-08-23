@@ -2,4 +2,4 @@ github "Quick/Quick"
 github "Quick/Nimble"
 github "realm/realm-cocoa"
 github "airbnb/lottie-ios" "master"
-
+github "pinterest/PINRemoteImage"

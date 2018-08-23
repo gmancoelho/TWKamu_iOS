@@ -19,7 +19,13 @@ final class KamuExploreWireframe: BaseWireframe {
   
   func configureModule() -> KamuExploreViewController {
   
-    let presenter = KamuExplorePresenter(wireframe: self, view: viewController)
+    let booksRepository: KamuBookRepository = KamuBookRepository(realm: KamuDataBase.shared.getRealmDB())
+    let booksInteractor: KamuBooksInteractor = KamuBooksInteractor(repository: booksRepository)
+    
+    let presenter = KamuExplorePresenter(wireframe: self,
+                                         view: viewController,
+                                         booksInteractor: booksInteractor)
+    booksInteractor.response = presenter
     viewController.presenter = presenter
     
     return viewController
