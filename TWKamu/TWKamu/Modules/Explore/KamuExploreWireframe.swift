@@ -41,7 +41,7 @@ final class KamuExploreWireframe: BaseWireframe {
   
   private func createDetailModule(book: KamuBook) {
     let detailModule = KamuBookDetailWireframe(navigationController: navigationController)
-    detailModule.show(parentVC: self.viewController, transition: .root, book: book)
+    detailModule.show(parentVC: self.viewController, transition: .push, book: book)
   }
 }
 

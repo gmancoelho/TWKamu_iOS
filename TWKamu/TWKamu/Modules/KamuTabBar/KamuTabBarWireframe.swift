@@ -58,23 +58,11 @@ final class KamuTabBarWireframe: BaseWireframe {
     self.tabBarController = tabBar
     
     if let tab = self.tabBarController {
-      self.navigationController.present(tab, animated: true)
+      show(viewController: tab, with: .root, animated: true)
     }
-    
   }
-//  
-//  func show(parentVC: UIViewController, transition: Transition, animated:Bool = true) {
-//    configureModule(with: moduleViewController)
-//    show(moduleViewController,
-//         with: .createNavFrom(fromViewController: parentVC),
-//         animated: true)
-//  }
-//  
-  // MARK: - Private Routing -
   
-  private func selectedIndex(index:Int) {
-    tabBar.selectedIndex = index
-  }
+  // MARK: - Private Routing
   
 }
 
@@ -83,20 +71,6 @@ final class KamuTabBarWireframe: BaseWireframe {
 extension KamuTabBarWireframe: KamuTabBarWireframeInterface {
   
   func navigate(to option: KamuTabBarNavigationOption) {
-    switch option {
-      
-    case .selectedExplore:
-      selectedIndex(index: 0)
-      
-    case .selectedMyBooks:
-      selectedIndex(index: 1)
-      
-    case .selectedWishlist:
-      selectedIndex(index: 2)
-      
-    case .selectedSettings:
-      selectedIndex(index: 2)
-      
-    }
+
   }
 }

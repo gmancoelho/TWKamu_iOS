@@ -38,7 +38,7 @@ enum KamuStrings {
     static let settings_whishlistCell = "Wishlist book available"
     static let settings_LogoutCell = "Log out"
 
-    static let details_newBooksCell = "Book Details"
+    static let details_title = "Book Details"
     static let details_availability = "AVAILABILITY"
     static let details_pages = "PAGES"
     static let details_pub = "PUBLICATION"

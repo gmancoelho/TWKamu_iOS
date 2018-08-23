@@ -8,12 +8,11 @@
 
 import UIKit
 
-class KamuTabBarController: UITabBarController, KamuTabbedControllerInterface {
+class KamuTabBarController: UITabBarController {
   
   // MARK: - Lifecycle
   required convenience init() {
     self.init(nibName: nil, bundle: nil)
-    
     self.configuration()
   }
   
@@ -28,12 +27,15 @@ class KamuTabBarController: UITabBarController, KamuTabbedControllerInterface {
     if let nav = navigationController {
       nav.navigationBar.barStyle = .blackTranslucent
     }
-    
+    self.title = KamuStrings.Labels.explore_title
   }
   
-  func selectedIndex(index: Int) {
+  override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
     
-    self.selectedIndex = index
+    if item.tag == 0 {
+      self.title = KamuStrings.Labels.explore_title
+    } else {
+      self.title = KamuStrings.Labels.settings_title
+    }
   }
-  
 }

@@ -29,9 +29,7 @@ final class KamuBookDetailWireframe: BaseWireframe {
     
     configureModule(book: book)
     
-    show(viewController: moduleViewController,
-         with: .createNavFrom(fromViewController: parentVC),
-         animated: true)
+    show(viewController: moduleViewController, with: transition, animated: animated)
   }
   
   // MARK: - Private Routing -

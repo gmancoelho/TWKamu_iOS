@@ -43,6 +43,7 @@ final class KamuBookDetailViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.viewConfiguration()
+    presenter.viewDidLoad()
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -72,7 +73,10 @@ final class KamuBookDetailViewController: UIViewController {
   
   // MARK: - Class Configurations
   
-  func viewConfiguration() {
+  private func viewConfiguration() {
+    
+    self.title = KamuStrings.Labels.details_title
+    
     configureLabels()
     configureButtons()
   }
@@ -84,6 +88,7 @@ final class KamuBookDetailViewController: UIViewController {
     lblSumary.text = KamuStrings.Labels.details_sumary
     lblBookPages.text = KamuStrings.Labels.details_pages
     lblBookPublication.text = KamuStrings.Labels.details_pub
+    lblBookAvailability.text = KamuStrings.Labels.details_availability
 
   }
   
@@ -112,7 +117,7 @@ extension KamuBookDetailViewController: KamuBookDetailViewInterface {
   }
   
   func updateBookPages(pages: String) {
-    lblBookPages.text = pages
+    lblBookPagesNumber.text = pages
   }
   
   func updateBookPubDate(date: String) {
@@ -120,7 +125,7 @@ extension KamuBookDetailViewController: KamuBookDetailViewInterface {
   }
   
   func updateBookAvailability(availability: String) {
-    lblBookAvailability.text = availability
+    lblBookAvailabilityNumber.text = availability
   }
   
   func updateBookCover(bookCover: UIImage) {

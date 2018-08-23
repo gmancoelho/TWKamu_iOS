@@ -56,6 +56,8 @@ final class KamuExploreViewController: UIViewController {
   // MARK: - Class Configurations
   
   func viewConfiguration() {
+    
+    self.title = KamuStrings.Labels.explore_title
     lblTitle.text = KamuStrings.Labels.explore_title
     configureCollectionView()
   }

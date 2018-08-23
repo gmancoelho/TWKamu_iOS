@@ -46,7 +46,7 @@ final class LibrariesWireframe: BaseWireframe {
   
   private func goToLib(library: KamuLibrary) {
     let tabModule = KamuTabBarWireframe(navigationController: navigationController)
-    tabModule.show(with: .push, index: 0)
+    tabModule.show(with: .root, index: 0)
   }
   
 }

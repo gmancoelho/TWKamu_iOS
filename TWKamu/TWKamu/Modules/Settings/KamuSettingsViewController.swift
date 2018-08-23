@@ -60,6 +60,7 @@ final class KamuSettingsViewController: UIViewController {
   // MARK: - Class Configurations
   
   private func viewConfiguration() {
+    self.title = KamuStrings.Labels.settings_title
     lbltitle.text = KamuStrings.Labels.settings_title
     lblGoodCare.text = KamuStrings.Labels.settings_goodCare
     configureTableView()
