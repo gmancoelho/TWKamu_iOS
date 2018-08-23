@@ -21,8 +21,8 @@ class KamuBookObject: Object {
   @objc dynamic var isbn: String = ""
   @objc dynamic var publisher: String = ""
   
-  @objc dynamic var user: String? = nil
-  @objc dynamic var borrowDate: Date? = nil
+  @objc dynamic var user: String?
+  @objc dynamic var borrowDate: Date?
 
   @objc dynamic var numberOfPages: Int = -1
   @objc dynamic var publicationDate: String = ""

@@ -93,7 +93,6 @@ final class KamuExploreViewController: UIViewController {
     }
   }
   
-  
   // MARK: - UIActions
   
 }
@@ -119,7 +118,6 @@ extension KamuExploreViewController: UICollectionViewDataSource {
 }
 
 extension KamuExploreViewController: UICollectionViewDelegate { }
-
 
 extension KamuExploreViewController: KamuExploreViewInterface {
   

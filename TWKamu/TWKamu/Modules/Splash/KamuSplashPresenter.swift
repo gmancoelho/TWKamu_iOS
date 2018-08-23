@@ -22,7 +22,6 @@ final class KamuSplashPresenter {
     self.view = view
   }
   
-
 }
 
 // MARK: - Extensions -

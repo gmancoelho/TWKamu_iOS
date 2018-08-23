@@ -18,8 +18,8 @@ struct KamuBook {
   var isbn: String = ""
   var publisher: String = ""
   
-  var user: String? = nil
-  var borrowDate: Date? = nil
+  var user: String?
+  var borrowDate: Date?
   
   var numberOfPages: Int = -1
   var publicationDate: String = ""

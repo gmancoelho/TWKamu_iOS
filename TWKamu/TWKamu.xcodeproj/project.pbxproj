@@ -94,8 +94,6 @@
 		B9AD1A44212C966700B65018 /* KamuBookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD1A43212C966700B65018 /* KamuBookRepository.swift */; };
 		B9AD1A48212C997E00B65018 /* KamuBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AD1A46212C997E00B65018 /* KamuBookCell.swift */; };
 		B9AD1A49212C997E00B65018 /* KamuBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9AD1A47212C997E00B65018 /* KamuBookCell.xib */; };
-		B9AD1A4C212CB33000B65018 /* library.json in Resources */ = {isa = PBXBuildFile; fileRef = B9AD1A4B212CB33000B65018 /* library.json */; };
-		B9AD1A4D212CB33000B65018 /* library.json in Resources */ = {isa = PBXBuildFile; fileRef = B9AD1A4B212CB33000B65018 /* library.json */; };
 		B9C0805A211E2ED20072F7BC /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C08058211E2ED20072F7BC /* Nimble.framework */; };
 		B9C0805B211E2ED20072F7BC /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C08059211E2ED20072F7BC /* Quick.framework */; };
 		B9C08062211E2F7F0072F7BC /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C0805E211E2F7E0072F7BC /* ViewInterface.swift */; };
@@ -223,7 +221,6 @@
 		B9AD1A43212C966700B65018 /* KamuBookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuBookRepository.swift; sourceTree = "<group>"; };
 		B9AD1A46212C997E00B65018 /* KamuBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KamuBookCell.swift; sourceTree = "<group>"; };
 		B9AD1A47212C997E00B65018 /* KamuBookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KamuBookCell.xib; sourceTree = "<group>"; };
-		B9AD1A4B212CB33000B65018 /* library.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = library.json; sourceTree = "<group>"; };
 		B9C08058211E2ED20072F7BC /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		B9C08059211E2ED20072F7BC /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		B9C0805E211E2F7E0072F7BC /* ViewInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
@@ -673,7 +670,6 @@
 			isa = PBXGroup;
 			children = (
 				B917807D212E04BB003CFF8B /* books.json */,
-				B9AD1A4B212CB33000B65018 /* library.json */,
 				B917807A212E04A9003CFF8B /* library.json */,
 			);
 			path = JSONs;
@@ -831,7 +827,6 @@
 				B917806F212DD0AC003CFF8B /* KamuSettingsSwitchCell.xib in Resources */,
 				B9178065212DAA57003CFF8B /* KamuSettingsViewController.xib in Resources */,
 				B9191784212AF0BB006EBD80 /* KamuSplashViewController.xib in Resources */,
-				B9AD1A4C212CB33000B65018 /* library.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -842,7 +837,6 @@
 				B917807F212E04BB003CFF8B /* books.json in Resources */,
 				B9178052212D9FC0003CFF8B /* libraryMock.json in Resources */,
 				B917807C212E04A9003CFF8B /* library.json in Resources */,
-				B9AD1A4D212CB33000B65018 /* library.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -907,7 +901,7 @@
 		};
 		B9C08057211E2BC00072F7BC /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -919,7 +913,7 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};

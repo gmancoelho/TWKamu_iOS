@@ -59,7 +59,6 @@ final class LibrariesViewController: UIViewController {
   
   private func configureTableView() {
     
-    
     let id = presenter.libraryCellId()
     let nib = UINib(nibName: id, bundle: nil)
     tableView.register(nib, forCellReuseIdentifier: id)

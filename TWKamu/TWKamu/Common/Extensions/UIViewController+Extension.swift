@@ -34,13 +34,13 @@ extension Alertable where Self: UIViewController {
       
       if index == 0 {
         
-        alertController.addAction(UIAlertAction.init(title: option, style: .cancel, handler: { (action) in
+        alertController.addAction(UIAlertAction.init(title: option, style: .cancel, handler: { (_) in
           completion(index)
         }))
         
       } else {
         
-        alertController.addAction(UIAlertAction.init(title: option, style: .default, handler: { (action) in
+        alertController.addAction(UIAlertAction.init(title: option, style: .default, handler: { (_) in
           completion(index)
         }))
       }

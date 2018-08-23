@@ -51,7 +51,7 @@ extension HomeWireframe: HomeWireframeInterface {
     case .goToLibraries:
       createLibraryModule()
       
-    case .showError(_):
+    case .showError:
       showAlertErrorGeneric()
     }
   }
