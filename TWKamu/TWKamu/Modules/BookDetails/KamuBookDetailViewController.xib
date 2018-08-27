@@ -187,23 +187,35 @@
                             <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pt-uk-otd">
-                            <rect key="frame" x="16" y="37" width="335" height="279"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YwJ-lW-J6k">
+                            <rect key="frame" x="12" y="37" width="343" height="279"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="1Pt-uk-otd">
+                                    <rect key="frame" x="12" y="8" width="308.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="1Pt-uk-otd" secondAttribute="bottom" constant="8" id="ASO-MX-6O1"/>
+                                <constraint firstItem="1Pt-uk-otd" firstAttribute="top" secondItem="YwJ-lW-J6k" secondAttribute="top" constant="8" id="bTy-03-SAs"/>
+                                <constraint firstAttribute="trailing" secondItem="1Pt-uk-otd" secondAttribute="trailing" constant="12" id="e7K-AB-mO5"/>
+                                <constraint firstItem="1Pt-uk-otd" firstAttribute="leading" secondItem="YwJ-lW-J6k" secondAttribute="leading" constant="12" id="mlK-0L-dna"/>
+                                <constraint firstItem="1Pt-uk-otd" firstAttribute="width" secondItem="YwJ-lW-J6k" secondAttribute="width" multiplier="0.9" id="qWE-LF-wkv"/>
+                            </constraints>
+                        </scrollView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="1Pt-uk-otd" firstAttribute="leading" secondItem="U0g-dc-sVP" secondAttribute="leading" constant="16" id="4MY-eA-PZP"/>
                         <constraint firstItem="IlT-Gl-ayu" firstAttribute="width" secondItem="JLS-ub-f9j" secondAttribute="width" id="GKA-iT-BLl"/>
+                        <constraint firstItem="YwJ-lW-J6k" firstAttribute="top" secondItem="JLS-ub-f9j" secondAttribute="bottom" constant="8" id="Lk1-z5-PNL"/>
                         <constraint firstItem="IlT-Gl-ayu" firstAttribute="top" secondItem="U0g-dc-sVP" secondAttribute="top" id="Q2K-Ru-E9R"/>
                         <constraint firstItem="JLS-ub-f9j" firstAttribute="top" secondItem="U0g-dc-sVP" secondAttribute="top" constant="8" id="T3j-fn-kVG"/>
-                        <constraint firstAttribute="bottom" secondItem="1Pt-uk-otd" secondAttribute="bottom" constant="8" id="bb1-Cr-ExR"/>
+                        <constraint firstAttribute="trailing" secondItem="YwJ-lW-J6k" secondAttribute="trailing" constant="12" id="a58-Jr-cYA"/>
+                        <constraint firstAttribute="bottom" secondItem="YwJ-lW-J6k" secondAttribute="bottom" constant="8" id="bo2-xl-P9s"/>
                         <constraint firstAttribute="trailing" secondItem="JLS-ub-f9j" secondAttribute="trailing" constant="16" id="dg4-iR-tqb"/>
+                        <constraint firstItem="YwJ-lW-J6k" firstAttribute="leading" secondItem="U0g-dc-sVP" secondAttribute="leading" constant="12" id="gPG-mr-aZJ"/>
                         <constraint firstItem="IlT-Gl-ayu" firstAttribute="centerX" secondItem="U0g-dc-sVP" secondAttribute="centerX" id="h5x-dz-pke"/>
-                        <constraint firstAttribute="trailing" secondItem="1Pt-uk-otd" secondAttribute="trailing" constant="16" id="iVc-pi-gxE"/>
-                        <constraint firstItem="1Pt-uk-otd" firstAttribute="top" secondItem="JLS-ub-f9j" secondAttribute="bottom" constant="8" id="tS0-i9-qo8"/>
                         <constraint firstItem="JLS-ub-f9j" firstAttribute="leading" secondItem="U0g-dc-sVP" secondAttribute="leading" constant="16" id="vVn-R4-lrC"/>
                     </constraints>
                 </view>

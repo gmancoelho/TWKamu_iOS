@@ -62,9 +62,7 @@ final class KamuSettingsPresenter {
                 .swtichItem(KamuStrings.Labels.settings_whishlistCell)]
         
       case .other:
-        
         return [.labelItem(KamuStrings.Labels.settings_LogoutCell)]
-        
       }
     }
     

@@ -50,8 +50,7 @@ extension KamuBooksInteractor: KamuBooksInteractorInterface {
       return
     }
     
-    if let jsonArray = openLibraryJSON(),
-      repository.getObjectsCount() == 0 {
+    if let jsonArray = openLibraryJSON() {
       
       let books = KamuBook.parseArrayFromJSON(array: jsonArray)
       for book in books {

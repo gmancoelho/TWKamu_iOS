@@ -58,6 +58,7 @@ class KamuBookObject: Object {
     self.borrowDate = borrowDate
     self.numberOfPages = numberOfPages
     self.publicationDate = publicationDate
+    self.desc = desc
 
   }
   
