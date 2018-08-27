@@ -24,7 +24,7 @@ final class KamuBookDetailViewController: UIViewController {
   @IBOutlet weak var lblBookPublication: UILabel!
   @IBOutlet weak var lblBookPublicationDate: UILabel!
   
-  @IBOutlet weak var borrowView: UIView!
+  @IBOutlet weak var borrowView: KamuBookedView!
   
   @IBOutlet weak var sumaryView: UIView!
   @IBOutlet weak var lblSumary: UILabel!

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KamuBookedView" customModule="TWKamu" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="SWG-Ps-o7F"/>
+                <outlet property="imgPhoto" destination="3z9-Kw-vdG" id="ZEB-b2-2Gb"/>
+                <outlet property="labelsStackView" destination="Is9-aJ-9SQ" id="4AW-ny-7kR"/>
+                <outlet property="lblBorrowWith" destination="BkN-bJ-UEA" id="CNv-5w-ueZ"/>
+                <outlet property="lblDate" destination="GN1-VU-LOw" id="l37-n6-HXH"/>
+                <outlet property="lblName" destination="ZDy-cK-xoL" id="San-AR-okZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="223" height="67"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconUserPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="3z9-Kw-vdG">
+                    <rect key="frame" x="16" y="13.5" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="IyR-W0-qfd"/>
+                        <constraint firstAttribute="width" secondItem="3z9-Kw-vdG" secondAttribute="height" multiplier="1:1" id="mjI-jl-ART"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Is9-aJ-9SQ">
+                    <rect key="frame" x="68" y="6" width="143" height="55"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BkN-bJ-UEA">
+                            <rect key="frame" x="0.0" y="0.0" width="143" height="18.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDy-cK-xoL">
+                            <rect key="frame" x="0.0" y="18.5" width="143" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GN1-VU-LOw">
+                            <rect key="frame" x="0.0" y="36.5" width="143" height="18.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.99607843139999996" green="0.24313725489999999" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Is9-aJ-9SQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="6" id="CHi-n6-TYZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Is9-aJ-9SQ" secondAttribute="trailing" constant="12" id="JG1-BG-AQC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Is9-aJ-9SQ" secondAttribute="bottom" constant="6" id="T0D-Ag-e6c"/>
+                <constraint firstItem="Is9-aJ-9SQ" firstAttribute="leading" secondItem="3z9-Kw-vdG" secondAttribute="trailing" constant="12" id="d5E-Cm-3Yc"/>
+                <constraint firstItem="3z9-Kw-vdG" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="kYQ-j6-yDh"/>
+                <constraint firstItem="3z9-Kw-vdG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="zz1-aW-D95"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-159.5" y="-240"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="iconUserPlaceholder" width="16" height="16"/>
+    </resources>
+</document>
