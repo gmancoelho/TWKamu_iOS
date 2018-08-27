@@ -10,9 +10,7 @@ import UIKit
 
 final class KamuExploreViewController: UIViewController {
   
-  // MARK: - Outlets
-  @IBOutlet weak var lblTitle: UILabel!
-  
+  // MARK: - Outlets  
   @IBOutlet weak var collectionView: UICollectionView!
   
   // MARK: - Class properties
@@ -58,7 +56,6 @@ final class KamuExploreViewController: UIViewController {
   func viewConfiguration() {
     
     self.title = KamuStrings.Labels.explore_title
-    lblTitle.text = KamuStrings.Labels.explore_title
     configureCollectionView()
   }
   

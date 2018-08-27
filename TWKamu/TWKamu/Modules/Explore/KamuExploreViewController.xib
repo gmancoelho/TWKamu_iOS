@@ -12,7 +12,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KamuExploreViewController" customModule="TWKamu" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="BSp-D8-YoO" id="rse-qp-5tC"/>
-                <outlet property="lblTitle" destination="RhE-Ch-oSg" id="nUX-QF-6HI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,24 +20,15 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pJU-jL-V86">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RhE-Ch-oSg">
-                            <rect key="frame" x="16" y="63" width="104" height="49"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pJU-jL-V86">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="RhE-Ch-oSg" secondAttribute="bottom" constant="8" id="40K-3L-poQ"/>
-                        <constraint firstItem="RhE-Ch-oSg" firstAttribute="leading" secondItem="pJU-jL-V86" secondAttribute="leading" constant="16" id="avM-hc-Xz0"/>
+                        <constraint firstAttribute="height" constant="1" id="eI3-lB-did"/>
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="BSp-D8-YoO">
-                    <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                    <rect key="frame" x="0.0" y="1" width="375" height="666"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wBc-3s-adM">
                         <size key="itemSize" width="50" height="50"/>
@@ -55,7 +45,6 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="BSp-D8-YoO" firstAttribute="top" secondItem="pJU-jL-V86" secondAttribute="bottom" id="6et-qg-ukF"/>
-                <constraint firstItem="pJU-jL-V86" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.18" id="DX8-gW-ZuC"/>
                 <constraint firstItem="BSp-D8-YoO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EDR-uz-OpD"/>
                 <constraint firstAttribute="bottom" secondItem="BSp-D8-YoO" secondAttribute="bottom" id="Fyx-AG-Nq6"/>
                 <constraint firstAttribute="trailing" secondItem="BSp-D8-YoO" secondAttribute="trailing" id="Mjp-V7-Y8q"/>

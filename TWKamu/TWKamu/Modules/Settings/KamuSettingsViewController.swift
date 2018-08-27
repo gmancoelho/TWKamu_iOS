@@ -10,9 +10,7 @@ import UIKit
 
 final class KamuSettingsViewController: UIViewController {
   
-  // MARK: - Outlets
-  @IBOutlet weak var lbltitle: UILabel!
-  
+  // MARK: - Outlets  
   @IBOutlet weak var tableView: UITableView!
   
   @IBOutlet weak var viewGoodCare: UIView!
@@ -61,7 +59,6 @@ final class KamuSettingsViewController: UIViewController {
   
   private func viewConfiguration() {
     self.title = KamuStrings.Labels.settings_title
-    lbltitle.text = KamuStrings.Labels.settings_title
     lblGoodCare.text = KamuStrings.Labels.settings_goodCare
     configureTableView()
   }
