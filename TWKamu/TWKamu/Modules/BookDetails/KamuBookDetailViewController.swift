@@ -128,8 +128,9 @@ extension KamuBookDetailViewController: KamuBookDetailViewInterface {
     lblBookAvailabilityNumber.text = availability
   }
   
-  func updateBookCover(bookCover: UIImage) {
+  func updateBookCover(bookCover: UIImage, contentMode: UIViewContentMode) {
     imgBookCover.image = bookCover
+    imgBookCover.contentMode = contentMode
   }
   
 }

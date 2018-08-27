@@ -82,26 +82,22 @@ extension KamuExplorePresenter: KamuExplorePresenterInterface {
     
     let isBorrowed = ( item.user != nil && item.borrowDate != nil)
     
-    let placeHolder = UIImage(named: "placeholderIcon")
+    let coverImageView = UIImageView()
     
-    weak var weakPinCell = cell
-
     if let imgUrl = URL(string: item.imgUrl) {
       
-      cell.imgBookCover.pin_setImage(from: imgUrl, placeholderImage:placeHolder,  completion: { (result) in
-        if result.requestDuration > 0.25 {
-          
-          UIView.animate(withDuration: 0.3, animations: {
-            weakPinCell?.alpha = 1
-          })
+      coverImageView.pin_setImage(from: imgUrl) { (result) in
+        
+        if let img = result.image {
+          cell.imgBookCover.image = img
+          cell.imgBookCover.contentMode = .scaleToFill
         } else {
-          weakPinCell?.alpha = 1
+          let placeHolder = UIImage(named: "placeholderIcon")!
+          cell.imgBookCover.contentMode = .center
+          cell.imgBookCover.image = placeHolder
         }
-      })
-      cell.imgBookCover.contentMode = .scaleToFill
-    } else {
-      cell.imgBookCover.contentMode = .center
-      cell.imgBookCover.image = placeHolder
+      }
+      
     }
     
     cell.configureCellWith(title: item.title,

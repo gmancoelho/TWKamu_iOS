@@ -24,7 +24,7 @@ protocol KamuBookDetailViewInterface: ViewInterface {
   func updateBookPages(pages: String)
   func updateBookPubDate(date: String)
   func updateBookAvailability(availability: String)
-  func updateBookCover(bookCover: UIImage)
+  func updateBookCover(bookCover: UIImage, contentMode: UIViewContentMode)
 
 }
 

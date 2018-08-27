@@ -50,13 +50,18 @@ final class KamuBookDetailPresenter {
     let coverImageView = UIImageView()
     
     if let imgUrl = URL(string: book.imgUrl) {
+      
       coverImageView.pin_setImage(from: imgUrl) { (result) in
+        
         if let img = result.image {
-          self.view.updateBookCover(bookCover: img)
+          self.view.updateBookCover(bookCover: img, contentMode: .scaleAspectFit)
+        } else {
+          let placeHolder = UIImage(named: "placeholderIcon")!
+          self.view.updateBookCover(bookCover: placeHolder, contentMode: .center)
         }
       }
+      
     }
-    
   }
   
 }
