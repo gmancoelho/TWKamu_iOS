@@ -34,6 +34,7 @@ final class KamuBookDetailPresenter {
   // MARK: - Methods
   
   func viewDidLoad() {
+    
     getBookCover()
     
     view.updateBookAuthor(author: book.author)
@@ -42,7 +43,8 @@ final class KamuBookDetailPresenter {
     view.updateBookPubDate(date: book.publicationDate)
     view.updateBookSumary(sumary: book.desc)
     view.updateBookAvailability(availability: "1")
-
+    
+    view.updateBorrowedView(isBorrowed: (book.user != nil) )
   }
   
   private func getBookCover() {

@@ -46,9 +46,8 @@ final class KamuBookDetailViewController: UIViewController {
     presenter.viewDidLoad()
   }
   
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
   }
   
   override func viewWillDisappear(_ animated: Bool) {
@@ -133,4 +132,7 @@ extension KamuBookDetailViewController: KamuBookDetailViewInterface {
     imgBookCover.contentMode = contentMode
   }
   
+  func updateBorrowedView(isBorrowed: Bool) {
+    borrowView.configureFor(isBorrowed: isBorrowed)
+  }
 }

@@ -124,7 +124,7 @@
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mOz-ft-MJz" customClass="KamuBookedView" customModule="TWKamu" customModuleProvider="target">
                             <rect key="frame" x="162" y="106" width="189" height="56"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="56" id="vTt-BT-Jtp"/>
                             </constraints>

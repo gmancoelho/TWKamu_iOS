@@ -15,6 +15,7 @@
                 <outlet property="contentView" destination="iN0-l3-epB" id="SWG-Ps-o7F"/>
                 <outlet property="imgPhoto" destination="3z9-Kw-vdG" id="ZEB-b2-2Gb"/>
                 <outlet property="labelsStackView" destination="Is9-aJ-9SQ" id="4AW-ny-7kR"/>
+                <outlet property="lblAvailable" destination="qxH-eP-lvG" id="0iQ-MV-ZSY"/>
                 <outlet property="lblBorrowWith" destination="BkN-bJ-UEA" id="CNv-5w-ueZ"/>
                 <outlet property="lblDate" destination="GN1-VU-LOw" id="l37-n6-HXH"/>
                 <outlet property="lblName" destination="ZDy-cK-xoL" id="San-AR-okZ"/>
@@ -25,6 +26,12 @@
             <rect key="frame" x="0.0" y="0.0" width="223" height="67"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxH-eP-lvG">
+                    <rect key="frame" x="90.5" y="23.5" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconUserPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="3z9-Kw-vdG">
                     <rect key="frame" x="16" y="13.5" width="40" height="40"/>
                     <constraints>
@@ -58,11 +65,13 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="qxH-eP-lvG" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="0p0-J2-4qD"/>
                 <constraint firstItem="Is9-aJ-9SQ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="6" id="CHi-n6-TYZ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Is9-aJ-9SQ" secondAttribute="trailing" constant="12" id="JG1-BG-AQC"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Is9-aJ-9SQ" secondAttribute="bottom" constant="6" id="T0D-Ag-e6c"/>
                 <constraint firstItem="Is9-aJ-9SQ" firstAttribute="leading" secondItem="3z9-Kw-vdG" secondAttribute="trailing" constant="12" id="d5E-Cm-3Yc"/>
                 <constraint firstItem="3z9-Kw-vdG" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="kYQ-j6-yDh"/>
+                <constraint firstItem="qxH-eP-lvG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="wlB-Fj-ZKV"/>
                 <constraint firstItem="3z9-Kw-vdG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="zz1-aW-D95"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
