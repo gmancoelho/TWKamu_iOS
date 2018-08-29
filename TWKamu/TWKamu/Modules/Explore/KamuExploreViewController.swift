@@ -84,7 +84,7 @@ final class KamuExploreViewController: UIViewController {
     let bounds = UIScreen.main.bounds
     
     let width = (bounds.size.width - leftAndRightPaddings * (numberOfItemsPerRow)) / numberOfItemsPerRow
-    let height:CGFloat = 300.0
+    let height:CGFloat = width * 2.2
     
     if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
       layout.itemSize = CGSize(width, height)
